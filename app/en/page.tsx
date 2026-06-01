@@ -6,19 +6,19 @@ import DressCodeSection from "@/components/DressCodeSection";
 import RegistrySection from "@/components/RegistrySection";
 import RsvpSection from "@/components/RsvpSection";
 import ContactSection from "@/components/ContactSection";
-import es from "@/content/es";
+import en from "@/content/en";
 
-export default function Home() {
+export default function EnglishHome() {
   return (
     <main>
-      <HeroSection content={es.hero} />
-      <CountdownSection content={es.countdown} />
-      <EventInfoSection content={es.eventInfo} />
-      <LocationSection content={es.location} />
-      <DressCodeSection content={es.dressCode} />
-      <RegistrySection content={es.registry} />
-      <RsvpSection content={es.rsvp} />
-      <ContactSection content={es.contact} />
+      <HeroSection content={en.hero} />
+      <CountdownSection content={en.countdown} />
+      <EventInfoSection content={en.eventInfo} />
+      <LocationSection content={en.location} />
+      <DressCodeSection content={en.dressCode} />
+      <RegistrySection content={en.registry} />
+      <RsvpSection content={en.rsvp} />
+      <ContactSection content={en.contact} />
     </main>
   );
 }
