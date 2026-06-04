@@ -53,7 +53,7 @@ export default function CountdownSection({ content }: Props) {
         {content.heading}
       </p>
 
-      <div className="flex justify-center gap-6 sm:gap-12">
+      <div className="flex flex-wrap justify-center gap-x-6 gap-y-8 sm:flex-nowrap sm:gap-12">
         {[
           { label: content.labels.months, value: t.months },
           { label: content.labels.days, value: t.days },
@@ -61,9 +61,9 @@ export default function CountdownSection({ content }: Props) {
           { label: content.labels.minutes, value: t.minutes },
           { label: content.labels.seconds, value: t.seconds },
         ].map(({ label, value }) => (
-          <div key={label} className="flex flex-col items-center gap-2">
+          <div key={label} className="flex w-[calc(33.333%-16px)] flex-col items-center gap-2 sm:w-auto">
             <span
-              className="text-5xl font-light tabular-nums text-white sm:text-6xl"
+              className="text-4xl font-light tabular-nums text-white sm:text-6xl"
               style={{ fontFamily: "var(--font-heading)" }}
             >
               {pad(value)}
