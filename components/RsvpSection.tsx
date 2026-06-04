@@ -34,7 +34,7 @@ export default function RsvpSection({ content }: Props) {
             {content.thankYou}
           </h2>
           <div className="mx-auto mb-6 h-px w-12 bg-[#c9a96e]" />
-          <p className="text-sm text-[#7a7a7a]" style={{ fontFamily: "var(--font-body)" }}>
+          <p className="text-sm text-[#666666]" style={{ fontFamily: "var(--font-body)" }}>
             {content.thankYouMessage}
           </p>
         </div>
@@ -52,7 +52,7 @@ export default function RsvpSection({ content }: Props) {
           {content.heading}
         </h2>
         <div className="mx-auto mb-4 h-px w-12 bg-[#c9a96e]" />
-        <p className="mb-10 text-sm text-[#7a7a7a]" style={{ fontFamily: "var(--font-body)" }}>
+        <p className="mb-10 text-sm text-[#666666]" style={{ fontFamily: "var(--font-body)" }}>
           {content.deadline}
         </p>
 
@@ -96,7 +96,7 @@ export default function RsvpSection({ content }: Props) {
                   className={`flex-1 border py-3 text-xs uppercase tracking-[0.15em] transition-colors ${
                     attending === value
                       ? "border-[#9BAED4] bg-[#9BAED4] text-white"
-                      : "border-[#AEBDCF] text-[#7a7a7a] hover:border-[#9BAED4] hover:text-[#9BAED4]"
+                      : "border-[#AEBDCF] text-[#666666] hover:border-[#9BAED4] hover:text-[#9BAED4]"
                   }`}
                   style={{ fontFamily: "var(--font-body)" }}
                 >
@@ -118,7 +118,7 @@ export default function RsvpSection({ content }: Props) {
                 <button
                   type="button"
                   onClick={() => setGuests((g) => Math.max(1, g - 1))}
-                  className="flex h-8 w-8 items-center justify-center border border-[#AEBDCF] text-[#7a7a7a] transition-colors hover:border-[#5D7B9F] hover:text-[#5D7B9F]"
+                  className="flex h-8 w-8 items-center justify-center border border-[#AEBDCF] text-[#666666] transition-colors hover:border-[#5D7B9F] hover:text-[#5D7B9F]"
                 >
                   −
                 </button>
@@ -131,7 +131,7 @@ export default function RsvpSection({ content }: Props) {
                 <button
                   type="button"
                   onClick={() => setGuests((g) => Math.min(10, g + 1))}
-                  className="flex h-8 w-8 items-center justify-center border border-[#AEBDCF] text-[#7a7a7a] transition-colors hover:border-[#5D7B9F] hover:text-[#5D7B9F]"
+                  className="flex h-8 w-8 items-center justify-center border border-[#AEBDCF] text-[#666666] transition-colors hover:border-[#5D7B9F] hover:text-[#5D7B9F]"
                 >
                   +
                 </button>

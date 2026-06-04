@@ -31,7 +31,7 @@ export default function EventInfoSection({ content }: Props) {
                 >
                   {line1}
                 </p>
-                <p className="mt-1 text-sm text-[#7a7a7a]" style={{ fontFamily: "var(--font-body)" }}>
+                <p className="mt-1 text-sm text-[#666666]" style={{ fontFamily: "var(--font-body)" }}>
                   {line2}
                 </p>
               </div>

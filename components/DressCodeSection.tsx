@@ -21,7 +21,7 @@ export default function DressCodeSection({ content }: Props) {
           {content.style}
         </p>
 
-        <p className="text-sm leading-7 text-[#7a7a7a]" style={{ fontFamily: "var(--font-body)" }}>
+        <p className="text-sm leading-7 text-[#666666]" style={{ fontFamily: "var(--font-body)" }}>
           {content.lines[0]}
           <br />
           {content.lines[1]}

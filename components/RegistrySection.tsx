@@ -14,7 +14,7 @@ export default function RegistrySection({ content }: Props) {
         </h2>
         <div className="mx-auto mb-6 h-px w-12 bg-[#c9a96e]" />
 
-        <p className="mb-10 text-sm leading-7 text-[#7a7a7a]" style={{ fontFamily: "var(--font-body)" }}>
+        <p className="mb-10 text-sm leading-7 text-[#666666]" style={{ fontFamily: "var(--font-body)" }}>
           {content.lines[0]}
           <br />
           {content.lines[1]}

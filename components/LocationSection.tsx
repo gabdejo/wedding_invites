@@ -16,10 +16,10 @@ export default function LocationSection({ content }: Props) {
         </h2>
         <div className="mx-auto mb-6 h-px w-12 bg-[#c9a96e]" />
 
-        <p className="mb-1 text-base text-[#7a7a7a]" style={{ fontFamily: "var(--font-body)" }}>
+        <p className="mb-1 text-base text-[#666666]" style={{ fontFamily: "var(--font-body)" }}>
           {content.venueName}
         </p>
-        <p className="mb-10 text-base text-[#7a7a7a]" style={{ fontFamily: "var(--font-body)" }}>
+        <p className="mb-10 text-base text-[#666666]" style={{ fontFamily: "var(--font-body)" }}>
           {content.address}
         </p>
 
