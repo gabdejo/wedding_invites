@@ -2,7 +2,6 @@ import type { SiteContent } from "./types";
 
 const es: SiteContent = {
   hero: {
-    tagline: "Junto a sus familias",
     scroll: "Ver más",
   },
   countdown: {

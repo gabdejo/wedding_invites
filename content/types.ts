@@ -1,6 +1,5 @@
 export interface SiteContent {
   hero: {
-    tagline: string;
     scroll: string;
   };
   countdown: {
