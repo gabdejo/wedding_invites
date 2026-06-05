@@ -9,13 +9,17 @@ Cronograma: De costado (?), conviene mas en vertical para Cel
 Paleta de colores: #9BAED4, #AEBDCF, #5D7B9F
 
 Cambios en nuevo branch:
+    General: que aparezcan un par de fotos (#ref1)
+
     Pantalla inicial: Foto de nosotros o toma frente a la playa (3 tomas)
     Borrar junto a sus familias, Dejar, Sol & Gabriel y nuestra fecha (mas grande y mas abajo)
 
     Cuentra regresiva: no changes. Version en celular mas grande
 
-    Nuestra historia: aparezcan un par de fotos (#ref1)
-    
-    Itinerario: #ref2
+    Nuestra historia: una seccion con texto explicando nuestra historia resumida (#ref4)
+   
+    Itinerario: Elemento por cada fase de la boda (#ref2). Cada una representarlo por una acuarela bonita del lugar si se puede (#ref3)
 
     Vestimenta: 
+
+    OJO: puedes usar cualquier foto, solo coloca el espacio para ver la distribucion

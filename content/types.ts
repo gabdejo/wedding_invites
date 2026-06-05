@@ -14,7 +14,15 @@ export interface SiteContent {
   };
   eventInfo: {
     heading: string;
-    details: Array<{ icon: string; title: string; line1: string; line2: string }>;
+    flipLabel: string;
+    openInMaps: string;
+    events: Array<{
+      name: string;
+      imagePath: string;
+      time?: string;
+      address: string;
+      mapsUrl?: string;
+    }>;
   };
   location: {
     heading: string;

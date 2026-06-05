@@ -16,10 +16,22 @@ const en: SiteContent = {
   },
   eventInfo: {
     heading: "The Celebration",
-    details: [
-      { icon: "📅", title: "Date", line1: "Saturday", line2: "Nov 14, 2026" },
-      { icon: "🕕", title: "Time", line1: "Mass", line2: "12:00 PM" },
-      { icon: "📍", title: "Venue", line1: "Nuestra Señora de Fátima", line2: "Av. Armendariz 350, Lima" },
+    flipLabel: "See more",
+    openInMaps: "Open in Maps",
+    events: [
+      {
+        name: "Ceremony",
+        imagePath: "/images/misa.png",
+        time: "12:00 PM",
+        address: "Parroquia Nuestra Señora de Fátima · Av. Armendariz 350, Lima, Perú",
+        mapsUrl: "https://maps.app.goo.gl/UqyHfwYS5m7971fz5",
+      },
+      {
+        name: "Reception",
+        imagePath: "",
+        time: "To be announced",
+        address: "To be announced",
+      },
     ],
   },
   location: {
