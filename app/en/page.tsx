@@ -1,7 +1,7 @@
 import HeroSection from "@/components/HeroSection";
 import CountdownSection from "@/components/CountdownSection";
+import OurStorySection from "@/components/OurStorySection";
 import EventInfoSection from "@/components/EventInfoSection";
-import LocationSection from "@/components/LocationSection";
 import DressCodeSection from "@/components/DressCodeSection";
 import RegistrySection from "@/components/RegistrySection";
 import RsvpSection from "@/components/RsvpSection";
@@ -13,8 +13,8 @@ export default function EnglishHome() {
     <main>
       <HeroSection content={en.hero} />
       <CountdownSection content={en.countdown} />
+      <OurStorySection content={en.ourStory} />
       <EventInfoSection content={en.eventInfo} />
-      <LocationSection content={en.location} />
       <DressCodeSection content={en.dressCode} />
       <RegistrySection content={en.registry} />
       <RsvpSection content={en.rsvp} />

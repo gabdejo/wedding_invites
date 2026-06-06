@@ -24,11 +24,9 @@ export interface SiteContent {
       mapsUrl?: string;
     }>;
   };
-  location: {
+  ourStory: {
     heading: string;
-    venueName: string;
-    address: string;
-    openInMaps: string;
+    body: string;
   };
   dressCode: {
     heading: string;

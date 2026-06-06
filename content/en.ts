@@ -34,11 +34,9 @@ const en: SiteContent = {
       },
     ],
   },
-  location: {
-    heading: "How to Get There",
-    venueName: "Parroquia Nuestra Señora de Fátima",
-    address: "Av. Armendariz 350, Lima, Perú",
-    openInMaps: "Open in Maps",
+  ourStory: {
+    heading: "Our Story",
+    body: "Before we were a couple, we first became very close friends. We met in our first semester at university, and although we would drift apart between classes and busy schedules, we always found our way back to each other — sharing our lives, the same lives we now seek to intertwine forever. The genuine affection we had for one another grew and evolved until we were no longer just friends.",
   },
   dressCode: {
     heading: "Dress Code",

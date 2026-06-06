@@ -17,6 +17,8 @@ Cambios en nuevo branch:
     Cuentra regresiva: no changes. Version en celular mas grande
 
     Nuestra historia: una seccion con texto explicando nuestra historia resumida (#ref4)
+
+    Antes de ser novios, primero empezamos siendo muy buenos amigos. Coincidimos en el primer ciclo de la universidad, y aunque nos distanciabamos por las clases y la falta de tiempo, siempre nos encontrabamos para hablarnos sobre nuestras vidas, las mismas que ahora buscamos entrelazar para hoy y siempre. El cariño genuino que nos teniamos el uno al otro creció y evolucionó hasta que dejamos de ser solo amigos.
    
     Itinerario: Elemento por cada fase de la boda (#ref2). Cada una representarlo por una acuarela bonita del lugar si se puede (#ref3)
 

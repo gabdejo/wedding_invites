@@ -15,30 +15,29 @@ const es: SiteContent = {
     },
   },
   eventInfo: {
-    heading: "La Celebración",
+    heading: "Itinerario",
     flipLabel: "Ver más",
     openInMaps: "Abrir en Maps",
     events: [
       {
         name: "Misa",
-        imagePath: "/images/misa.png",
+        imagePath: "/images/fatima_fondo.png",
         time: "12:00 M",
-        address: "Parroquia Nuestra Señora de Fátima · Av. Armendariz 350, Lima, Perú",
+        address: "Parroquia Nuestra Señora de Fátima · Av. Armendariz 350, Miraflores",
         mapsUrl: "https://maps.app.goo.gl/UqyHfwYS5m7971fz5",
       },
       {
         name: "Recepción",
-        imagePath: "/images/lilas_rosado.png",
-        time: "Por anunciar",
-        address: "Por anunciar",
+        imagePath: "/images/lilas_medio_rosado.png",
+        time: "3:30 PM",
+        address: "Hacienda Las Lilas · Pachacamac",
+        mapsUrl: "https://maps.app.goo.gl/HqxFEcde4zyGsXae6"
       },
     ],
   },
-  location: {
-    heading: "Cómo Llegar",
-    venueName: "Parroquia Nuestra Señora de Fátima",
-    address: "Av. Armendariz 350, Lima, Perú",
-    openInMaps: "Abrir en Maps",
+  ourStory: {
+    heading: "Nuestra Historia",
+    body: "Antes de ser novios, primero empezamos siendo muy buenos amigos. Coincidimos en el primer ciclo de la universidad, y aunque nos distanciábamos por las clases y la falta de tiempo, siempre nos encontrábamos para hablarnos sobre nuestras vidas, las mismas que ahora buscamos entrelazar para hoy y siempre. El cariño genuino que nos teníamos el uno al otro creció y evolucionó hasta que dejamos de ser solo amigos.",
   },
   dressCode: {
     heading: "Código de Vestimenta",
