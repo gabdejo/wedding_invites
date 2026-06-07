@@ -15,7 +15,7 @@ const es: SiteContent = {
     },
   },
   eventInfo: {
-    heading: "Itinerario",
+    heading: "Locaciones",
     flipLabel: "Ver más",
     openInMaps: "Abrir en Maps",
     events: [
