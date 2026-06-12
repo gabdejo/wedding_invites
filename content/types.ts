@@ -28,6 +28,21 @@ export interface SiteContent {
     heading: string;
     body: string;
   };
+  photoCollage: {
+    photos: Array<{
+      imagePath: string;
+      alt: string;
+      orientation: "portrait" | "landscape";
+    }>;
+  };
+  itinerary: {
+    heading: string;
+    items: Array<{
+      time: string;
+      name: string;
+      imagePath: string;
+    }>;
+  };
   dressCode: {
     heading: string;
     style: string;

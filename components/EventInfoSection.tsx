@@ -93,28 +93,28 @@ function FlipCard({
 
         {/* Side B */}
         <div
-          className="absolute inset-0 flex flex-col items-center justify-center gap-5 rounded-2xl bg-white px-7 shadow-md"
+          className="absolute inset-0 flex flex-col items-center gap-10 rounded-2xl bg-white px-7 pb-7 pt-10 shadow-md"
           style={{
             backfaceVisibility: "hidden",
             transform: "rotateY(180deg)",
           }}
         >
           <p
-            className="text-3xl font-light text-[#2c2c2c]"
+            className="text-4xl font-light text-[#2c2c2c]"
             style={{ fontFamily: "var(--font-heading)" }}
           >
             {event.name}
           </p>
           {event.time && (
             <p
-              className="text-sm text-[#7a7a7a]"
+              className="text-xl text-[#5D7B9F]"
               style={{ fontFamily: "var(--font-body)" }}
             >
               {event.time}
             </p>
           )}
           <p
-            className="text-center text-sm leading-relaxed text-[#7a7a7a]"
+            className="text-center text-base leading-relaxed text-[#7a7a7a]"
             style={{ fontFamily: "var(--font-body)" }}
           >
             {event.address}
@@ -125,7 +125,7 @@ function FlipCard({
               target="_blank"
               rel="noopener noreferrer"
               onClick={(e) => e.stopPropagation()}
-              className="mt-1 rounded-full border border-[#5D7B9F] px-6 py-2.5 text-xs uppercase tracking-widest text-[#5D7B9F] transition-colors hover:bg-[#5D7B9F] hover:text-white"
+              className="mt-auto rounded-full border border-[#5D7B9F] px-6 py-2.5 text-xs uppercase tracking-widest text-[#5D7B9F] transition-colors hover:bg-[#5D7B9F] hover:text-white"
               style={{ fontFamily: "var(--font-body)" }}
             >
               {openInMaps}

@@ -1,6 +1,8 @@
 import HeroSection from "@/components/HeroSection";
 import CountdownSection from "@/components/CountdownSection";
 import OurStorySection from "@/components/OurStorySection";
+import PhotoCollageSection from "@/components/PhotoCollageSection";
+import ItinerarySection from "@/components/ItinerarySection";
 import EventInfoSection from "@/components/EventInfoSection";
 import DressCodeSection from "@/components/DressCodeSection";
 import RegistrySection from "@/components/RegistrySection";
@@ -14,6 +16,8 @@ export default function EnglishHome() {
       <HeroSection content={en.hero} />
       <CountdownSection content={en.countdown} />
       <OurStorySection content={en.ourStory} />
+      <PhotoCollageSection content={en.photoCollage} />
+      <ItinerarySection content={en.itinerary} />
       <EventInfoSection content={en.eventInfo} />
       <DressCodeSection content={en.dressCode} />
       <RegistrySection content={en.registry} />

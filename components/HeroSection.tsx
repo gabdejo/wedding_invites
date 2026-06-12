@@ -29,12 +29,14 @@ export default function HeroSection({ content }: Props) {
 
         <div className="mt-4 flex flex-col items-center gap-2">
           <div className="h-px w-12 bg-white/60" />
-          <p
-            className="text-lg font-light uppercase tracking-widest text-white/90"
+          <div
+            className="flex items-center text-lg font-light uppercase tracking-widest text-white/90"
             style={{ fontFamily: "var(--font-body)" }}
           >
-            14 · Nov · 2026
-          </p>
+            <span className="w-20 text-right">14 ·</span>
+            <span className="px-2">Nov</span>
+            <span className="w-20 text-left">· 2026</span>
+          </div>
           <div className="h-px w-12 bg-white/60" />
         </div>
       </div>

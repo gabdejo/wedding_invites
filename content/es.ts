@@ -20,14 +20,14 @@ const es: SiteContent = {
     openInMaps: "Abrir en Maps",
     events: [
       {
-        name: "Misa",
+        name: "Iglesia",
         imagePath: "/images/fatima_fondo.png",
         time: "12:00 M",
         address: "Parroquia Nuestra Señora de Fátima · Av. Armendariz 350, Miraflores",
         mapsUrl: "https://maps.app.goo.gl/UqyHfwYS5m7971fz5",
       },
       {
-        name: "Recepción",
+        name: "Hacienda",
         imagePath: "/images/lilas_medio_rosado.png",
         time: "3:30 PM",
         address: "Hacienda Las Lilas · Pachacamac",
@@ -38,6 +38,29 @@ const es: SiteContent = {
   ourStory: {
     heading: "Nuestra Historia",
     body: "Antes de ser novios, primero empezamos siendo muy buenos amigos. Coincidimos en el primer ciclo de la universidad, y aunque nos distanciábamos por las clases y la falta de tiempo, siempre nos encontrábamos para hablarnos sobre nuestras vidas, las mismas que ahora buscamos entrelazar para hoy y siempre. El cariño genuino que nos teníamos el uno al otro creció y evolucionó hasta que dejamos de ser solo amigos.",
+  },
+  photoCollage: {
+    photos: [
+      { imagePath: "", alt: "Foto de Sol y Gabriel 1", orientation: "portrait" },
+      { imagePath: "", alt: "Foto de Sol y Gabriel 2", orientation: "landscape" },
+      { imagePath: "", alt: "Foto de Sol y Gabriel 3", orientation: "portrait" },
+      { imagePath: "", alt: "Foto de Sol y Gabriel 4", orientation: "landscape" },
+      { imagePath: "", alt: "Foto de Sol y Gabriel 5", orientation: "portrait" },
+      { imagePath: "", alt: "Foto de Sol y Gabriel 6", orientation: "portrait" },
+      { imagePath: "", alt: "Foto de Sol y Gabriel 7", orientation: "landscape" },
+      { imagePath: "", alt: "Foto de Sol y Gabriel 8", orientation: "portrait" },
+      { imagePath: "", alt: "Foto de Sol y Gabriel 9", orientation: "portrait" },
+      { imagePath: "", alt: "Foto de Sol y Gabriel 10", orientation: "landscape" },
+    ],
+  },
+  itinerary: {
+    heading: "Itinerario",
+    items: [
+      { time: "12:00 M", name: "Misa", imagePath: "" },
+      { time: "3:00 PM", name: "Recepción", imagePath: "" },
+      { time: "5:30 PM", name: "Cena", imagePath: "" },
+      { time: "6:30 PM", name: "Fiesta", imagePath: "" },
+    ],
   },
   dressCode: {
     heading: "Código de Vestimenta",

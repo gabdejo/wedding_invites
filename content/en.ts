@@ -38,6 +38,29 @@ const en: SiteContent = {
     heading: "Our Story",
     body: "Before we were a couple, we first became very close friends. We met in our first semester at university, and although we would drift apart between classes and busy schedules, we always found our way back to each other — sharing our lives, the same lives we now seek to intertwine forever. The genuine affection we had for one another grew and evolved until we were no longer just friends.",
   },
+  photoCollage: {
+    photos: [
+      { imagePath: "", alt: "Photo of Sol and Gabriel 1", orientation: "portrait" },
+      { imagePath: "", alt: "Photo of Sol and Gabriel 2", orientation: "landscape" },
+      { imagePath: "", alt: "Photo of Sol and Gabriel 3", orientation: "portrait" },
+      { imagePath: "", alt: "Photo of Sol and Gabriel 4", orientation: "landscape" },
+      { imagePath: "", alt: "Photo of Sol and Gabriel 5", orientation: "portrait" },
+      { imagePath: "", alt: "Photo of Sol and Gabriel 6", orientation: "portrait" },
+      { imagePath: "", alt: "Photo of Sol and Gabriel 7", orientation: "landscape" },
+      { imagePath: "", alt: "Photo of Sol and Gabriel 8", orientation: "portrait" },
+      { imagePath: "", alt: "Photo of Sol and Gabriel 9", orientation: "portrait" },
+      { imagePath: "", alt: "Photo of Sol and Gabriel 10", orientation: "landscape" },
+    ],
+  },
+  itinerary: {
+    heading: "Itinerary",
+    items: [
+      { time: "12:00 PM", name: "Ceremony", imagePath: "" },
+      { time: "2:00 PM", name: "Reception", imagePath: "" },
+      { time: "4:00 PM", name: "Dinner", imagePath: "" },
+      { time: "7:00 PM", name: "Party", imagePath: "" },
+    ],
+  },
   dressCode: {
     heading: "Dress Code",
     style: "Black Tie",
