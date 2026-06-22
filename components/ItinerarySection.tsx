@@ -5,7 +5,7 @@ type Props = { content: SiteContent["itinerary"] };
 
 export default function ItinerarySection({ content }: Props) {
   return (
-    <section className="bg-[#faf8f4] px-6 py-24" id="itinerary">
+    <section className="bg-[#f5f0e8] px-6 py-24" id="itinerary">
       <div className="mx-auto max-w-md text-center">
         <h2
           className="mb-4 text-4xl font-light text-[#2c2c2c]"
@@ -34,7 +34,7 @@ export default function ItinerarySection({ content }: Props) {
                   )}
                 </div>
 
-                <div className="absolute left-[100px] h-3 w-3 -translate-x-1/2 rounded-full border-2 border-[#c9a96e] bg-[#faf8f4]" />
+                <div className="absolute left-[100px] h-3 w-3 -translate-x-1/2 rounded-full border-2 border-[#c9a96e] bg-[#f5f0e8]" />
 
                 <div>
                   <p

@@ -22,6 +22,12 @@ Cambios en nuevo branch:
    
     Itinerario: Elemento por cada fase de la boda (#ref2). Cada una representarlo por una acuarela bonita del lugar si se puede (#ref3)
 
-    Vestimenta: 
+    Vestimenta:
+
+    Mesa de regalos:
+
+    RSVP:
+
+    FAQ:
 
     OJO: puedes usar cualquier foto, solo coloca el espacio para ver la distribucion
