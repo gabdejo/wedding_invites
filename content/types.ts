@@ -43,6 +43,14 @@ export interface SiteContent {
       imagePath: string;
     }>;
   };
+  photoCarousel: {
+    heading: string;
+    photos: Array<{
+      imagePath: string;
+      alt: string;
+      orientation: "portrait" | "landscape";
+    }>;
+  };
   dressCode: {
     heading: string;
     style: string;
@@ -66,6 +74,10 @@ export interface SiteContent {
     submit: string;
     thankYou: string;
     thankYouMessage: string;
+  };
+  faq: {
+    heading: string;
+    items: Array<{ question: string; answer: string }>;
   };
   contact: {
     heading: string;

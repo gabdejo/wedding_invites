@@ -61,6 +61,17 @@ const en: SiteContent = {
       { time: "7:00 PM", name: "Party", imagePath: "" },
     ],
   },
+  photoCarousel: {
+    heading: "Our Moments",
+    photos: [
+      { imagePath: "", alt: "Photo of Sol and Gabriel 1", orientation: "portrait" },
+      { imagePath: "", alt: "Photo of Sol and Gabriel 2", orientation: "landscape" },
+      { imagePath: "", alt: "Photo of Sol and Gabriel 3", orientation: "portrait" },
+      { imagePath: "", alt: "Photo of Sol and Gabriel 4", orientation: "portrait" },
+      { imagePath: "", alt: "Photo of Sol and Gabriel 5", orientation: "landscape" },
+      { imagePath: "", alt: "Photo of Sol and Gabriel 6", orientation: "portrait" },
+    ],
+  },
   dressCode: {
     heading: "Dress Code",
     style: "Black Tie",
@@ -94,6 +105,31 @@ const en: SiteContent = {
     submit: "Send RSVP",
     thankYou: "Thank you!",
     thankYouMessage: "We've received your RSVP. We can't wait to celebrate with you.",
+  },
+  faq: {
+    heading: "Frequently Asked Questions",
+    items: [
+      {
+        question: "By when should I RSVP?",
+        answer: "Please confirm your attendance by May 31, 2026 through the RSVP form above.",
+      },
+      {
+        question: "Can I bring a plus one?",
+        answer: "Only guests included on the invitation will be able to attend. Reach out on WhatsApp if you have questions.",
+      },
+      {
+        question: "Is this an adults-only event?",
+        answer: "Yes, with love we ask that this celebration be adults only.",
+      },
+      {
+        question: "What's the dress code?",
+        answer: "Black Tie. Gentlemen in tuxedo or dark formal suit, ladies in floor-length gown or elegant cocktail dress.",
+      },
+      {
+        question: "Will parking be available?",
+        answer: "Yes, both venues have parking available for guests.",
+      },
+    ],
   },
   contact: {
     heading: "Any questions?",

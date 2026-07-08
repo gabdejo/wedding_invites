@@ -62,6 +62,17 @@ const es: SiteContent = {
       { time: "6:30 PM", name: "Fiesta", imagePath: "" },
     ],
   },
+  photoCarousel: {
+    heading: "Nuestros Momentos",
+    photos: [
+      { imagePath: "/images/carru1.jpg", alt: "Foto de Sol y Gabriel 1", orientation: "portrait" },
+      { imagePath: "/images/carru2.jpg", alt: "Foto de Sol y Gabriel 2", orientation: "landscape" },
+      { imagePath: "/images/carru3.jpg", alt: "Foto de Sol y Gabriel 3", orientation: "portrait" },
+      { imagePath: "/images/carru4.jpg", alt: "Foto de Sol y Gabriel 4", orientation: "portrait" },
+      { imagePath: "/images/carru5b.jpg", alt: "Foto de Sol y Gabriel 5", orientation: "landscape" },
+      { imagePath: "/images/carru6b.jpg", alt: "Foto de Sol y Gabriel 6", orientation: "portrait" },
+    ],
+  },
   dressCode: {
     heading: "Código de Vestimenta",
     style: "Black Tie",
@@ -95,6 +106,31 @@ const es: SiteContent = {
     submit: "Confirmar asistencia",
     thankYou: "¡Gracias!",
     thankYouMessage: "Hemos recibido tu confirmación. ¡No podemos esperar para celebrar juntos!",
+  },
+  faq: {
+    heading: "Preguntas Frecuentes",
+    items: [
+      {
+        question: "¿Hasta cuándo puedo confirmar mi asistencia?",
+        answer: "Agradecemos que confirmes antes del 31 de mayo de 2026 a través del formulario de RSVP.",
+      },
+      {
+        question: "¿Puedo llevar acompañante?",
+        answer: "Solo podrán asistir las personas incluidas en la invitación. Si tienes dudas, escríbenos por WhatsApp.",
+      },
+      {
+        question: "¿Es un evento solo para adultos?",
+        answer: "Sí, con mucho cariño pedimos que sea una celebración solo para adultos.",
+      },
+      {
+        question: "¿Cuál es el código de vestimenta?",
+        answer: "Black Tie. Caballeros de esmoquin o traje oscuro, damas de vestido largo o cóctel elegante.",
+      },
+      {
+        question: "¿Habrá estacionamiento?",
+        answer: "Sí, ambas locaciones cuentan con estacionamiento disponible para los invitados.",
+      },
+    ],
   },
   contact: {
     heading: "¿Tienes alguna duda?",
