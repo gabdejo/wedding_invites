@@ -51,6 +51,14 @@ export interface SiteContent {
       orientation: "portrait" | "landscape";
     }>;
   };
+  photoCarousel2: {
+    heading: string;
+    photos: Array<{
+      imagePath: string;
+      alt: string;
+      orientation: "portrait" | "landscape";
+    }>;
+  };
   dressCode: {
     heading: string;
     style: string;

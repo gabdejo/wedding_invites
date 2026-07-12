@@ -4,12 +4,12 @@ import { useEffect, useRef } from "react";
 import Image from "next/image";
 import type { SiteContent } from "@/content/types";
 
-type Props = { content: SiteContent["photoCarousel"] };
+type Props = { content: SiteContent["photoCarousel"]; id?: string; paddingClassName?: string };
 
-const AUTOPLAY_PX_PER_SECOND = 50;//18;
+const AUTOPLAY_PX_PER_SECOND = 80;//50 18;
 const RESUME_DELAY_MS = 2500;
 
-export default function PhotoCarouselSection({ content }: Props) {
+export default function PhotoCarouselSection({ content, id = "photo-carousel", paddingClassName = "py-6" }: Props) {
   const scrollerRef = useRef<HTMLDivElement>(null);
   const settleTimeout = useRef<ReturnType<typeof setTimeout> | null>(null);
   const resumeTimeout = useRef<ReturnType<typeof setTimeout> | null>(null);
@@ -81,7 +81,7 @@ export default function PhotoCarouselSection({ content }: Props) {
   };
 
   return (
-    <section className="bg-[#faf8f4] py-6" id="photo-carousel">
+    <section className={`bg-[#faf8f4] ${paddingClassName}`} id={id}>
       <div
         ref={scrollerRef}
         onScroll={handleScroll}
@@ -100,7 +100,7 @@ export default function PhotoCarouselSection({ content }: Props) {
             key={index}
             className="relative shrink-0 snap-center overflow-hidden bg-gradient-to-br from-[#e8f0f8] via-[#dce8f2] to-[#c8d9eb]"
             style={{
-              width: "min(76vw, 320px)",
+              width: photo.orientation === "landscape" ? "min(90vw, 440px)" : "min(76vw, 320px)",
               aspectRatio: photo.orientation === "landscape" ? "4 / 3" : "3 / 4",
             }}
           >

@@ -14,6 +14,17 @@ const es: SiteContent = {
       seconds: "Segundos",
     },
   },
+  photoCarousel: {
+    heading: "Nuestros Momentos",
+    photos: [
+      { imagePath: "/images/carru1.jpg", alt: "Foto de Sol y Gabriel 1", orientation: "landscape" },
+      { imagePath: "/images/carru2.jpg", alt: "Foto de Sol y Gabriel 2", orientation: "landscape" },
+      { imagePath: "/images/carru3.jpg", alt: "Foto de Sol y Gabriel 3", orientation: "landscape" },
+      { imagePath: "/images/carru4.jpg", alt: "Foto de Sol y Gabriel 4", orientation: "landscape" },
+      { imagePath: "/images/carru5b.jpg", alt: "Foto de Sol y Gabriel 5", orientation: "landscape" },
+      { imagePath: "/images/carru6b.jpg", alt: "Foto de Sol y Gabriel 6", orientation: "landscape" },
+    ],
+  },
   eventInfo: {
     heading: "Locaciones",
     flipLabel: "Ver más",
@@ -62,15 +73,15 @@ const es: SiteContent = {
       { time: "6:30 PM", name: "Fiesta", imagePath: "" },
     ],
   },
-  photoCarousel: {
+  photoCarousel2: {
     heading: "Nuestros Momentos",
     photos: [
-      { imagePath: "/images/carru1.jpg", alt: "Foto de Sol y Gabriel 1", orientation: "portrait" },
-      { imagePath: "/images/carru2.jpg", alt: "Foto de Sol y Gabriel 2", orientation: "landscape" },
-      { imagePath: "/images/carru3.jpg", alt: "Foto de Sol y Gabriel 3", orientation: "portrait" },
-      { imagePath: "/images/carru4.jpg", alt: "Foto de Sol y Gabriel 4", orientation: "portrait" },
-      { imagePath: "/images/carru5b.jpg", alt: "Foto de Sol y Gabriel 5", orientation: "landscape" },
-      { imagePath: "/images/carru6b.jpg", alt: "Foto de Sol y Gabriel 6", orientation: "portrait" },
+      { imagePath: "", alt: "Foto de Sol y Gabriel 1", orientation: "landscape" },
+      { imagePath: "", alt: "Foto de Sol y Gabriel 2", orientation: "landscape" },
+      { imagePath: "", alt: "Foto de Sol y Gabriel 3", orientation: "landscape" },
+      { imagePath: "", alt: "Foto de Sol y Gabriel 4", orientation: "landscape" },
+      { imagePath: "", alt: "Foto de Sol y Gabriel 5", orientation: "landscape" },
+      { imagePath: "", alt: "Foto de Sol y Gabriel 6", orientation: "landscape" },
     ],
   },
   dressCode: {

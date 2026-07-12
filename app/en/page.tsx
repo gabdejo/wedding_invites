@@ -17,11 +17,12 @@ export default function EnglishHome() {
     <main>
       <HeroSection content={en.hero} />
       <CountdownSection content={en.countdown} />
+      <PhotoCarouselSection content={en.photoCarousel2} id="photo-carousel-2" />
       <OurStorySection content={en.ourStory} />
       <PhotoCollageSection content={en.photoCollage} />
       <ItinerarySection content={en.itinerary} />
       <EventInfoSection content={en.eventInfo} />
-      <PhotoCarouselSection content={en.photoCarousel} />
+      <PhotoCarouselSection content={en.photoCarousel} paddingClassName="pt-2 pb-6" />
       <DressCodeSection content={en.dressCode} />
       <RegistrySection content={en.registry} />
       <RsvpSection content={en.rsvp} />

@@ -14,6 +14,17 @@ const en: SiteContent = {
       seconds: "Seconds",
     },
   },
+  photoCarousel: {
+    heading: "Our Moments",
+    photos: [
+      { imagePath: "", alt: "Photo of Sol and Gabriel 1", orientation: "portrait" },
+      { imagePath: "", alt: "Photo of Sol and Gabriel 2", orientation: "landscape" },
+      { imagePath: "", alt: "Photo of Sol and Gabriel 3", orientation: "portrait" },
+      { imagePath: "", alt: "Photo of Sol and Gabriel 4", orientation: "portrait" },
+      { imagePath: "", alt: "Photo of Sol and Gabriel 5", orientation: "landscape" },
+      { imagePath: "", alt: "Photo of Sol and Gabriel 6", orientation: "portrait" },
+    ],
+  },
   eventInfo: {
     heading: "The Celebration",
     flipLabel: "See more",
@@ -61,15 +72,15 @@ const en: SiteContent = {
       { time: "7:00 PM", name: "Party", imagePath: "" },
     ],
   },
-  photoCarousel: {
+  photoCarousel2: {
     heading: "Our Moments",
     photos: [
-      { imagePath: "", alt: "Photo of Sol and Gabriel 1", orientation: "portrait" },
+      { imagePath: "", alt: "Photo of Sol and Gabriel 1", orientation: "landscape" },
       { imagePath: "", alt: "Photo of Sol and Gabriel 2", orientation: "landscape" },
-      { imagePath: "", alt: "Photo of Sol and Gabriel 3", orientation: "portrait" },
-      { imagePath: "", alt: "Photo of Sol and Gabriel 4", orientation: "portrait" },
+      { imagePath: "", alt: "Photo of Sol and Gabriel 3", orientation: "landscape" },
+      { imagePath: "", alt: "Photo of Sol and Gabriel 4", orientation: "landscape" },
       { imagePath: "", alt: "Photo of Sol and Gabriel 5", orientation: "landscape" },
-      { imagePath: "", alt: "Photo of Sol and Gabriel 6", orientation: "portrait" },
+      { imagePath: "", alt: "Photo of Sol and Gabriel 6", orientation: "landscape" },
     ],
   },
   dressCode: {

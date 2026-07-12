@@ -4,7 +4,7 @@ type Props = { content: SiteContent["ourStory"] };
 
 export default function OurStorySection({ content }: Props) {
   return (
-    <section className="bg-[#faf8f4] px-6 py-24 text-center" id="our-story">
+    <section className="bg-[#faf8f4] px-6 pt-16 pb-24 text-center" id="our-story">
       <div className="mx-auto max-w-2xl">
         <h2
           className="mb-4 text-4xl font-light italic text-[#2c2c2c]"
