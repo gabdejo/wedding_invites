@@ -33,6 +33,7 @@ export interface SiteContent {
       imagePath: string;
       alt: string;
       orientation: "portrait" | "landscape";
+      caption?: string;
     }>;
   };
   itinerary: {
