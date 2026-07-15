@@ -76,12 +76,14 @@ const es: SiteContent = {
   photoCarousel2: {
     heading: "Nuestros Momentos",
     photos: [
-      { imagePath: "", alt: "Foto de Sol y Gabriel 1", orientation: "landscape" },
-      { imagePath: "", alt: "Foto de Sol y Gabriel 2", orientation: "landscape" },
-      { imagePath: "", alt: "Foto de Sol y Gabriel 3", orientation: "landscape" },
-      { imagePath: "", alt: "Foto de Sol y Gabriel 4", orientation: "landscape" },
-      { imagePath: "", alt: "Foto de Sol y Gabriel 5", orientation: "landscape" },
-      { imagePath: "", alt: "Foto de Sol y Gabriel 6", orientation: "landscape" },
+      { imagePath: "/images/carruB1.jpg", alt: "Foto de Sol y Gabriel 1", orientation: "landscape" },
+      { imagePath: "/images/carruB2.jpg", alt: "Foto de Sol y Gabriel 2", orientation: "landscape" },
+      { imagePath: "/images/carruB3.jpg", alt: "Foto de Sol y Gabriel 3", orientation: "landscape" },
+      { imagePath: "/images/carruB4.jpg", alt: "Foto de Sol y Gabriel 4", orientation: "landscape" },
+      { imagePath: "/images/carruB5.jpg", alt: "Foto de Sol y Gabriel 5", orientation: "landscape" },
+      { imagePath: "/images/carruB6.jpg", alt: "Foto de Sol y Gabriel 6", orientation: "landscape" },
+      { imagePath: "/images/carruB7.jpg", alt: "Foto de Sol y Gabriel 7", orientation: "landscape" },
+      { imagePath: "/images/carruB8.jpg", alt: "Foto de Sol y Gabriel 8", orientation: "landscape" },
     ],
   },
   dressCode: {
