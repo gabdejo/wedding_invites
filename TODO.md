@@ -1,22 +1,23 @@
 Inicio:
-"Sol y Gabriel" Con un video de nosotros de fondo.
+"Sol y Gabriel" Con un video de nosotros de fondo. DONE
 
-Agregar al costado, en Como Llegar, la ubicacion de la Hacenda las Lilas
-Quizas en cronograma de actividades
+Agregar al costado, en Como Llegar, la ubicacion de la Hacenda las Lilas 
+Quizas en cronograma de actividades 
+DONE
 
-Cronograma: De costado (?), conviene mas en vertical para Cel
+Cronograma: De costado (?), conviene mas en vertical para Cel DONE
 
 Paleta de colores: #9BAED4, #AEBDCF, #5D7B9F
 
 Cambios en nuevo branch:
-    General: que aparezcan un par de fotos (#ref1)
+    General: que aparezcan un par de fotos (#ref1) DONE
 
     Pantalla inicial: Foto de nosotros o toma frente a la playa (3 tomas)
-    Borrar junto a sus familias, Dejar, Sol & Gabriel y nuestra fecha (mas grande y mas abajo)
+    Borrar junto a sus familias, Dejar, Sol & Gabriel y nuestra fecha (mas grande y mas abajo) DONE
 
-    Cuentra regresiva: no changes. Version en celular mas grande
+    Cuentra regresiva: no changes. Version en celular mas grande DONE
 
-    Carrusel1: Mimetizar margenes top y bot, (anterior min(76vw, 320px), tiles now render up to 440px wide (90vw on mobile) instead of 320px)
+    Carrusel1: Mimetizar margenes top y bot, (anterior min(76vw, 320px), tiles now render up to 440px wide (90vw on mobile) instead of 320px) DONE
 
     Nuestra historia: una seccion con texto explicando nuestra historia resumida (#ref4)
 
@@ -35,3 +36,8 @@ Cambios en nuevo branch:
     FAQ:
 
     OJO: puedes usar cualquier foto, solo coloca el espacio para ver la distribucion
+
+Todo list:
+    Font: Verificar que fuentes se quieren para titulos y cuerpos de texto
+    Regalos: Ver si se puede incorporar pasarela de pagos (Sin envolturas, D'Parte)
+    RSVP: Testear base de datos de invitados
