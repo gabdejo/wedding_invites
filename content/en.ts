@@ -139,13 +139,72 @@ const en: SiteContent = {
   },
   registry: {
     heading: "Gifts & Registry",
+    intro: "Thank you for thinking of a gift for us!",
     lines: [
       "Your presence is the greatest gift of all.",
-      "If you wish to give something, we've set up a small registry.",
+      "If you wish to give something, we've set up a small registry for our new home.",
     ],
-    stores: [
-      { name: "Amazon", url: "#" },
-      { name: "El Corte Inglés", url: "#" },
+    buyLabel: "Choose gift",
+    freeContributionLabel: "Open contribution",
+    showAllLabel: "Show all gifts",
+    showLessLabel: "Show less",
+    products: [
+      {
+        imagePath: "",
+        category: "honeymoon",
+        name: "Honeymoon fund",
+        description: "An open contribution toward our honeymoon and the first memories of this new chapter.",
+        price: null,
+      },
+      {
+        imagePath: "",
+        category: "kitchen",
+        name: "Wine glass set",
+        description: "Wine glasses for our table and future dinners together.",
+        price: 200,
+      },
+      {
+        imagePath: "",
+        category: "home",
+        name: "Decorative frame",
+        description: "A decorative set to frame special photos and fill our home with memories.",
+        price: 350,
+      },
+      {
+        imagePath: "",
+        category: "kitchen",
+        name: "Coffee maker",
+        description: "A coffee maker to enjoy good coffee together every morning.",
+        price: 450,
+      },
+      {
+        imagePath: "",
+        category: "experiences",
+        name: "Romantic dinner",
+        description: "A special dinner to celebrate our first days as a married couple.",
+        price: 300,
+      },
+      {
+        imagePath: "",
+        category: "home",
+        name: "Towel set",
+        description: "Soft, stylish towels for our new home.",
+        price: 180,
+      },
+    ],
+    bankTransfer: {
+      heading: "Prefer a bank transfer?",
+      note: "Please include your name in the transfer note so we can identify and thank you for your gift.",
+      bank: "Interbank",
+      accountHolder: "Sol & Gabriel",
+      accountNumber: "000-0000000000",
+      cci: "00300000000000000000",
+    },
+    legalLinks: [
+      { label: "Merchant details", href: "/datos-del-comercio" },
+      { label: "Terms & conditions", href: "/terminos-y-condiciones" },
+      { label: "Returns & exchanges", href: "/politica-cambios-devoluciones" },
+      { label: "Complaints book", href: "/libro-de-reclamaciones" },
     ],
   },
   rsvp: {
@@ -195,6 +254,14 @@ const en: SiteContent = {
     ],
     whatsappLabel: "WhatsApp Us",
     whatsappUrl: "https://wa.me/34600000000?text=Hi%20Sol%20%26%20Gabriel!",
+  },
+  merchant: {
+    tradeName: "Sol & Gabriel Gift Registry",
+    legalName: "[Legal name pending]",
+    taxId: "[Tax ID pending]",
+    phone: "+34 600 000 000",
+    email: "gabrieldejos@gmail.com",
+    address: "[Address pending], Lima, Peru",
   },
 };
 

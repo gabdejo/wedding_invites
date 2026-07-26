@@ -78,8 +78,28 @@ export interface SiteContent {
   };
   registry: {
     heading: string;
+    intro: string;
     lines: string[];
-    stores: Array<{ name: string; url: string }>;
+    buyLabel: string;
+    freeContributionLabel: string;
+    showAllLabel: string;
+    showLessLabel: string;
+    products: Array<{
+      imagePath: string;
+      category: string;
+      name: string;
+      description: string;
+      price: number | null;
+    }>;
+    bankTransfer: {
+      heading: string;
+      note: string;
+      bank: string;
+      accountHolder: string;
+      accountNumber: string;
+      cci: string;
+    };
+    legalLinks: Array<{ label: string; href: string }>;
   };
   rsvp: {
     heading: string;
@@ -104,5 +124,13 @@ export interface SiteContent {
     lines: string[];
     whatsappLabel: string;
     whatsappUrl: string;
+  };
+  merchant: {
+    tradeName: string;
+    legalName: string;
+    taxId: string;
+    phone: string;
+    email: string;
+    address: string;
   };
 }

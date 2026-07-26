@@ -142,13 +142,72 @@ const es: SiteContent = {
   },
   registry: {
     heading: "Mesa de Regalos",
+    intro: "¡Gracias por pensar en un detalle para nosotros!",
     lines: [
       "Tu presencia es el mejor regalo de todos.",
-      "Si deseas obsequiarnos algo, hemos preparado una pequeña lista.",
+      "Si deseas obsequiarnos algo, hemos preparado una pequeña lista de detalles para nuestro nuevo hogar.",
     ],
-    stores: [
-      { name: "Amazon", url: "#" },
-      { name: "El Corte Inglés", url: "#" },
+    buyLabel: "Elegir regalo",
+    freeContributionLabel: "Aporte libre",
+    showAllLabel: "Ver todos los regalos",
+    showLessLabel: "Ver menos",
+    products: [
+      {
+        imagePath: "",
+        category: "luna de miel",
+        name: "Aporte libre - luna de miel",
+        description: "Un aporte libre para nuestra luna de miel y los primeros recuerdos de esta nueva etapa.",
+        price: null,
+      },
+      {
+        imagePath: "",
+        category: "cocina",
+        name: "Set de copas de vino",
+        description: "Copas de vino para nuestra mesa y futuras cenas juntos.",
+        price: 200,
+      },
+      {
+        imagePath: "",
+        category: "hogar",
+        name: "Cuadro decorativo",
+        description: "Set decorativo para enmarcar fotos especiales y llenar nuestro hogar de recuerdos.",
+        price: 350,
+      },
+      {
+        imagePath: "",
+        category: "cocina",
+        name: "Cafetera",
+        description: "Cafetera para disfrutar un buen café en nuestras mañanas juntos.",
+        price: 450,
+      },
+      {
+        imagePath: "",
+        category: "experiencias",
+        name: "Cena romántica",
+        description: "Cena especial para celebrar nuestros primeros días como esposos.",
+        price: 300,
+      },
+      {
+        imagePath: "",
+        category: "hogar",
+        name: "Set de toallas",
+        description: "Toallas para nuestro nuevo hogar, suaves y con estilo.",
+        price: 180,
+      },
+    ],
+    bankTransfer: {
+      heading: "¿Prefieres hacerlo por transferencia?",
+      note: "Por favor coloca tu nombre en el concepto para poder identificarte y agradecerte por tu detalle.",
+      bank: "Interbank",
+      accountHolder: "Sol y Gabriel",
+      accountNumber: "000-0000000000",
+      cci: "00300000000000000000",
+    },
+    legalLinks: [
+      { label: "Datos del comercio", href: "/datos-del-comercio" },
+      { label: "Términos y condiciones", href: "/terminos-y-condiciones" },
+      { label: "Cambios y devoluciones", href: "/politica-cambios-devoluciones" },
+      { label: "Libro de reclamaciones", href: "/libro-de-reclamaciones" },
     ],
   },
   rsvp: {
@@ -198,6 +257,14 @@ const es: SiteContent = {
     ],
     whatsappLabel: "Escríbenos",
     whatsappUrl: "https://wa.me/34600000000?text=Hola%20Sol%20%26%20Gabriel!",
+  },
+  merchant: {
+    tradeName: "Mesa de Regalos Sol y Gabriel",
+    legalName: "[Razón social pendiente]",
+    taxId: "[RUC pendiente]",
+    phone: "+34 600 000 000",
+    email: "gabrieldejos@gmail.com",
+    address: "[Dirección pendiente], Lima, Perú",
   },
 };
 
