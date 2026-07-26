@@ -46,8 +46,53 @@ const en: SiteContent = {
     ],
   },
   ourStory: {
-    heading: "Our Story",
-    body: "Before we were a couple, we first became very close friends. We met in our first semester at university, and although we would drift apart between classes and busy schedules, we always found our way back to each other — sharing our lives, the same lives we now seek to intertwine forever. The genuine affection we had for one another grew and evolved until we were no longer just friends.",
+    eyebrow: "You are cordially invited to this adventure called...",
+    heading: "Our Love Story",
+    milestones: [
+      {
+        title: "How we met",
+        text: "Before we were a couple, we first became very close friends. We met in our first semester at university, and although we would drift apart between classes and busy schedules, we always found our way back to each other — sharing the same lives we now seek to intertwine forever.",
+        photos: [
+          { imagePath: "", alt: "Sol and Gabriel in Guyana", orientation: "portrait", caption: "Guyana" },
+          { imagePath: "", alt: "Sol and Gabriel when they met", orientation: "portrait" },
+          { imagePath: "", alt: "Sol and Gabriel in their early months", orientation: "landscape" },
+        ],
+      },
+      {
+        title: "Our 1st New Year together",
+        text: "We started feeling things. The genuine affection we had for one another grew and evolved until we were no longer just friends.",
+        photos: [
+          { imagePath: "", alt: "First New Year together", orientation: "landscape" },
+          { imagePath: "", alt: "First New Year together, another moment", orientation: "portrait" },
+          { imagePath: "", alt: "First New Year together, celebration", orientation: "portrait" },
+        ],
+      },
+      {
+        title: "She asked me to be her boyfriend",
+        text: "And so, between laughter and closeness, we stopped being just friends and began this journey together.",
+        photos: [
+          { imagePath: "", alt: "The day we started dating", orientation: "portrait" },
+          { imagePath: "", alt: "Early dates as a couple", orientation: "landscape" },
+        ],
+      },
+      {
+        title: "Our life together",
+        text: "Dates, the pandemic, university, travels, graduation. Years spent building a life together, one day at a time.",
+        photos: [
+          { imagePath: "", alt: "Dates", orientation: "portrait" },
+          { imagePath: "", alt: "The pandemic together", orientation: "landscape" },
+          { imagePath: "", alt: "University", orientation: "portrait" },
+          { imagePath: "", alt: "Travels", orientation: "landscape" },
+          { imagePath: "", alt: "Graduation", orientation: "portrait" },
+        ],
+      },
+      {
+        title: "Engagement",
+        text: "In our third year he gave me a promise ring, vowing that in a couple of years he'd trade it for an engagement ring. And after a few more years...",
+        highlight: "I said yes!",
+        photos: [],
+      },
+    ],
   },
   photoCollage: {
     photos: [

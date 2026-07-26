@@ -1,7 +1,6 @@
 import HeroSection from "@/components/HeroSection";
 import CountdownSection from "@/components/CountdownSection";
 import OurStorySection from "@/components/OurStorySection";
-import PhotoCollageSection from "@/components/PhotoCollageSection";
 import ItinerarySection from "@/components/ItinerarySection";
 import EventInfoSection from "@/components/EventInfoSection";
 import PhotoCarouselSection from "@/components/PhotoCarouselSection";
@@ -17,9 +16,8 @@ export default function Home() {
     <main>
       <HeroSection content={es.hero} />
       <CountdownSection content={es.countdown} />
-      <PhotoCarouselSection content={es.photoCarousel} paddingClassName="pt-0 pb-0" />
       <OurStorySection content={es.ourStory} />
-      <PhotoCollageSection content={es.photoCollage} />
+      <PhotoCarouselSection content={es.photoCarousel} paddingClassName="pt-0 pb-0" />
       <ItinerarySection content={es.itinerary} />
       <EventInfoSection content={es.eventInfo} />
       <PhotoCarouselSection content={es.photoCarousel2} id="photo-carousel-2" />

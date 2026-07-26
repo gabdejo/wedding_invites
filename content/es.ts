@@ -47,8 +47,53 @@ const es: SiteContent = {
     ],
   },
   ourStory: {
-    heading: "Nuestra Historia",
-    body: "Antes de ser novios, primero empezamos siendo muy buenos amigos. Coincidimos en el primer ciclo de la universidad, y aunque nos distanciábamos por las clases y la falta de tiempo, siempre nos encontrábamos para hablarnos sobre nuestras vidas, las mismas que ahora buscamos entrelazar para hoy y siempre. El cariño genuino que nos teníamos el uno al otro creció y evolucionó hasta que dejamos de ser solo amigos.",
+    eyebrow: "Estás cordialmente invitado a esta aventura llamada...",
+    heading: "Nuestra historia de Amor",
+    milestones: [
+      {
+        title: "Cómo nos conocimos",
+        text: "Antes de ser novios, primero empezamos siendo muy buenos amigos. Coincidimos en el primer ciclo de la universidad, y aunque nos distanciábamos por las clases y la falta de tiempo, siempre nos encontrábamos para hablarnos sobre nuestras vidas, las mismas que ahora buscamos entrelazar para hoy y siempre.",
+        photos: [
+          { imagePath: "", alt: "Sol y Gabriel en Guyana", orientation: "portrait", caption: "Guyana" },
+          { imagePath: "", alt: "Sol y Gabriel al conocerse", orientation: "portrait" },
+          { imagePath: "", alt: "Sol y Gabriel en sus primeros meses", orientation: "landscape" },
+        ],
+      },
+      {
+        title: "1er Año Nuevo juntos",
+        text: "Sentimos cositas. El cariño genuino que nos teníamos el uno al otro creció y evolucionó hasta que dejamos de ser solo amigos.",
+        photos: [
+          { imagePath: "", alt: "Primer Año Nuevo juntos", orientation: "landscape" },
+          { imagePath: "", alt: "Primer Año Nuevo juntos, otro momento", orientation: "portrait" },
+          { imagePath: "", alt: "Primer Año Nuevo juntos, celebración", orientation: "portrait" },
+        ],
+      },
+      {
+        title: "Me pidió ser su enamorada",
+        text: "Y así, entre risas y complicidad, dejamos de ser solo amigos para empezar esta historia de a dos.",
+        photos: [
+          { imagePath: "", alt: "El día que empezamos a salir", orientation: "portrait" },
+          { imagePath: "", alt: "Primeras salidas como enamorados", orientation: "landscape" },
+        ],
+      },
+      {
+        title: "Nuestra vida juntos",
+        text: "Citas, pandemia, universidad, viajes, graduación. Años construyendo una vida juntos, un día a la vez.",
+        photos: [
+          { imagePath: "", alt: "Citas", orientation: "portrait" },
+          { imagePath: "", alt: "Pandemia juntos", orientation: "landscape" },
+          { imagePath: "", alt: "Universidad", orientation: "portrait" },
+          { imagePath: "", alt: "Viajes", orientation: "landscape" },
+          { imagePath: "", alt: "Graduación", orientation: "portrait" },
+        ],
+      },
+      {
+        title: "Compromiso",
+        text: "Al tercer año me dio el anillo de promesa, prometiendo que en un par de años lo cambiaría por el de compromiso. Y después de unos años más...",
+        highlight: "¡Me dijo que sí!",
+        photos: [],
+      },
+    ],
   },
   photoCollage: {
     photos: [

@@ -25,8 +25,19 @@ export interface SiteContent {
     }>;
   };
   ourStory: {
+    eyebrow: string;
     heading: string;
-    body: string;
+    milestones: Array<{
+      title: string;
+      text: string;
+      highlight?: string;
+      photos: Array<{
+        imagePath: string;
+        alt: string;
+        orientation: "portrait" | "landscape";
+        caption?: string;
+      }>;
+    }>;
   };
   photoCollage: {
     photos: Array<{
