@@ -151,6 +151,13 @@ const es: SiteContent = {
     freeContributionLabel: "Aporte libre",
     showAllLabel: "Ver todos los regalos",
     showLessLabel: "Ver menos",
+    purchaseSuccess: "¡Gracias! Tu regalo se procesó correctamente.",
+    purchaseError: "No pudimos procesar el pago. Intenta de nuevo o usa la transferencia bancaria.",
+    addToCartLabel: "Agregar",
+    inCartLabel: "Agregado ✓",
+    checkoutLabel: "Pagar regalos",
+    cartSummaryLabel: "regalos seleccionados",
+    totalLabel: "Total:",
     products: [
       {
         imagePath: "",

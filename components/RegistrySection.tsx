@@ -8,8 +8,64 @@ type Props = { content: SiteContent["registry"] };
 
 export default function RegistrySection({ content }: Props) {
   const [expanded, setExpanded] = useState(false);
+  const [purchaseState, setPurchaseState] = useState<"idle" | "success" | "error">("idle");
+  const [cart, setCart] = useState<Set<string>>(new Set());
   const visibleProducts = expanded ? content.products : [];
   const hasMore = content.products.length > 0;
+
+  const cartItems = content.products.filter((p) => cart.has(p.name));
+  const cartTotal = cartItems.reduce((sum, p) => sum + (p.price ?? 0), 0);
+
+  function toggleCart(product: { name: string; price: number | null }) {
+    if (product.price === null) return; // free-contribution products use bank transfer instead
+    setCart((prev) => {
+      const next = new Set(prev);
+      if (next.has(product.name)) next.delete(product.name);
+      else next.add(product.name);
+      return next;
+    });
+  }
+
+  function checkoutCart() {
+    if (cartItems.length === 0) return;
+
+    window.Culqi.publicKey = process.env.NEXT_PUBLIC_CULQI_PUBLIC_KEY as string;
+    window.Culqi.settings({
+      title: content.heading,
+      currency: "PEN",
+      amount: Math.round(cartTotal * 100),
+    });
+    window.Culqi.options({ lang: "es", installments: false });
+
+    window.culqi = async () => {
+      if (window.Culqi.token) {
+        try {
+          const res = await fetch("/api/charge", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({
+              token: window.Culqi.token.id,
+              amount: Math.round(cartTotal * 100),
+              email: window.Culqi.token.email,
+              description: cartItems.map((p) => p.name).join(", "),
+            }),
+          });
+          if (res.ok) {
+            setPurchaseState("success");
+            setCart(new Set());
+          } else {
+            setPurchaseState("error");
+          }
+        } catch {
+          setPurchaseState("error");
+        }
+      } else if (window.Culqi.error) {
+        setPurchaseState("error");
+      }
+    };
+
+    window.Culqi.open();
+  }
 
   return (
     <section className="bg-[#f0f4f9] px-6 py-24" id="registry">
@@ -63,13 +119,28 @@ export default function RegistrySection({ content }: Props) {
                   <span className="text-sm font-medium text-[#5D7B9F]" style={{ fontFamily: "var(--font-body)" }}>
                     {product.price === null ? content.freeContributionLabel : `S/ ${product.price.toFixed(2)}`}
                   </span>
-                  <a
-                    href="#registry-bank-transfer"
-                    className="border border-[#5D7B9F] px-3 py-1.5 text-center text-[10px] uppercase tracking-[0.15em] text-[#5D7B9F] transition-colors hover:bg-[#5D7B9F] hover:text-white"
-                    style={{ fontFamily: "var(--font-body)" }}
-                  >
-                    {content.buyLabel}
-                  </a>
+                  {product.price === null ? (
+                    <a
+                      href="#registry-bank-transfer"
+                      className="border border-[#5D7B9F] px-3 py-1.5 text-center text-[10px] uppercase tracking-[0.15em] text-[#5D7B9F] transition-colors hover:bg-[#5D7B9F] hover:text-white"
+                      style={{ fontFamily: "var(--font-body)" }}
+                    >
+                      {content.buyLabel}
+                    </a>
+                  ) : (
+                    <button
+                      type="button"
+                      onClick={() => toggleCart(product)}
+                      className={`border px-3 py-1.5 text-center text-[10px] uppercase tracking-[0.15em] transition-colors ${
+                        cart.has(product.name)
+                          ? "border-[#5D7B9F] bg-[#5D7B9F] text-white"
+                          : "border-[#5D7B9F] text-[#5D7B9F] hover:bg-[#5D7B9F] hover:text-white"
+                      }`}
+                      style={{ fontFamily: "var(--font-body)" }}
+                    >
+                      {cart.has(product.name) ? content.inCartLabel : content.addToCartLabel}
+                    </button>
+                  )}
                 </div>
               </div>
             </div>
@@ -86,6 +157,31 @@ export default function RegistrySection({ content }: Props) {
           >
             {expanded ? content.showLessLabel : content.showAllLabel}
           </button>
+        )}
+
+        {cartItems.length > 0 && (
+          <div className="sticky bottom-4 z-10 mx-auto mt-8 flex max-w-md flex-wrap items-center justify-between gap-3 rounded-sm bg-white p-4 shadow-lg ring-1 ring-black/10">
+            <span className="text-sm text-[#2c2c2c]" style={{ fontFamily: "var(--font-body)" }}>
+              {cartItems.length} {content.cartSummaryLabel} · {content.totalLabel} S/ {cartTotal.toFixed(2)}
+            </span>
+            <button
+              type="button"
+              onClick={checkoutCart}
+              className="bg-[#5D7B9F] px-5 py-2 text-xs uppercase tracking-[0.2em] text-white transition-colors hover:bg-[#9BAED4]"
+              style={{ fontFamily: "var(--font-body)" }}
+            >
+              {content.checkoutLabel}
+            </button>
+          </div>
+        )}
+
+        {purchaseState !== "idle" && (
+          <p
+            className={`mt-8 text-sm ${purchaseState === "success" ? "text-[#5D7B9F]" : "text-red-600"}`}
+            style={{ fontFamily: "var(--font-body)" }}
+          >
+            {purchaseState === "success" ? content.purchaseSuccess : content.purchaseError}
+          </p>
         )}
 
         <div id="registry-bank-transfer" className="mx-auto mt-16 max-w-md rounded-sm bg-white p-8 text-left shadow-md ring-1 ring-black/5">

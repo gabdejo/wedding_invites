@@ -84,6 +84,13 @@ export interface SiteContent {
     freeContributionLabel: string;
     showAllLabel: string;
     showLessLabel: string;
+    purchaseSuccess: string;
+    purchaseError: string;
+    addToCartLabel: string;
+    inCartLabel: string;
+    checkoutLabel: string;
+    cartSummaryLabel: string;
+    totalLabel: string;
     products: Array<{
       imagePath: string;
       category: string;

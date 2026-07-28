@@ -148,6 +148,13 @@ const en: SiteContent = {
     freeContributionLabel: "Open contribution",
     showAllLabel: "Show all gifts",
     showLessLabel: "Show less",
+    purchaseSuccess: "Thank you! Your gift was processed successfully.",
+    purchaseError: "We couldn't process the payment. Please try again or use the bank transfer.",
+    addToCartLabel: "Add",
+    inCartLabel: "Added ✓",
+    checkoutLabel: "Pay for gifts",
+    cartSummaryLabel: "gifts selected",
+    totalLabel: "Total:",
     products: [
       {
         imagePath: "",
