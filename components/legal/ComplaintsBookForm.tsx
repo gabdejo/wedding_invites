@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { supabase } from "@/lib/supabase";
 
 const inputClass =
   "w-full border-b border-[#AEBDCF] bg-transparent py-3 text-sm text-[#2c2c2c] placeholder-[#9BAED4] outline-none transition-colors focus:border-[#5D7B9F]";
@@ -17,11 +18,25 @@ export default function ComplaintsBookForm() {
   const [detail, setDetail] = useState("");
   const [request, setRequest] = useState("");
   const [submitted, setSubmitted] = useState(false);
+  const [error, setError] = useState(false);
 
-  function handleSubmit(e: React.FormEvent) {
+  async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
-    // TODO: wire to Supabase
-    setSubmitted(true);
+    setError(false);
+    const { error } = await supabase.from("complaints").insert({
+      full_name: fullName,
+      document_id: documentId,
+      email,
+      phone,
+      address,
+      type,
+      product,
+      amount,
+      detail,
+      request,
+    });
+    if (error) setError(true);
+    else setSubmitted(true);
   }
 
   if (submitted) {
@@ -76,6 +91,12 @@ export default function ComplaintsBookForm() {
       >
         Enviar
       </button>
+
+      {error && (
+        <p className="text-center text-sm text-red-600">
+          No pudimos enviar tu {type}. Por favor intenta de nuevo.
+        </p>
+      )}
     </form>
   );
 }

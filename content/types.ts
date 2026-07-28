@@ -121,6 +121,8 @@ export interface SiteContent {
     submit: string;
     thankYou: string;
     thankYouMessage: string;
+    submitError: string;
+    guestNotFound: string;
   };
   faq: {
     heading: string;

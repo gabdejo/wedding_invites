@@ -90,6 +90,48 @@ export default function RegistrySection({ content }: Props) {
           {content.lines[1]}
         </p>
 
+        {hasMore && (
+          <button
+            type="button"
+            onClick={() => setExpanded((e) => !e)}
+            className="mb-8 border border-[#5D7B9F] px-8 py-3 text-sm uppercase tracking-[0.2em] text-[#5D7B9F] transition-colors hover:bg-[#5D7B9F] hover:text-white"
+            style={{ fontFamily: "var(--font-body)" }}
+          >
+            {expanded ? content.showLessLabel : content.showAllLabel}
+          </button>
+        )}
+
+        {cartItems.length > 0 && (
+          <div className="sticky top-4 z-10 mx-auto mb-8 flex max-w-md flex-wrap items-center justify-between gap-3 rounded-sm bg-white p-4 shadow-lg ring-1 ring-black/10">
+            <span className="text-sm text-[#2c2c2c]" style={{ fontFamily: "var(--font-body)" }}>
+              {cartItems.length} {content.cartSummaryLabel} · {content.totalLabel} S/ {cartTotal.toFixed(2)}
+            </span>
+            <button
+              type="button"
+              onClick={checkoutCart}
+              className="bg-[#5D7B9F] px-5 py-2 text-xs uppercase tracking-[0.2em] text-white transition-colors hover:bg-[#9BAED4]"
+              style={{ fontFamily: "var(--font-body)" }}
+            >
+              {content.checkoutLabel}
+            </button>
+          </div>
+        )}
+
+        <div id="registry-bank-transfer" className="mx-auto mb-16 max-w-md rounded-sm bg-white p-8 text-left shadow-md ring-1 ring-black/5">
+          <h3 className="mb-2 text-xl font-light text-[#2c2c2c]" style={{ fontFamily: "var(--font-heading)" }}>
+            {content.bankTransfer.heading}
+          </h3>
+          <p className="mb-4 text-sm leading-6 text-[#666666]" style={{ fontFamily: "var(--font-body)" }}>
+            {content.bankTransfer.note}
+          </p>
+          <ul className="space-y-1 text-sm text-[#2c2c2c]" style={{ fontFamily: "var(--font-body)" }}>
+            <li><strong>{content.bankTransfer.bank}</strong></li>
+            <li>{content.bankTransfer.accountHolder}</li>
+            <li>Cuenta: {content.bankTransfer.accountNumber}</li>
+            <li>CCI: {content.bankTransfer.cci}</li>
+          </ul>
+        </div>
+
         {expanded && (
         <div className="grid grid-cols-2 gap-4 text-left sm:grid-cols-3 lg:grid-cols-4">
           {visibleProducts.map((product) => (
@@ -148,33 +190,6 @@ export default function RegistrySection({ content }: Props) {
         </div>
         )}
 
-        {hasMore && (
-          <button
-            type="button"
-            onClick={() => setExpanded((e) => !e)}
-            className="mt-8 border border-[#5D7B9F] px-8 py-3 text-sm uppercase tracking-[0.2em] text-[#5D7B9F] transition-colors hover:bg-[#5D7B9F] hover:text-white"
-            style={{ fontFamily: "var(--font-body)" }}
-          >
-            {expanded ? content.showLessLabel : content.showAllLabel}
-          </button>
-        )}
-
-        {cartItems.length > 0 && (
-          <div className="sticky bottom-4 z-10 mx-auto mt-8 flex max-w-md flex-wrap items-center justify-between gap-3 rounded-sm bg-white p-4 shadow-lg ring-1 ring-black/10">
-            <span className="text-sm text-[#2c2c2c]" style={{ fontFamily: "var(--font-body)" }}>
-              {cartItems.length} {content.cartSummaryLabel} · {content.totalLabel} S/ {cartTotal.toFixed(2)}
-            </span>
-            <button
-              type="button"
-              onClick={checkoutCart}
-              className="bg-[#5D7B9F] px-5 py-2 text-xs uppercase tracking-[0.2em] text-white transition-colors hover:bg-[#9BAED4]"
-              style={{ fontFamily: "var(--font-body)" }}
-            >
-              {content.checkoutLabel}
-            </button>
-          </div>
-        )}
-
         {purchaseState !== "idle" && (
           <p
             className={`mt-8 text-sm ${purchaseState === "success" ? "text-[#5D7B9F]" : "text-red-600"}`}
@@ -183,21 +198,6 @@ export default function RegistrySection({ content }: Props) {
             {purchaseState === "success" ? content.purchaseSuccess : content.purchaseError}
           </p>
         )}
-
-        <div id="registry-bank-transfer" className="mx-auto mt-16 max-w-md rounded-sm bg-white p-8 text-left shadow-md ring-1 ring-black/5">
-          <h3 className="mb-2 text-xl font-light text-[#2c2c2c]" style={{ fontFamily: "var(--font-heading)" }}>
-            {content.bankTransfer.heading}
-          </h3>
-          <p className="mb-4 text-sm leading-6 text-[#666666]" style={{ fontFamily: "var(--font-body)" }}>
-            {content.bankTransfer.note}
-          </p>
-          <ul className="space-y-1 text-sm text-[#2c2c2c]" style={{ fontFamily: "var(--font-body)" }}>
-            <li><strong>{content.bankTransfer.bank}</strong></li>
-            <li>{content.bankTransfer.accountHolder}</li>
-            <li>Cuenta: {content.bankTransfer.accountNumber}</li>
-            <li>CCI: {content.bankTransfer.cci}</li>
-          </ul>
-        </div>
 
         <div className="mt-10 flex flex-wrap justify-center gap-x-6 gap-y-2 text-xs uppercase tracking-widest text-[#9a8066]">
           {content.legalLinks.map(({ label, href }) => (

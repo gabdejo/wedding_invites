@@ -227,6 +227,8 @@ const en: SiteContent = {
     submit: "Send RSVP",
     thankYou: "Thank you!",
     thankYouMessage: "We've received your RSVP. We can't wait to celebrate with you.",
+    submitError: "We couldn't submit your RSVP. Please try again.",
+    guestNotFound: "We couldn't find your name on the guest list. If you think this is a mistake, please contact us.",
   },
   faq: {
     heading: "Frequently Asked Questions",

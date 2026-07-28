@@ -230,6 +230,8 @@ const es: SiteContent = {
     submit: "Confirmar asistencia",
     thankYou: "¡Gracias!",
     thankYouMessage: "Hemos recibido tu confirmación. ¡No podemos esperar para celebrar juntos!",
+    submitError: "No pudimos enviar tu confirmación. Por favor intenta de nuevo.",
+    guestNotFound: "No encontramos tu nombre en la lista de invitados. Si crees que es un error, contáctanos.",
   },
   faq: {
     heading: "Preguntas Frecuentes",
