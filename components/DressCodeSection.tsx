@@ -26,10 +26,10 @@ export default function DressCodeSection({ content }: Props) {
 
       <div className="relative h-[45vh] w-full md:h-[55vh]">
         <Image
-          src="/images/dress_code.png"
+          src="/images/dressCode.png"
           alt=""
           fill
-          className="object-cover object-center"
+          className="object-cover object-center md:object-contain"
           sizes="100vw"
         />
       </div>

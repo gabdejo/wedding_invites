@@ -55,15 +55,31 @@ export interface SiteContent {
       imagePath: string;
     }>;
   };
-  photoCarousel: {
-    heading: string;
+  featuredPhoto: {
     photos: Array<{
       imagePath: string;
       alt: string;
-      orientation: "portrait" | "landscape";
     }>;
   };
-  photoCarousel2: {
+  featuredPhoto2: {
+    photos: Array<{
+      imagePath: string;
+      alt: string;
+    }>;
+  };
+  featuredPhoto3: {
+    photos: Array<{
+      imagePath: string;
+      alt: string;
+    }>;
+  };
+  featuredPhoto4: {
+    photos: Array<{
+      imagePath: string;
+      alt: string;
+    }>;
+  };
+  photoCarousel: {
     heading: string;
     photos: Array<{
       imagePath: string;
