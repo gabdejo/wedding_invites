@@ -79,16 +79,28 @@ export default function RegistrySection({ content }: Props) {
         <div className="mx-auto mb-6 h-px w-12 bg-[#c9a96e]" />
 
         <p
-          className="mx-auto mb-2 max-w-xl text-lg italic text-[#6b5744]"
+          className="mx-auto mb-12 max-w-xl text-lg italic text-[#6b5744]"
           style={{ fontFamily: "var(--font-heading)" }}
         >
           {content.intro}
         </p>
-        <p className="mx-auto mb-12 max-w-xl text-sm leading-7 text-[#666666]" style={{ fontFamily: "var(--font-body)" }}>
-          {content.lines[0]}
-          <br />
-          {content.lines[1]}
-        </p>
+
+        <div id="registry-bank-transfer" className="mx-auto mb-12 max-w-md text-left">
+          <p className="mb-6 text-sm leading-7 text-[#666666]" style={{ fontFamily: "var(--font-body)" }}>
+            {content.lines[0]}
+            <br />
+            {content.lines[1]}
+          </p>
+          <p className="mb-4 text-sm leading-6 text-[#666666]" style={{ fontFamily: "var(--font-body)" }}>
+            {content.bankTransfer.note}
+          </p>
+          <ul className="space-y-1 text-sm text-[#2c2c2c]" style={{ fontFamily: "var(--font-body)" }}>
+            <li><strong>{content.bankTransfer.bank}</strong></li>
+            <li>{content.bankTransfer.accountHolder}</li>
+            <li>Cuenta: {content.bankTransfer.accountNumber}</li>
+            <li>CCI: {content.bankTransfer.cci}</li>
+          </ul>
+        </div>
 
         {hasMore && (
           <button
@@ -116,21 +128,6 @@ export default function RegistrySection({ content }: Props) {
             </button>
           </div>
         )}
-
-        <div id="registry-bank-transfer" className="mx-auto mb-16 max-w-md rounded-sm bg-white p-8 text-left shadow-md ring-1 ring-black/5">
-          <h3 className="mb-2 text-xl font-light text-[#2c2c2c]" style={{ fontFamily: "var(--font-heading)" }}>
-            {content.bankTransfer.heading}
-          </h3>
-          <p className="mb-4 text-sm leading-6 text-[#666666]" style={{ fontFamily: "var(--font-body)" }}>
-            {content.bankTransfer.note}
-          </p>
-          <ul className="space-y-1 text-sm text-[#2c2c2c]" style={{ fontFamily: "var(--font-body)" }}>
-            <li><strong>{content.bankTransfer.bank}</strong></li>
-            <li>{content.bankTransfer.accountHolder}</li>
-            <li>Cuenta: {content.bankTransfer.accountNumber}</li>
-            <li>CCI: {content.bankTransfer.cci}</li>
-          </ul>
-        </div>
 
         {expanded && (
         <div className="grid grid-cols-2 gap-4 text-left sm:grid-cols-3 lg:grid-cols-4">
@@ -199,13 +196,15 @@ export default function RegistrySection({ content }: Props) {
           </p>
         )}
 
-        <div className="mt-10 flex flex-wrap justify-center gap-x-6 gap-y-2 text-xs uppercase tracking-widest text-[#9a8066]">
-          {content.legalLinks.map(({ label, href }) => (
-            <a key={href} href={href} className="underline-offset-4 hover:underline" style={{ fontFamily: "var(--font-body)" }}>
-              {label}
-            </a>
-          ))}
-        </div>
+        {expanded && (
+          <div className="mt-10 flex flex-wrap justify-center gap-x-6 gap-y-2 text-xs uppercase tracking-widest text-[#9a8066]">
+            {content.legalLinks.map(({ label, href }) => (
+              <a key={href} href={href} target="_blank" rel="noopener noreferrer" className="underline-offset-4 hover:underline" style={{ fontFamily: "var(--font-body)" }}>
+                {label}
+              </a>
+            ))}
+          </div>
+        )}
       </div>
     </section>
   );

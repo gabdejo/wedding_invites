@@ -162,25 +162,25 @@ const es: SiteContent = {
     totalLabel: "Total:",
     products: [
       {
-        imagePath: "",
+        imagePath: "/images/luna_miel.jpg",
         category: "luna de miel",
-        name: "Aporte libre - luna de miel",
+        name: "Aporte libre - Luna de miel",
         description: "Un aporte libre para nuestra luna de miel y los primeros recuerdos de esta nueva etapa.",
         price: null,
       },
       {
         imagePath: "",
-        category: "cocina",
-        name: "Set de copas de vino",
-        description: "Copas de vino para nuestra mesa y futuras cenas juntos.",
-        price: 200,
+        category: "estudios",
+        name: "Aporte libre - Maestrías",
+        description: "Un aporte libre que nos acercará a nuestas maestrías soñadas y a seguir creciendo juntos.",
+        price: null,
       },
       {
-        imagePath: "",
+        imagePath: "/images/moje_mis_sabanas_blancas.webp",
         category: "hogar",
-        name: "Cuadro decorativo",
-        description: "Set decorativo para enmarcar fotos especiales y llenar nuestro hogar de recuerdos.",
-        price: 350,
+        name: "Juego de sábanas de algódon",
+        description: "Juego de sábanas para hacer más cómodo nuestro descanso.",
+        price: 450,
       },
       {
         imagePath: "",
@@ -271,11 +271,11 @@ const es: SiteContent = {
   },
   merchant: {
     tradeName: "Mesa de Regalos Sol y Gabriel",
-    legalName: "[Razón social pendiente]",
-    taxId: "[RUC pendiente]",
-    phone: "+34 600 000 000",
+    legalName: "Gabriel Fernando Dejo Seminario",
+    taxId: "10729321767",
+    phone: "948427924",
     email: "gabrieldejos@gmail.com",
-    address: "[Dirección pendiente], Lima, Perú",
+    address: "Calle aragón 119, Lima, Perú",
   },
 };
 
