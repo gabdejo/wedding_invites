@@ -1,0 +1,14 @@
+- [x] https://www.falabella.com.pe/falabella-pe/product/155616696/set-de-bar-25-piezas-coctelera-profesional-acero-inoxidable/155616697
+- [x] https://www.falabella.com.pe/falabella-pe/product/881530831/hielera-acero-inoxidable/881530831
+- [x] https://www.falabella.com.pe/falabella-pe/product/prod17701058/cubrecama-javiera-100-algodon-roberta-allen/883022272
+- [x] https://simple.ripley.com.pe/edredon-juego-de-sabanas-queen-size-algodon-color-hueso-pmp20000354016
+- [x] https://www.falabella.com.pe/falabella-pe/product/136606159/Freidora-de-Aire-Oster-CKSTAF75WDSSDF-7.5-L/136606160
+- [x] https://www.falabella.com.pe/falabella-pe/product/150621362/parlante-bluetooth-bose-soundlink-revolve-ii-negro/150621363
+- [x] https://www.falabella.com.pe/falabella-pe/product/883662050/puf-curly-beige-41x37x42cm/883662050
+- [x] https://www.falabella.com.pe/falabella-pe/product/881126680/juego-de-cubiertos-45-piezas-bride/881126680
+- [x] https://www.falabella.com.pe/falabella-pe/product/881743034/juego-de-vajilla-porcelana-30-piezas-blanca-puntos/881743034
+- [x] https://www.falabella.com.pe/falabella-pe/product/140826036/Mueble-Bar-Moderno-Con-Ratan-Husnia-Amore-Home/140826037
+- [x] https://www.falabella.com.pe/falabella-pe/product/121417084/Mesa-de-Centro-Manila-de-Melamine-Ventitas-Home-Color-Chocolate/121417085
+- [x] https://www.falabella.com.pe/falabella-pe/product/883661717/difusor-aromatico-ceramica-17x10cm/883661717
+- [x] https://record.com.pe/products/olla-gourmet-rojo-aluminio-fundido-ceramico-n24
+- [x] https://www.kitchenaid.pe/batidora-artisan-plus-4-7-l-sun-dried-tomato/p
