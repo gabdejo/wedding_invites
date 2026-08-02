@@ -98,6 +98,7 @@ export interface SiteContent {
     lines: string[];
     buyLabel: string;
     freeContributionLabel: string;
+    customAmountPrompt: string;
     showAllLabel: string;
     showLessLabel: string;
     purchaseSuccess: string;
@@ -107,6 +108,15 @@ export interface SiteContent {
     checkoutLabel: string;
     cartSummaryLabel: string;
     totalLabel: string;
+    cartDrawerHeading: string;
+    securePaymentHeading: string;
+    securePaymentNote: string;
+    buyerNamePlaceholder: string;
+    buyerEmailPlaceholder: string;
+    buyerPhonePlaceholder: string;
+    dedicationPlaceholder: string;
+    goToPayLabel: string;
+    removeLabel: string;
     products: Array<{
       imagePath: string;
       category: string;

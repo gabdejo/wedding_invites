@@ -151,6 +151,7 @@ const es: SiteContent = {
     ],
     buyLabel: "Elegir regalo",
     freeContributionLabel: "Aporte libre",
+    customAmountPrompt: "Monto en S/",
     showAllLabel: "Ver todos los regalos",
     showLessLabel: "Ver menos",
     purchaseSuccess: "¡Gracias! Tu regalo se procesó correctamente.",
@@ -160,6 +161,15 @@ const es: SiteContent = {
     checkoutLabel: "Pagar regalos",
     cartSummaryLabel: "regalos seleccionados",
     totalLabel: "Total:",
+    cartDrawerHeading: "Carrito",
+    securePaymentHeading: "Pago seguro con Culqi",
+    securePaymentNote: "Al continuar, se habilitará una ventana segura de Culqi para completar el pago. Los datos de tu tarjeta están protegidos y no pasan por esta web.",
+    buyerNamePlaceholder: "Nombre del comprador",
+    buyerEmailPlaceholder: "Correo",
+    buyerPhonePlaceholder: "Teléfono",
+    dedicationPlaceholder: "Dedicatoria (opcional)",
+    goToPayLabel: "Ir a pagar",
+    removeLabel: "Quitar",
     products: [
       {
         imagePath: "/images/luna_miel.jpg",
@@ -366,7 +376,7 @@ const es: SiteContent = {
     taxId: "10729321767",
     phone: "948427924",
     email: "gabrieldejos@gmail.com",
-    address: "Calle aragón 119, Lima, Perú",
+    address: "Jirón Aragón 119, Lima, Perú",
   },
 };
 

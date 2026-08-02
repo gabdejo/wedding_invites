@@ -150,6 +150,7 @@ const en: SiteContent = {
     ],
     buyLabel: "Choose gift",
     freeContributionLabel: "Open contribution",
+    customAmountPrompt: "Amount in S/",
     showAllLabel: "Show all gifts",
     showLessLabel: "Show less",
     purchaseSuccess: "Thank you! Your gift was processed successfully.",
@@ -159,6 +160,15 @@ const en: SiteContent = {
     checkoutLabel: "Pay for gifts",
     cartSummaryLabel: "gifts selected",
     totalLabel: "Total:",
+    cartDrawerHeading: "Cart",
+    securePaymentHeading: "Secure payment with Culqi",
+    securePaymentNote: "When you continue, a secure Culqi window will open to complete the payment. Your card details are protected and never pass through this site.",
+    buyerNamePlaceholder: "Buyer's name",
+    buyerEmailPlaceholder: "Email",
+    buyerPhonePlaceholder: "Phone",
+    dedicationPlaceholder: "Message (optional)",
+    goToPayLabel: "Go to payment",
+    removeLabel: "Remove",
     products: [
       {
         imagePath: "",
