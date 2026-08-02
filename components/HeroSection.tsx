@@ -4,7 +4,7 @@ type Props = { content: SiteContent["hero"] };
 
 export default function HeroSection({ content }: Props) {
   return (
-    <section className="relative flex min-h-screen flex-col items-center justify-center overflow-hidden px-6 text-center bg-neutral-900">
+    <section id="hero" className="relative flex min-h-screen flex-col items-center justify-center overflow-hidden px-6 text-center bg-neutral-900">
       <video
         className="absolute inset-0 h-full w-full object-cover md:hidden"
         src="/videos/hero.mp4"

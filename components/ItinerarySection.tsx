@@ -43,7 +43,7 @@ export default function ItinerarySection({ content }: Props) {
 
                 <div
                   className={`absolute w-[clamp(96px,29vw,160px)] -translate-y-1/2 ${
-                    flip ? "right-[70%] mr-1 text-right" : "left-[70%] ml-1 text-left"
+                    flip ? "right-[70%] mr-3 text-right" : "left-[70%] ml-3 text-left"
                   }`}
                 >
                   <p

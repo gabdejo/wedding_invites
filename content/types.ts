@@ -1,4 +1,8 @@
 export interface SiteContent {
+  nav: {
+    heading: string;
+    items: Array<{ id: string; label: string }>;
+  };
   hero: {
     scroll: string;
   };

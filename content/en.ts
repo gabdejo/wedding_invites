@@ -1,6 +1,20 @@
 import type { SiteContent } from "./types";
 
 const en: SiteContent = {
+  nav: {
+    heading: "Menu",
+    items: [
+      { id: "hero", label: "Home" },
+      { id: "countdown", label: "Countdown" },
+      { id: "our-story", label: "Our Story" },
+      { id: "itinerary", label: "Itinerary" },
+      { id: "info", label: "Locations" },
+      { id: "dresscode", label: "Dress Code" },
+      { id: "registry", label: "Registry" },
+      { id: "rsvp", label: "RSVP" },
+      { id: "faq", label: "FAQ" },
+    ],
+  },
   hero: {
     scroll: "Scroll",
   },

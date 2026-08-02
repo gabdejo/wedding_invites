@@ -1,6 +1,20 @@
 import type { SiteContent } from "./types";
 
 const es: SiteContent = {
+  nav: {
+    heading: "Menú",
+    items: [
+      { id: "hero", label: "Inicio" },
+      { id: "countdown", label: "Cuenta regresiva" },
+      { id: "our-story", label: "Nuestra historia" },
+      { id: "itinerary", label: "Itinerario" },
+      { id: "info", label: "Ubicaciones" },
+      { id: "dresscode", label: "Código de vestimenta" },
+      { id: "registry", label: "Mesa de regalos" },
+      { id: "rsvp", label: "Confirmar asistencia" },
+      { id: "faq", label: "Preguntas frecuentes" },
+    ],
+  },
   hero: {
     scroll: "Ver más",
   },
@@ -112,10 +126,10 @@ const es: SiteContent = {
   itinerary: {
     heading: "Itinerario",
     items: [
-      { time: "12:00 M", name: "Misa", imagePath: "" },
-      { time: "3:00 PM", name: "Recepción", imagePath: "" },
-      { time: "5:30 PM", name: "Cena", imagePath: "" },
-      { time: "6:30 PM", name: "Fiesta", imagePath: "" },
+      { time: "12:00 M", name: "Misa", imagePath: "/images/dib_misa.png" },
+      { time: "3:00 PM", name: "Recepción", imagePath: "/images/dib_recepcion.png" },
+      { time: "5:30 PM", name: "Cena", imagePath: "/images/dib_cena.png" },
+      { time: "6:30 PM", name: "Fiesta", imagePath: "/images/dib_fiesta.png" },
     ],
   },
   featuredPhoto: {

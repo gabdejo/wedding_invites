@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Cormorant_Garamond, Inter } from "next/font/google";
 import Script from "next/script";
+import MusicPlayer from "@/components/MusicPlayer";
 import "./globals.css";
 
 const cormorant = Cormorant_Garamond({
@@ -28,6 +29,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         style={{ fontFamily: "var(--font-body)" }}
       >
         {children}
+        <MusicPlayer />
         <Script src="https://checkout.culqi.com/js/v4" strategy="lazyOnload" />
       </body>
     </html>

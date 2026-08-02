@@ -10,11 +10,13 @@ import RegistrySection from "@/components/RegistrySection";
 import RsvpSection from "@/components/RsvpSection";
 import FaqSection from "@/components/FaqSection";
 import ContactSection from "@/components/ContactSection";
+import SectionNav from "@/components/SectionNav";
 import en from "@/content/en";
 
 export default function EnglishHome() {
   return (
     <main>
+      <SectionNav content={en.nav} />
       <HeroSection content={en.hero} />
       <CountdownSection content={en.countdown} />
       <OurStorySection content={en.ourStory} />
