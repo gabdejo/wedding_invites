@@ -362,7 +362,7 @@ const es: SiteContent = {
   },
   merchant: {
     tradeName: "Mesa de Regalos Sol y Gabriel",
-    legalName: "Gabriel Fernando Dejo Seminario",
+    legalName: "DEJO SEMINARIO GABRIEL FERNANDO",
     taxId: "10729321767",
     phone: "948427924",
     email: "gabrieldejos@gmail.com",
