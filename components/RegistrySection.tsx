@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Image from "next/image";
+import { supabase } from "@/lib/supabase";
 import type { SiteContent } from "@/content/types";
 
 type Props = { content: SiteContent["registry"] };
@@ -86,6 +87,14 @@ export default function RegistrySection({ content }: Props) {
             }),
           });
           if (res.ok) {
+            await supabase.from("gifts").insert({
+              buyer_name: buyerName,
+              buyer_email: buyerEmail,
+              buyer_phone: buyerPhone || null,
+              dedication: dedication || null,
+              items: cartItems.map((p) => p.name).join(", "),
+              amount: cartTotal,
+            });
             setPurchaseState("success");
             setCart(new Map());
             setCartOpen(false);

@@ -69,3 +69,24 @@ grant execute on function search_guests(text) to anon;
 
 -- Link each RSVP to the guest-list entry it matched
 alter table rsvps add column guest_id uuid references guests(id);
+
+-- Gift purchases (components/RegistrySection.tsx). buyer_name is free text —
+-- match it against guests.full_name later with a fuzzy join (e.g. pg_trgm)
+-- rather than linking guest_id at insert time.
+create table gifts (
+  id uuid primary key default gen_random_uuid(),
+  buyer_name text not null,
+  buyer_email text not null,
+  buyer_phone text,
+  dedication text,
+  items text not null,
+  amount numeric not null,
+  created_at timestamptz not null default now()
+);
+
+alter table gifts enable row level security;
+
+create policy "anon can insert gifts"
+  on gifts for insert
+  to anon
+  with check (true);
