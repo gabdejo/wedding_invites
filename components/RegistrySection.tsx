@@ -269,15 +269,14 @@ export default function RegistrySection({ content }: Props) {
           </p>
         )}
 
-        {expanded && (
-          <div className="mt-10 flex flex-wrap justify-center gap-x-6 gap-y-2 text-xs uppercase tracking-widest text-[#9a8066]">
-            {content.legalLinks.map(({ label, href }) => (
-              <a key={href} href={href} target="_blank" rel="noopener noreferrer" className="underline-offset-4 hover:underline" style={{ fontFamily: "var(--font-body)" }}>
-                {label}
-              </a>
-            ))}
-          </div>
-        )}
+        {/* Legal links: always visible. To gate behind "gift list expanded" again, wrap this div in {expanded && ( ... )}. */}
+        <div className="mt-10 flex flex-wrap justify-center gap-x-6 gap-y-2 text-xs uppercase tracking-widest text-[#9a8066]">
+          {content.legalLinks.map(({ label, href }) => (
+            <a key={href} href={href} target="_blank" rel="noopener noreferrer" className="underline-offset-4 hover:underline" style={{ fontFamily: "var(--font-body)" }}>
+              {label}
+            </a>
+          ))}
+        </div>
       </div>
 
       {cartOpen && (
