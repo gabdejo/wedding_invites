@@ -13,6 +13,7 @@ const inputClass =
 export default function RegistrySection({ content }: Props) {
   const [expanded, setExpanded] = useState(false);
   const [purchaseState, setPurchaseState] = useState<"idle" | "success" | "error">("idle");
+  const [showToast, setShowToast] = useState(false);
   const [cart, setCart] = useState<Map<string, number>>(new Map());
   const [amountEditing, setAmountEditing] = useState<string | null>(null);
   const [amountDraft, setAmountDraft] = useState("");
@@ -74,6 +75,7 @@ export default function RegistrySection({ content }: Props) {
     window.Culqi.options({ lang: "es", installments: false });
 
     window.culqi = async () => {
+      window.Culqi.close();
       if (window.Culqi.token) {
         try {
           const res = await fetch("/api/charge", {
@@ -96,8 +98,12 @@ export default function RegistrySection({ content }: Props) {
               amount: cartTotal,
             });
             setPurchaseState("success");
+            setShowToast(true);
+            setTimeout(() => setShowToast(false), 6000);
             setCart(new Map());
             setCartOpen(false);
+            setExpanded(false);
+            document.getElementById("registry")?.scrollIntoView({ block: "start" });
             setBuyerName("");
             setBuyerEmail("");
             setBuyerPhone("");
@@ -118,9 +124,29 @@ export default function RegistrySection({ content }: Props) {
 
   return (
     <section className="bg-[#f0f4f9] px-6 py-24" id="registry">
+      {showToast && (
+        <div className="fixed inset-x-4 top-4 z-[60] flex justify-center sm:inset-x-auto sm:right-4 sm:justify-end">
+          <div
+            role="status"
+            className="flex items-center gap-3 rounded-sm bg-[#5D7B9F] px-5 py-3 text-sm text-white shadow-lg"
+            style={{ fontFamily: "var(--font-body)", animation: "toast-in 0.3s ease-out" }}
+          >
+            <span>{content.purchaseSuccess}</span>
+            <button
+              type="button"
+              onClick={() => setShowToast(false)}
+              aria-label="Close"
+              className="text-white/80 transition-colors hover:text-white"
+            >
+              ×
+            </button>
+          </div>
+        </div>
+      )}
+
       <div className="mx-auto max-w-5xl text-center">
         <h2
-          className="mb-4 text-4xl font-light text-[#2c2c2c]"
+          className="mb-4 text-4xl font-medium text-[#2c2c2c]"
           style={{ fontFamily: "var(--font-heading)" }}
         >
           {content.heading}
@@ -155,7 +181,7 @@ export default function RegistrySection({ content }: Props) {
           <button
             type="button"
             onClick={() => setExpanded((e) => !e)}
-            className="mb-8 border border-[#5D7B9F] px-8 py-3 text-sm uppercase tracking-[0.2em] text-[#5D7B9F] transition-colors hover:bg-[#5D7B9F] hover:text-white"
+            className="mb-8 border border-[#5D7B9F] px-8 py-3 text-sm font-medium uppercase tracking-[0.2em] text-[#5D7B9F] transition-colors hover:bg-[#5D7B9F] hover:text-white"
             style={{ fontFamily: "var(--font-body)" }}
           >
             {expanded ? content.showLessLabel : content.showAllLabel}
@@ -170,7 +196,7 @@ export default function RegistrySection({ content }: Props) {
             <button
               type="button"
               onClick={() => setCartOpen(true)}
-              className="bg-[#5D7B9F] px-5 py-2 text-xs uppercase tracking-[0.2em] text-white transition-colors hover:bg-[#9BAED4]"
+              className="bg-[#5D7B9F] px-5 py-2 text-xs font-medium uppercase tracking-[0.2em] text-white transition-colors hover:bg-[#9BAED4]"
               style={{ fontFamily: "var(--font-body)" }}
             >
               {content.checkoutLabel}
@@ -189,13 +215,13 @@ export default function RegistrySection({ content }: Props) {
               </div>
               <div className="flex flex-1 flex-col p-3">
                 <span
-                  className="mb-1 text-[10px] uppercase tracking-widest text-[#9BAED4]"
+                  className="mb-1 text-[10px] font-medium uppercase tracking-widest text-[#9BAED4]"
                   style={{ fontFamily: "var(--font-body)" }}
                 >
                   {product.category}
                 </span>
                 <h3
-                  className="mb-1 text-base font-light text-[#2c2c2c]"
+                  className="mb-1 text-base font-medium text-[#2c2c2c]"
                   style={{ fontFamily: "var(--font-heading)" }}
                 >
                   {product.name}
@@ -229,7 +255,7 @@ export default function RegistrySection({ content }: Props) {
                       />
                       <button
                         type="submit"
-                        className="border border-[#5D7B9F] bg-[#5D7B9F] px-2 py-1.5 text-[10px] uppercase text-white"
+                        className="border border-[#5D7B9F] bg-[#5D7B9F] px-2 py-1.5 text-[10px] font-medium uppercase text-white"
                         style={{ fontFamily: "var(--font-body)" }}
                       >
                         {content.addToCartLabel}
@@ -239,7 +265,7 @@ export default function RegistrySection({ content }: Props) {
                     <button
                       type="button"
                       onClick={() => toggleCart(product)}
-                      className={`border px-3 py-1.5 text-center text-[10px] uppercase tracking-[0.15em] transition-colors ${
+                      className={`border px-3 py-1.5 text-center text-[10px] font-medium uppercase tracking-[0.15em] transition-colors ${
                         cart.has(product.name)
                           ? "border-[#5D7B9F] bg-[#5D7B9F] text-white"
                           : "border-[#5D7B9F] text-[#5D7B9F] hover:bg-[#5D7B9F] hover:text-white"
@@ -269,14 +295,16 @@ export default function RegistrySection({ content }: Props) {
           </p>
         )}
 
-        {/* Legal links: always visible. To gate behind "gift list expanded" again, wrap this div in {expanded && ( ... )}. */}
-        <div className="mt-10 flex flex-wrap justify-center gap-x-6 gap-y-2 text-xs uppercase tracking-widest text-[#9a8066]">
-          {content.legalLinks.map(({ label, href }) => (
-            <a key={href} href={href} target="_blank" rel="noopener noreferrer" className="underline-offset-4 hover:underline" style={{ fontFamily: "var(--font-body)" }}>
-              {label}
-            </a>
-          ))}
-        </div>
+        {/* Legal links: gated behind "gift list expanded". To make always visible again, remove the {expanded && ( ... )} wrap. */}
+        {expanded && (
+          <div className="mt-10 flex flex-wrap justify-center gap-x-6 gap-y-2 text-xs font-medium uppercase tracking-widest text-[#9a8066]">
+            {content.legalLinks.map(({ label, href }) => (
+              <a key={href} href={href} target="_blank" rel="noopener noreferrer" className="underline-offset-4 hover:underline" style={{ fontFamily: "var(--font-body)" }}>
+                {label}
+              </a>
+            ))}
+          </div>
+        )}
       </div>
 
       {cartOpen && (
@@ -285,10 +313,10 @@ export default function RegistrySection({ content }: Props) {
           <div className="relative flex h-full w-full flex-col overflow-y-auto bg-[#faf8f4] p-6 sm:w-[420px] sm:max-w-full">
             <div className="mb-6 flex items-start justify-between">
               <div>
-                <p className="text-xs uppercase tracking-[0.2em] text-[#9a8066]" style={{ fontFamily: "var(--font-body)" }}>
+                <p className="text-xs font-medium uppercase tracking-[0.2em] text-[#9a8066]" style={{ fontFamily: "var(--font-body)" }}>
                   {content.heading}
                 </p>
-                <h3 className="text-3xl font-light text-[#2c2c2c]" style={{ fontFamily: "var(--font-heading)" }}>
+                <h3 className="text-3xl font-medium text-[#2c2c2c]" style={{ fontFamily: "var(--font-heading)" }}>
                   {content.cartDrawerHeading}
                 </h3>
               </div>
@@ -350,7 +378,7 @@ export default function RegistrySection({ content }: Props) {
               <button
                 type="submit"
                 disabled={!buyerName.trim() || !buyerEmail.trim()}
-                className="mt-2 bg-[#5D7B9F] py-4 text-sm uppercase tracking-[0.3em] text-white transition-colors hover:bg-[#9BAED4] disabled:cursor-not-allowed disabled:opacity-40"
+                className="mt-2 bg-[#5D7B9F] py-4 text-sm font-semibold uppercase tracking-[0.3em] text-white transition-colors hover:bg-[#9BAED4] disabled:cursor-not-allowed disabled:opacity-40"
                 style={{ fontFamily: "var(--font-body)" }}
               >
                 {content.goToPayLabel}

@@ -12,7 +12,7 @@ export default function FaqSection({ content }: Props) {
     <section className="bg-[#faf8f4] px-6 py-24" id="faq">
       <div className="mx-auto max-w-xl text-center">
         <h2
-          className="mb-4 text-4xl font-light text-[#2c2c2c]"
+          className="mb-4 text-4xl font-medium text-[#2c2c2c]"
           style={{ fontFamily: "var(--font-heading)" }}
         >
           {content.heading}

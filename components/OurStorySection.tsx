@@ -4,6 +4,7 @@ import { useState } from "react";
 import Image from "next/image";
 import type { SiteContent } from "@/content/types";
 import Reveal from "@/components/Reveal";
+import ReadInText from "@/components/ReadInText";
 
 type Props = { content: SiteContent["ourStory"] };
 type Photo = SiteContent["ourStory"]["milestones"][number]["photos"][number];
@@ -96,13 +97,19 @@ export default function OurStorySection({ content }: Props) {
     <section className="overflow-x-clip bg-[#faf8f4] px-6 pt-20 pb-24" id="our-story">
       <Reveal className="mx-auto mb-20 max-w-xl text-center sm:mb-28">
         <p
-          className="mb-3 text-sm uppercase tracking-widest text-[#9a8066] sm:text-base"
+          className="mb-3 text-sm font-medium uppercase tracking-widest sm:text-base"
           style={{ fontFamily: "var(--font-body)" }}
         >
-          {content.eyebrow}
+          <ReadInText
+            text={content.eyebrow}
+            color="#9a8066"
+            lightColor="#e3d9c8"
+            staggerMs={150}
+            durationMs={1500}
+          />
         </p>
         <h2
-          className="text-4xl font-light italic text-[#2c2c2c] sm:text-5xl"
+          className="text-4xl font-medium italic text-[#2c2c2c] sm:text-5xl"
           style={{ fontFamily: "var(--font-heading)" }}
         >
           {content.heading}
@@ -124,6 +131,7 @@ export default function OurStorySection({ content }: Props) {
               }`}
             >
               <Reveal
+                durationMs={2500}
                 className={`mx-auto max-w-sm text-center md:max-w-none ${
                   !hasPhotos
                     ? "md:mx-auto md:text-center"
@@ -131,7 +139,7 @@ export default function OurStorySection({ content }: Props) {
                 }`}
               >
                 <h3
-                  className="mb-3 text-2xl font-light italic text-[#2c2c2c] sm:text-3xl"
+                  className="mb-3 text-2xl font-medium italic text-[#2c2c2c] sm:text-3xl"
                   style={{ fontFamily: "var(--font-heading)" }}
                 >
                   {milestone.title}
@@ -144,7 +152,7 @@ export default function OurStorySection({ content }: Props) {
                 </p>
                 {milestone.highlight && (
                   <p
-                    className="mt-4 text-3xl font-light italic text-[#c9a96e] sm:text-4xl"
+                    className="mt-4 text-3xl font-normal italic text-[#c9a96e] sm:text-4xl"
                     style={{ fontFamily: "var(--font-heading)" }}
                   >
                     {milestone.highlight}
@@ -154,6 +162,7 @@ export default function OurStorySection({ content }: Props) {
 
               {hasPhotos && (
                 <Reveal
+                  durationMs={2500}
                   className={`relative mx-auto mt-10 w-full max-w-sm md:mx-0 md:mt-0 md:max-w-none ${
                     CLUSTER_HEIGHTS[milestone.photos.length] ?? CLUSTER_HEIGHTS[3]
                   } ${textOnRight ? "md:order-1" : "md:order-2"}`}

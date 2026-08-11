@@ -58,7 +58,7 @@ export default function SectionNav({ content }: Props) {
           >
             <div className="mb-8 flex items-start justify-between">
               <div>
-                <h3 className="text-3xl font-light text-[#2c2c2c]" style={{ fontFamily: "var(--font-heading)" }}>
+                <h3 className="text-3xl font-medium text-[#2c2c2c]" style={{ fontFamily: "var(--font-heading)" }}>
                   {content.heading}
                 </h3>
                 <div className="mt-3 h-px w-12 bg-[#c9a96e]" />
@@ -79,7 +79,7 @@ export default function SectionNav({ content }: Props) {
                   key={item.id}
                   type="button"
                   onClick={() => goTo(item.id)}
-                  className="border-b border-[#e5ddd0] py-3 text-left text-sm uppercase tracking-[0.15em] text-[#2c2c2c] transition-colors hover:text-[#5D7B9F]"
+                  className="border-b border-[#e5ddd0] py-3 text-left text-sm font-medium uppercase tracking-[0.15em] text-[#2c2c2c] transition-colors hover:text-[#5D7B9F]"
                   style={{ fontFamily: "var(--font-body)" }}
                 >
                   {item.label}

@@ -2,9 +2,9 @@
 
 import { useEffect, useRef, useState } from "react";
 
-type Props = { children: React.ReactNode; className?: string };
+type Props = { children: React.ReactNode; className?: string; durationMs?: number };
 
-export default function Reveal({ children, className = "" }: Props) {
+export default function Reveal({ children, className = "", durationMs = 700 }: Props) {
   const ref = useRef<HTMLDivElement>(null);
   const [visible, setVisible] = useState(false);
 
@@ -27,7 +27,8 @@ export default function Reveal({ children, className = "" }: Props) {
   return (
     <div
       ref={ref}
-      className={`transition-all duration-700 ease-out motion-reduce:transition-none motion-reduce:!opacity-100 motion-reduce:!translate-y-0 ${
+      style={{ transitionDuration: `${durationMs}ms` }}
+      className={`transition-all ease-out motion-reduce:transition-none motion-reduce:!opacity-100 motion-reduce:!translate-y-0 ${
         visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
       } ${className}`}
     >

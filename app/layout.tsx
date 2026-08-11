@@ -1,19 +1,20 @@
 import type { Metadata } from "next";
-import { Cormorant_Garamond, Inter } from "next/font/google";
+import { Libre_Bodoni, Manrope } from "next/font/google";
 import Script from "next/script";
 import MusicPlayer from "@/components/MusicPlayer";
 import "./globals.css";
 
-const cormorant = Cormorant_Garamond({
+const libreBodoni = Libre_Bodoni({
   variable: "--font-heading",
   subsets: ["latin"],
-  weight: ["300", "400", "500", "600"],
+  weight: ["400", "500", "600"],
   style: ["normal", "italic"],
 });
 
-const inter = Inter({
+const manrope = Manrope({
   variable: "--font-body",
   subsets: ["latin"],
+  weight: ["400", "500", "600"],
 });
 
 export const metadata: Metadata = {
@@ -23,7 +24,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="es" className={`${cormorant.variable} ${inter.variable}`}>
+    <html lang="es" className={`${libreBodoni.variable} ${manrope.variable}`}>
       <body
         className="bg-[#faf8f4] text-[#2c2c2c]"
         style={{ fontFamily: "var(--font-body)" }}

@@ -66,7 +66,7 @@ export default function RsvpSection({ content }: Props) {
       <section className="bg-[#e8eff7] px-6 py-24 text-center" id="rsvp">
         <div className="mx-auto max-w-md">
           <h2
-            className="mb-4 text-4xl font-light text-[#2c2c2c]"
+            className="mb-4 text-4xl font-medium text-[#2c2c2c]"
             style={{ fontFamily: "var(--font-heading)" }}
           >
             {content.thankYou}
@@ -145,7 +145,7 @@ export default function RsvpSection({ content }: Props) {
 
               <div>
                 <p
-                  className="mb-3 text-xs uppercase tracking-[0.2em] text-[#7A96B0]"
+                  className="mb-3 text-xs font-medium uppercase tracking-[0.2em] text-[#7A96B0]"
                   style={{ fontFamily: "var(--font-body)" }}
                 >
                   {content.willYouAttend}
@@ -161,7 +161,7 @@ export default function RsvpSection({ content }: Props) {
                       key={label}
                       type="button"
                       onClick={() => setAttending(value)}
-                      className={`flex-1 border py-3 text-xs uppercase tracking-[0.15em] transition-colors ${
+                      className={`flex-1 border py-3 text-xs font-medium uppercase tracking-[0.15em] transition-colors ${
                         attending === value
                           ? "border-[#9BAED4] bg-[#9BAED4] text-white"
                           : "border-[#AEBDCF] text-[#666666] hover:border-[#9BAED4] hover:text-[#9BAED4]"
@@ -177,7 +177,7 @@ export default function RsvpSection({ content }: Props) {
               {attending === true && selectedGuest.max_guests > 1 && (
                 <div>
                   <p
-                    className="mb-3 text-xs uppercase tracking-[0.2em] text-[#7A96B0]"
+                    className="mb-3 text-xs font-medium uppercase tracking-[0.2em] text-[#7A96B0]"
                     style={{ fontFamily: "var(--font-body)" }}
                   >
                     {content.numberOfGuests}
@@ -219,7 +219,7 @@ export default function RsvpSection({ content }: Props) {
               <button
                 type="submit"
                 disabled={attending === null}
-                className="mt-2 bg-[#5D7B9F] py-4 text-sm uppercase tracking-[0.3em] text-white transition-colors hover:bg-[#9BAED4] disabled:cursor-not-allowed disabled:opacity-40"
+                className="mt-2 bg-[#5D7B9F] py-4 text-sm font-semibold uppercase tracking-[0.3em] text-white transition-colors hover:bg-[#9BAED4] disabled:cursor-not-allowed disabled:opacity-40"
                 style={{ fontFamily: "var(--font-body)" }}
               >
                 {content.submit}

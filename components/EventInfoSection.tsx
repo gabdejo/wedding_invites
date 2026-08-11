@@ -12,7 +12,7 @@ export default function EventInfoSection({ content }: Props) {
     <section className="bg-[#f0f4f9] px-6 py-24" id="info">
       <div className="mx-auto max-w-3xl text-center">
         <h2
-          className="mb-4 text-4xl font-light text-[#2c2c2c]"
+          className="mb-4 text-4xl font-medium text-[#2c2c2c]"
           style={{ fontFamily: "var(--font-heading)" }}
         >
           {content.heading}
@@ -77,13 +77,13 @@ function FlipCard({
           </div>
           <div className="flex flex-col items-center gap-1.5 px-5 py-5">
             <p
-              className="text-2xl font-light text-[#2c2c2c]"
+              className="text-2xl font-medium text-[#2c2c2c]"
               style={{ fontFamily: "var(--font-heading)" }}
             >
               {event.name}
             </p>
             <span
-              className="flex items-center gap-1 text-xs uppercase tracking-widest text-[#9BAED4]"
+              className="flex items-center gap-1 text-xs font-medium uppercase tracking-widest text-[#9BAED4]"
               style={{ fontFamily: "var(--font-body)" }}
             >
               {flipLabel} <span aria-hidden>›</span>
@@ -100,7 +100,7 @@ function FlipCard({
           }}
         >
           <p
-            className="text-4xl font-light text-[#2c2c2c]"
+            className="text-4xl font-medium text-[#2c2c2c]"
             style={{ fontFamily: "var(--font-heading)" }}
           >
             {event.name}
@@ -125,7 +125,7 @@ function FlipCard({
               target="_blank"
               rel="noopener noreferrer"
               onClick={(e) => e.stopPropagation()}
-              className="mt-auto rounded-full border border-[#5D7B9F] px-6 py-2.5 text-xs uppercase tracking-widest text-[#5D7B9F] transition-colors hover:bg-[#5D7B9F] hover:text-white"
+              className="mt-auto rounded-full border border-[#5D7B9F] px-6 py-2.5 text-xs font-medium uppercase tracking-widest text-[#5D7B9F] transition-colors hover:bg-[#5D7B9F] hover:text-white"
               style={{ fontFamily: "var(--font-body)" }}
             >
               {openInMaps}

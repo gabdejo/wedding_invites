@@ -10,7 +10,7 @@ export default function ItinerarySection({ content }: Props) {
     <section className="bg-[#f5f0e8] px-2 py-24 sm:px-6" id="itinerary">
       <div className="mx-auto max-w-xl text-center">
         <h2
-          className="mb-4 text-4xl font-light text-[#2c2c2c]"
+          className="mb-4 text-4xl font-medium text-[#2c2c2c]"
           style={{ fontFamily: "var(--font-heading)" }}
         >
           {content.heading}
@@ -47,13 +47,13 @@ export default function ItinerarySection({ content }: Props) {
                   }`}
                 >
                   <p
-                    className="text-[clamp(13px,3.2vw,15px)] uppercase tracking-widest text-[#5D7B9F]"
+                    className="text-[clamp(13px,3.2vw,15px)] font-medium uppercase tracking-widest text-[#5D7B9F]"
                     style={{ fontFamily: "var(--font-body)" }}
                   >
                     {item.time}
                   </p>
                   <p
-                    className="text-[clamp(22px,5.5vw,26px)] font-light text-[#2c2c2c]"
+                    className="text-[clamp(22px,5.5vw,26px)] font-medium text-[#2c2c2c]"
                     style={{ fontFamily: "var(--font-heading)" }}
                   >
                     {item.name}

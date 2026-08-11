@@ -75,19 +75,19 @@ const es: SiteContent = {
       },
       {
         title: "1er Año Nuevo juntos",
-        text: "Sentimos cositas. El cariño genuino que nos teníamos el uno al otro creció y evolucionó hasta que dejamos de ser solo amigos.",
+        text: "El cariño genuino que nos teníamos el uno al otro creció y evolucionó hasta que dejamos de ser solo amigos.",
         photos: [
-          { imagePath: "", alt: "Primer Año Nuevo juntos", orientation: "landscape" },
-          { imagePath: "", alt: "Primer Año Nuevo juntos, otro momento", orientation: "portrait" },
-          { imagePath: "", alt: "Primer Año Nuevo juntos, celebración", orientation: "portrait" },
+          { imagePath: "/images/IMG_8479.jpg", alt: "Primer Año Nuevo juntos", orientation: "landscape" },
+          { imagePath: "/images/IMG_8384.jpg", alt: "Primer Año Nuevo juntos, otro momento", orientation: "portrait" },
+          { imagePath: "/images/IMG_8463.jpg", alt: "Primer Año Nuevo juntos, celebración", orientation: "portrait" },
         ],
       },
       {
         title: "Me pidió ser su enamorada",
         text: "Y así, entre risas y complicidad, dejamos de ser solo amigos para empezar esta historia de a dos.",
         photos: [
-          { imagePath: "", alt: "El día que empezamos a salir", orientation: "portrait" },
-          { imagePath: "", alt: "Primeras salidas como enamorados", orientation: "landscape" },
+          { imagePath: "/images/IMG_3453.jpg", alt: "El día que empezamos a salir", orientation: "portrait" },
+          { imagePath: "/images/IMG_0950.jpg", alt: "Primeras salidas como enamorados", orientation: "landscape" },
         ],
       },
       {
@@ -169,7 +169,7 @@ const es: SiteContent = {
     showAllLabel: "Ver todos los regalos",
     showLessLabel: "Ver menos",
     purchaseSuccess: "¡Gracias! Tu regalo se procesó correctamente.",
-    purchaseError: "No pudimos procesar el pago. Intenta de nuevo o usa la transferencia bancaria.",
+    purchaseError: "No pudimos procesar tu pago en este momento. Por favor, inténtalo nuevamente en unos minutos o, si lo prefieres, utiliza la opción de transferencia bancaria.",
     addToCartLabel: "Agregar",
     inCartLabel: "Agregado ✓",
     checkoutLabel: "Pagar regalos",
