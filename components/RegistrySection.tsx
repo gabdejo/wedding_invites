@@ -146,7 +146,7 @@ export default function RegistrySection({ content }: Props) {
 
       <div className="mx-auto max-w-5xl text-center">
         <h2
-          className="mb-4 text-4xl font-medium text-[#2c2c2c]"
+          className="mb-4 text-4xl font-light text-[#2c2c2c]"
           style={{ fontFamily: "var(--font-heading)" }}
         >
           {content.heading}
@@ -166,22 +166,32 @@ export default function RegistrySection({ content }: Props) {
             <br />
             {content.lines[1]}
           </p>
-          <p className="mb-4 text-sm leading-6 text-[#666666]" style={{ fontFamily: "var(--font-body)" }}>
-            {content.bankTransfer.note}
+          <p className="mb-4 text-sm leading-7 text-[#666666]" style={{ fontFamily: "var(--font-body)" }}>
+            {content.bankTransfer.note.map((line, i) => (
+              <span key={i}>
+                {line}
+                {i < content.bankTransfer.note.length - 1 && <br />}
+              </span>
+            ))}
           </p>
-          <ul className="space-y-1 text-sm text-[#2c2c2c]" style={{ fontFamily: "var(--font-body)" }}>
-            <li><strong>{content.bankTransfer.bank}</strong></li>
-            <li>{content.bankTransfer.accountHolder}</li>
-            <li>Cuenta: {content.bankTransfer.accountNumber}</li>
-            <li>CCI: {content.bankTransfer.cci}</li>
-          </ul>
+          <div className="space-y-4">
+            {content.bankTransfer.accounts.map((account, i) => (
+              <p key={i} className="text-sm leading-7 text-[#666666]" style={{ fontFamily: "var(--font-body)" }}>
+                <span className="font-medium uppercase tracking-wide text-[#9a8066]">{account.bank}</span>
+                <br />
+                Cuenta: {account.accountNumber}
+                <br />
+                CCI: {account.cci}
+              </p>
+            ))}
+          </div>
         </div>
 
         {hasMore && (
           <button
             type="button"
             onClick={() => setExpanded((e) => !e)}
-            className="mb-8 border border-[#5D7B9F] px-8 py-3 text-sm font-medium uppercase tracking-[0.2em] text-[#5D7B9F] transition-colors hover:bg-[#5D7B9F] hover:text-white"
+            className="mb-8 border border-[#5D7B9F] px-8 py-3 text-sm uppercase tracking-[0.2em] text-[#5D7B9F] transition-colors hover:bg-[#5D7B9F] hover:text-white"
             style={{ fontFamily: "var(--font-body)" }}
           >
             {expanded ? content.showLessLabel : content.showAllLabel}
@@ -196,7 +206,7 @@ export default function RegistrySection({ content }: Props) {
             <button
               type="button"
               onClick={() => setCartOpen(true)}
-              className="bg-[#5D7B9F] px-5 py-2 text-xs font-medium uppercase tracking-[0.2em] text-white transition-colors hover:bg-[#9BAED4]"
+              className="bg-[#5D7B9F] px-5 py-2 text-xs uppercase tracking-[0.2em] text-white transition-colors hover:bg-[#9BAED4]"
               style={{ fontFamily: "var(--font-body)" }}
             >
               {content.checkoutLabel}
@@ -215,13 +225,13 @@ export default function RegistrySection({ content }: Props) {
               </div>
               <div className="flex flex-1 flex-col p-3">
                 <span
-                  className="mb-1 text-[10px] font-medium uppercase tracking-widest text-[#9BAED4]"
+                  className="mb-1 text-[10px] uppercase tracking-widest text-[#9BAED4]"
                   style={{ fontFamily: "var(--font-body)" }}
                 >
                   {product.category}
                 </span>
                 <h3
-                  className="mb-1 text-base font-medium text-[#2c2c2c]"
+                  className="mb-1 text-base font-light text-[#2c2c2c]"
                   style={{ fontFamily: "var(--font-heading)" }}
                 >
                   {product.name}
@@ -255,7 +265,7 @@ export default function RegistrySection({ content }: Props) {
                       />
                       <button
                         type="submit"
-                        className="border border-[#5D7B9F] bg-[#5D7B9F] px-2 py-1.5 text-[10px] font-medium uppercase text-white"
+                        className="border border-[#5D7B9F] bg-[#5D7B9F] px-2 py-1.5 text-[10px] uppercase text-white"
                         style={{ fontFamily: "var(--font-body)" }}
                       >
                         {content.addToCartLabel}
@@ -265,7 +275,7 @@ export default function RegistrySection({ content }: Props) {
                     <button
                       type="button"
                       onClick={() => toggleCart(product)}
-                      className={`border px-3 py-1.5 text-center text-[10px] font-medium uppercase tracking-[0.15em] transition-colors ${
+                      className={`border px-3 py-1.5 text-center text-[10px] uppercase tracking-[0.15em] transition-colors ${
                         cart.has(product.name)
                           ? "border-[#5D7B9F] bg-[#5D7B9F] text-white"
                           : "border-[#5D7B9F] text-[#5D7B9F] hover:bg-[#5D7B9F] hover:text-white"
@@ -297,7 +307,7 @@ export default function RegistrySection({ content }: Props) {
 
         {/* Legal links: gated behind "gift list expanded". To make always visible again, remove the {expanded && ( ... )} wrap. */}
         {expanded && (
-          <div className="mt-10 flex flex-wrap justify-center gap-x-6 gap-y-2 text-xs font-medium uppercase tracking-widest text-[#9a8066]">
+          <div className="mt-10 flex flex-wrap justify-center gap-x-6 gap-y-2 text-xs uppercase tracking-widest text-[#9a8066]">
             {content.legalLinks.map(({ label, href }) => (
               <a key={href} href={href} target="_blank" rel="noopener noreferrer" className="underline-offset-4 hover:underline" style={{ fontFamily: "var(--font-body)" }}>
                 {label}
@@ -313,10 +323,10 @@ export default function RegistrySection({ content }: Props) {
           <div className="relative flex h-full w-full flex-col overflow-y-auto bg-[#faf8f4] p-6 sm:w-[420px] sm:max-w-full">
             <div className="mb-6 flex items-start justify-between">
               <div>
-                <p className="text-xs font-medium uppercase tracking-[0.2em] text-[#9a8066]" style={{ fontFamily: "var(--font-body)" }}>
+                <p className="text-xs uppercase tracking-[0.2em] text-[#9a8066]" style={{ fontFamily: "var(--font-body)" }}>
                   {content.heading}
                 </p>
-                <h3 className="text-3xl font-medium text-[#2c2c2c]" style={{ fontFamily: "var(--font-heading)" }}>
+                <h3 className="text-3xl font-light text-[#2c2c2c]" style={{ fontFamily: "var(--font-heading)" }}>
                   {content.cartDrawerHeading}
                 </h3>
               </div>
@@ -378,7 +388,7 @@ export default function RegistrySection({ content }: Props) {
               <button
                 type="submit"
                 disabled={!buyerName.trim() || !buyerEmail.trim()}
-                className="mt-2 bg-[#5D7B9F] py-4 text-sm font-semibold uppercase tracking-[0.3em] text-white transition-colors hover:bg-[#9BAED4] disabled:cursor-not-allowed disabled:opacity-40"
+                className="mt-2 bg-[#5D7B9F] py-4 text-sm uppercase tracking-[0.3em] text-white transition-colors hover:bg-[#9BAED4] disabled:cursor-not-allowed disabled:opacity-40"
                 style={{ fontFamily: "var(--font-body)" }}
               >
                 {content.goToPayLabel}

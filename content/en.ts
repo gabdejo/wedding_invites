@@ -229,11 +229,17 @@ const en: SiteContent = {
     ],
     bankTransfer: {
       heading: "Prefer a bank transfer?",
-      note: "Please include your name in the transfer note so we can identify and thank you for your gift.",
-      bank: "Interbank",
-      accountHolder: "Sol & Gabriel",
-      accountNumber: "000-0000000000",
-      cci: "00300000000000000000",
+      note: [
+        "If you'd prefer to send a transfer, you can use the following accounts:",
+        "Please include your name in the transfer note so we can identify and thank you for your gift.",
+      ],
+      accounts: [
+        {
+          bank: "Interbank",
+          accountNumber: "000-0000000000",
+          cci: "00300000000000000000",
+        },
+      ],
     },
     legalLinks: [
       { label: "Merchant details", href: "/datos-del-comercio" },
@@ -243,7 +249,8 @@ const en: SiteContent = {
     ],
   },
   rsvp: {
-    heading: "RSVP",
+    heading: "Confirm Attendance",
+    subtitle: "RSVP",
     deadline: "Kindly respond by May 31, 2026",
     namePlaceholder: "Full name",
     emailPlaceholder: "Email address",

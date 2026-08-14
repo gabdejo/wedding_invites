@@ -9,14 +9,14 @@ export default function DressCodeSection({ content }: Props) {
       <div className="px-6 pt-24 text-center">
         <div className="mx-auto max-w-xl">
           <h2
-            className="mb-4 text-4xl font-medium text-[#2c2c2c]"
+            className="mb-4 text-4xl font-light text-[#2c2c2c]"
             style={{ fontFamily: "var(--font-heading)" }}
           >
             {content.heading}
           </h2>
           <div className="mx-auto mb-8 h-px w-12 bg-[#c9a96e]" />
           <p
-            className="mb-12 text-2xl font-normal italic text-[#5D7B9F]"
+            className="mb-12 text-3xl font-light italic tracking-wide text-[#5D7B9F] md:text-4xl"
             style={{ fontFamily: "var(--font-heading)" }}
           >
             {content.style}
@@ -36,13 +36,17 @@ export default function DressCodeSection({ content }: Props) {
 
       <div className="px-6 pb-24 pt-12 text-center">
         <p
-          className="mx-auto max-w-xl text-sm leading-7 text-[#666666]"
+          className="mx-auto max-w-xl text-base leading-relaxed text-[#666666] md:text-[1.1875rem]"
           style={{ fontFamily: "var(--font-body)" }}
         >
           {content.lines[0]}
           <br />
           {content.lines[1]}
-          <br />
+        </p>
+        <p
+          className="mx-auto mt-6 max-w-md text-sm italic tracking-wide text-[#9a8066] md:text-[1.0625rem]"
+          style={{ fontFamily: "var(--font-body)" }}
+        >
           {content.lines[2]}
         </p>
       </div>

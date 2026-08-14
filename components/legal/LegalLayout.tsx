@@ -7,13 +7,13 @@ export default function LegalLayout({ title, children }: { title: string; childr
       <div className="mx-auto max-w-2xl">
         <Link
           href="/#registry"
-          className="mb-8 inline-block text-xs font-medium uppercase tracking-widest text-[#9a8066] hover:underline"
+          className="mb-8 inline-block text-xs uppercase tracking-widest text-[#9a8066] hover:underline"
           style={{ fontFamily: "var(--font-body)" }}
         >
           ← Volver a la mesa de regalos
         </Link>
         <h1
-          className="mb-3 text-3xl font-medium text-[#2c2c2c] sm:text-4xl"
+          className="mb-3 text-3xl font-light text-[#2c2c2c] sm:text-4xl"
           style={{ fontFamily: "var(--font-heading)" }}
         >
           {title}

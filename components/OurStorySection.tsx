@@ -48,12 +48,10 @@ function StoryPhoto({
   photo,
   onClick,
   layout,
-  showLabel,
 }: {
   photo: Photo;
   onClick: () => void;
   layout: SpotLayout;
-  showLabel?: boolean;
 }) {
   return (
     <button
@@ -78,14 +76,6 @@ function StoryPhoto({
           <Image src={photo.imagePath} alt={photo.alt} fill className="object-cover" />
         )}
       </div>
-      {(showLabel || photo.caption) && (
-        <p
-          className="mt-1 truncate text-center text-[11px] text-[#9a8066]"
-          style={{ fontFamily: "var(--font-body)" }}
-        >
-          {photo.caption?.trim() || photo.alt}
-        </p>
-      )}
     </button>
   );
 }
@@ -97,8 +87,8 @@ export default function OurStorySection({ content }: Props) {
     <section className="overflow-x-clip bg-[#faf8f4] px-6 pt-20 pb-24" id="our-story">
       <Reveal className="mx-auto mb-20 max-w-xl text-center sm:mb-28">
         <p
-          className="mb-3 text-sm font-medium uppercase tracking-widest sm:text-base"
-          style={{ fontFamily: "var(--font-body)" }}
+          className="mb-3 text-sm font-medium tracking-widest sm:text-base"
+          style={{ fontFamily: "var(--font-body-new)" }}
         >
           <ReadInText
             text={content.eyebrow}
@@ -110,7 +100,7 @@ export default function OurStorySection({ content }: Props) {
         </p>
         <h2
           className="text-4xl font-medium italic text-[#2c2c2c] sm:text-5xl"
-          style={{ fontFamily: "var(--font-heading)" }}
+          style={{ fontFamily: "var(--font-heading-new)" }}
         >
           {content.heading}
         </h2>
@@ -140,20 +130,20 @@ export default function OurStorySection({ content }: Props) {
               >
                 <h3
                   className="mb-3 text-2xl font-medium italic text-[#2c2c2c] sm:text-3xl"
-                  style={{ fontFamily: "var(--font-heading)" }}
+                  style={{ fontFamily: "var(--font-heading-new)" }}
                 >
                   {milestone.title}
                 </h3>
                 <p
                   className="text-base leading-relaxed text-[#7a7a7a]"
-                  style={{ fontFamily: "var(--font-body)" }}
+                  style={{ fontFamily: "var(--font-body-new)" }}
                 >
                   {milestone.text}
                 </p>
                 {milestone.highlight && (
                   <p
                     className="mt-4 text-3xl font-normal italic text-[#c9a96e] sm:text-4xl"
-                    style={{ fontFamily: "var(--font-heading)" }}
+                    style={{ fontFamily: "var(--font-heading-new)" }}
                   >
                     {milestone.highlight}
                   </p>
@@ -175,7 +165,6 @@ export default function OurStorySection({ content }: Props) {
                         key={pIndex}
                         photo={photo}
                         layout={layout}
-                        showLabel={isMontage}
                         onClick={() => setOpenPhoto(photo)}
                       />
                     );
@@ -217,7 +206,7 @@ export default function OurStorySection({ content }: Props) {
             </div>
             <p
               className="mt-3 text-center text-sm text-[#7a7a7a]"
-              style={{ fontFamily: "var(--font-body)" }}
+              style={{ fontFamily: "var(--font-body-new)" }}
             >
               {openPhoto.caption?.trim() || openPhoto.alt}
             </p>

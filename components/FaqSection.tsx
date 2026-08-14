@@ -12,7 +12,7 @@ export default function FaqSection({ content }: Props) {
     <section className="bg-[#faf8f4] px-6 py-24" id="faq">
       <div className="mx-auto max-w-xl text-center">
         <h2
-          className="mb-4 text-4xl font-medium text-[#2c2c2c]"
+          className="mb-4 text-4xl font-light text-[#2c2c2c]"
           style={{ fontFamily: "var(--font-heading)" }}
         >
           {content.heading}
@@ -45,12 +45,22 @@ export default function FaqSection({ content }: Props) {
                   </span>
                 </button>
                 {isOpen && (
-                  <p
-                    className="pb-5 text-sm leading-7 text-[#7a7a7a]"
-                    style={{ fontFamily: "var(--font-body)" }}
-                  >
-                    {item.answer}
-                  </p>
+                  <div className="flex flex-col gap-3 pb-5">
+                    {item.answer.split("\n\n").map((paragraph, i) => (
+                      <p
+                        key={i}
+                        className="text-sm leading-7 text-[#7a7a7a]"
+                        style={{ fontFamily: "var(--font-body)" }}
+                      >
+                        {paragraph.split("\n").map((line, j, lines) => (
+                          <span key={j}>
+                            {line}
+                            {j < lines.length - 1 && <br />}
+                          </span>
+                        ))}
+                      </p>
+                    ))}
+                  </div>
                 )}
               </div>
             );

@@ -19,7 +19,7 @@ const es: SiteContent = {
     scroll: "Ver más",
   },
   countdown: {
-    heading: "La cuenta regresiva",
+    heading: "Cuenta regresiva",
     labels: {
       months: "Meses",
       days: "Días",
@@ -65,45 +65,45 @@ const es: SiteContent = {
     heading: "Nuestra historia de Amor",
     milestones: [
       {
-        title: "Cómo nos conocimos",
-        text: "Antes de ser novios, primero empezamos siendo muy buenos amigos. Coincidimos en el primer ciclo de la universidad, y aunque nos distanciábamos por las clases y la falta de tiempo, siempre nos encontrábamos para hablarnos sobre nuestras vidas, las mismas que ahora buscamos entrelazar para hoy y siempre.",
+        title: "Universidad",
+        text: "Nos conocimos en el primer ciclo de la universidad y nos hicimos muy amigos al instante. Por ser de diferentes carreras, ciclos después ya no coincidíamos en los cursos, pero aún salíamos para almorzar después de clases o aprovechar promos de Makis.",
         photos: [
-          { imagePath: "", alt: "Sol y Gabriel en Guyana", orientation: "portrait", caption: "Guyana" },
-          { imagePath: "", alt: "Sol y Gabriel al conocerse", orientation: "portrait" },
-          { imagePath: "", alt: "Sol y Gabriel en sus primeros meses", orientation: "landscape" },
+          { imagePath: "/images/IMG_1981.jpg", alt: "En un salón de la UP", orientation: "portrait" },
+          { imagePath: "/images/nori.jpg", alt: "Sol y Gabriel al conocerse", orientation: "portrait", caption: "Una promo de makis" },
+          //{ imagePath: "", alt: "Sol y Gabriel en sus primeros meses", orientation: "landscape" },
         ],
       },
       {
-        title: "1er Año Nuevo juntos",
-        text: "El cariño genuino que nos teníamos el uno al otro creció y evolucionó hasta que dejamos de ser solo amigos.",
+        title: "Año Nuevo 2020",
+        text: " Después de vernos más seguido otra vez por los Makis, lo invité a pasar Año Nuevo en la playa junto con otros amigos de la chamba. Todos podían ver la buena química que teníamos, menos nosotros, pero sus palabras nos dejaron esa idea de que podríamos ser buena pareja.",
         photos: [
-          { imagePath: "/images/IMG_8479.jpg", alt: "Primer Año Nuevo juntos", orientation: "landscape" },
-          { imagePath: "/images/IMG_8384.jpg", alt: "Primer Año Nuevo juntos, otro momento", orientation: "portrait" },
-          { imagePath: "/images/IMG_8463.jpg", alt: "Primer Año Nuevo juntos, celebración", orientation: "portrait" },
+          { imagePath: "/images/IMG_8479.jpg", alt: "Gabriel, Sol y el sol", orientation: "landscape" },
+          { imagePath: "/images/IMG_8384.jpg", alt: "Una pose saltando, de dos amigos", orientation: "portrait" },
+          { imagePath: "/images/IMG_8463.jpg", alt: "La primera cargada", orientation: "portrait" },
         ],
       },
       {
-        title: "Me pidió ser su enamorada",
-        text: "Y así, entre risas y complicidad, dejamos de ser solo amigos para empezar esta historia de a dos.",
+        title: "Enamorados",
+        text: "Después de un verano con más salidas y maratones de películas, Gabriel decidió pedirme ser su enamorada, agarrando la guitarra de mi papá, y cantándome una canción de Cultura Profética: Me faltabas tú",
         photos: [
-          { imagePath: "/images/IMG_3453.jpg", alt: "El día que empezamos a salir", orientation: "portrait" },
-          { imagePath: "/images/IMG_0950.jpg", alt: "Primeras salidas como enamorados", orientation: "landscape" },
+          { imagePath: "/images/IMG_0104.jpg", alt: "San Bartolo", orientation: "portrait" },
+          { imagePath: "/images/IMG_0950.jpg", alt: "Cerca a nuestro primer aniversario", orientation: "landscape" },
         ],
       },
       {
-        title: "Nuestra vida juntos",
-        text: "Citas, pandemia, universidad, viajes, graduación. Años construyendo una vida juntos, un día a la vez.",
+        title: "Promesa",
+        text: "A lo largo de los años crecimos, nos graduamos, viajamos, empezamos a trabajar y nos unimos más. Al cumplir nuestro aniversario #3, le regalé a Sol un anillo con la promesa de que en algunos años lo cambiaría por uno de compromiso.",
         photos: [
-          { imagePath: "", alt: "Citas", orientation: "portrait" },
-          { imagePath: "", alt: "Pandemia juntos", orientation: "landscape" },
-          { imagePath: "", alt: "Universidad", orientation: "portrait" },
-          { imagePath: "", alt: "Viajes", orientation: "landscape" },
-          { imagePath: "", alt: "Graduación", orientation: "portrait" },
+          { imagePath: "/images/IMG_6012.jpg", alt: "Ella y sus girasoles", orientation: "portrait" },
+          { imagePath: "/images/IMG_8283.jpg", alt: "El anillo de promesa", orientation: "landscape" },
+          { imagePath: "/images/IMG_0608.JPG", alt: "Un corazón en la playa", orientation: "portrait" },
+          { imagePath: "/images/IMG_5975.jpg", alt: "El salar de Uyuni", orientation: "landscape" },
+          { imagePath: "/images/IMG_7927.jpg", alt: "'¡Sí se pudo, burro!'", orientation: "portrait" },
         ],
       },
       {
-        title: "Compromiso",
-        text: "Al tercer año me dio el anillo de promesa, prometiendo que en un par de años lo cambiaría por el de compromiso. Y después de unos años más...",
+        title: "Comprometidos",
+        text: "En un viaje de desconexión a Cartagena, en el archipiélago de las islas del Rosario, le preparé a Sol una pedida íntima. Así, después de años y años de súplicas...",
         highlight: "¡Me dijo que sí!",
         photos: [],
       },
@@ -134,7 +134,7 @@ const es: SiteContent = {
   },
   featuredPhoto: {
     photos: [
-      { imagePath: "/images/carruB1.jpg", alt: "Foto de Sol y Gabriel" },
+      //{ imagePath: "/images/carruB1.jpg", alt: "Foto de Sol y Gabriel" },
       { imagePath: "/images/carruB2.jpg", alt: "Foto de Sol y Gabriel" },
     ],
   },
@@ -149,11 +149,11 @@ const es: SiteContent = {
   },
   dressCode: {
     heading: "Código de Vestimenta",
-    style: "Black Tie",
+    style: "Elegante",
     lines: [
-      "Caballeros: esmoquin o traje oscuro.",
-      "Damas: vestido largo o cóctel elegante.",
-      "Por favor evitar el blanco y el marfil.",
+      "Caballeros: terno y corbata.",
+      "Damas: vestido largo o cóctel.",
+      "Por favor, evitar el blanco, ivory, beige y marfil, ya que estarán reservados para la novia.",
     ],
   },
   registry: {
@@ -161,7 +161,7 @@ const es: SiteContent = {
     intro: "¡Gracias por pensar en un detalle para nosotros!",
     lines: [
       "Tu presencia es el mejor regalo de todos.",
-      "Si deseas obsequiarnos algo, hemos preparado una pequeña lista de detalles para nuestro nuevo hogar.",
+      "Si desean obsequiarnos algo, hemos preparado una pequeña lista de cosas para nuestro nuevo hogar. El detalle que elijan nos llegará a nosotros de forma instantánea.",
     ],
     buyLabel: "Elegir regalo",
     freeContributionLabel: "Aporte libre",
@@ -186,7 +186,7 @@ const es: SiteContent = {
     removeLabel: "Quitar",
     products: [
       {
-        imagePath: "/images/luna_miel.jpg",
+        imagePath: "/images/playa_italia.jpg",
         category: "luna de miel",
         name: "Aporte libre - Luna de miel",
         description: "Un aporte libre para nuestra luna de miel y los primeros recuerdos de esta nueva etapa.",
@@ -321,11 +321,27 @@ const es: SiteContent = {
     ],
     bankTransfer: {
       heading: "¿Prefieres hacerlo por transferencia?",
-      note: "Por favor coloca tu nombre en el concepto para poder identificarte y agradecerte por tu detalle.",
-      bank: "Interbank",
-      accountHolder: "Sol y Gabriel",
-      accountNumber: "000-0000000000",
-      cci: "00300000000000000000",
+      note: [
+        "Si prefieren hacerlo mediante transferencia, pueden realizarlo a las siguientes cuentas a nombre de Gabriel Dejo.",
+        "Les agradeceremos puedan colocar su nombre en el concepto para poder agradecerles por su detalle."
+      ],
+      accounts: [
+        {
+          bank: "BCP",
+          accountNumber: "19170142836048",
+          cci: "00219117014283604853",
+        },
+        {
+          bank: "Scotiabank",
+          accountNumber: "833-0064602",
+          cci: "00972420833006460267",
+        },
+        {
+          bank: "Interbank",
+          accountNumber: "100-3276288960",
+          cci: "00310001327628896059",
+        },
+      ],
     },
     legalLinks: [
       { label: "Datos del comercio", href: "/datos-del-comercio" },
@@ -335,9 +351,10 @@ const es: SiteContent = {
     ],
   },
   rsvp: {
-    heading: "RSVP",
-    deadline: "Por favor confirma antes del 31 de mayo de 2026",
-    namePlaceholder: "Nombre completo",
+    heading: "Confirmar Asistencia",
+    subtitle: "RSVP",
+    deadline: "Por favor confirmar antes del 8 de octubre",
+    namePlaceholder: "Nombre y apellido",
     emailPlaceholder: "Correo electrónico",
     willYouAttend: "¿Asistirás?",
     accepts: "Con gusto asistirá",
@@ -354,24 +371,32 @@ const es: SiteContent = {
     heading: "Preguntas Frecuentes",
     items: [
       {
-        question: "¿Hasta cuándo puedo confirmar mi asistencia?",
-        answer: "Agradecemos que confirmes antes del 31 de mayo de 2026 a través del formulario de RSVP.",
+        question: "¿A qué hora debería llegar para la misa y recepción?",
+        answer: "Para la misa, por favor llegar entre 11:40 y 11:50 a.m. para que tengas tiempo suficiente de tomar asiento antes que empieze la ceremonia puntualmente a las 12:00 p.m.\nPara la recepción, llegar por favor entre 3:00 y 3:15 p.m. para acomodarse para la boda civil y los votos que empezarán a las 3:30 p.m.",
       },
       {
-        question: "¿Puedo llevar acompañante?",
-        answer: "Solo podrán asistir las personas incluidas en la invitación. Si tienes dudas, escríbenos por WhatsApp.",
+        question: "¿Cómo confirmo mi asistencia?",
+        answer: "Puedes confirmar tu asistencia en la sección 'Confirmar Asistencia' o escribiéndonos por WhatsApp.\n Agradecemos que confirmes hasta el 8 de octubre. Si no recibimos tu confirmación hasta esa fecha, entenderemos que lamentablemente no podrás acompañarnos este día.",
       },
+      //{
+      //  question: "¿Puedo llevar acompañante?",
+      //  answer: "Solo podrán asistir las personas incluidas en la invitación por los cupos asignados. Si tienes dudas, escríbenos por WhatsApp.",
+      //},
       {
         question: "¿Es un evento solo para adultos?",
         answer: "Sí, con mucho cariño pedimos que sea una celebración solo para adultos.",
       },
-      {
-        question: "¿Cuál es el código de vestimenta?",
-        answer: "Black Tie. Caballeros de esmoquin o traje oscuro, damas de vestido largo o cóctel elegante.",
-      },
+      //{
+      //  question: "¿Cuál es el código de vestimenta?",
+      //  answer: "Elegante. Caballeros de esmoquin o traje oscuro, damas de vestido largo o cóctel elegante.",
+      //},
       {
         question: "¿Habrá estacionamiento?",
-        answer: "Sí, ambas locaciones cuentan con estacionamiento disponible para los invitados.",
+        answer: "Sí, ambas locaciones cuentan con estacionamiento disponible para los invitados. En el caso de la iglesia, hay una playa de Apparka en la misma cuadra en la siguiente esquina.",
+      },
+      {
+        question: "¿Cómo funciona la mesa de regalos?",
+        answer: "Pueden elegir alguno de los regalos que hemos seleccionado o, si lo prefieren, realizar un aporte libre que destinaremos con mucho cariño a nuestra luna de miel. Una vez elegido el regalo, la web los dirigirá a una plataforma segura, donde podrán completar el proceso con tarjeta de crédito, tarjeta de débito, Yape o Plin.\n\nSi prefieren hacerlo mediante transferencia, pueden realizarlo a las siguientes cuentas a nombre de Gabriel Dejo.\n BCP\n19170142836048\nCCI 00219117014283604853\n\nScotiabank\n833-0064602\nCCI 00972420833006460267\n\nInterbank\n100-3276288960\nCCI 00310001327628896059\n\nLes agradeceremos colocar su nombre en el concepto para poder agradecerles por su detalle.",
       },
     ],
   },

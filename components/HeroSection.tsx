@@ -26,11 +26,11 @@ export default function HeroSection({ content }: Props) {
 
       <div className="relative z-10 flex flex-col items-center gap-4">
         <div className="flex flex-col items-center gap-1" style={{ fontFamily: "var(--font-heading)" }}>
-          <h1 className="text-7xl font-semibold leading-none tracking-wide text-white sm:text-8xl md:text-9xl">
+          <h1 className="text-7xl font-light leading-none tracking-wide text-white sm:text-8xl md:text-9xl">
             Sol
           </h1>
-          <span className="text-5xl font-normal italic text-white/70 sm:text-6xl">&amp;</span>
-          <h1 className="text-7xl font-semibold leading-none tracking-wide text-white sm:text-8xl md:text-9xl">
+          <span className="text-5xl font-light italic text-white/70 sm:text-6xl">&amp;</span>
+          <h1 className="text-7xl font-light leading-none tracking-wide text-white sm:text-8xl md:text-9xl">
             Gabriel
           </h1>
         </div>
@@ -38,8 +38,8 @@ export default function HeroSection({ content }: Props) {
         <div className="mt-4 flex flex-col items-center gap-2">
           <div className="h-px w-12 bg-white/60" />
           <div
-            className="flex items-center text-lg font-normal italic text-white/90"
-            style={{ fontFamily: "var(--font-heading)" }}
+            className="flex items-center text-lg font-light uppercase tracking-widest text-white/90"
+            style={{ fontFamily: "var(--font-body)" }}
           >
             <span className="w-20 text-right">14 ·</span>
             <span className="px-2">Nov</span>

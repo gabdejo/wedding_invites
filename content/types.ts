@@ -130,16 +130,18 @@ export interface SiteContent {
     }>;
     bankTransfer: {
       heading: string;
-      note: string;
-      bank: string;
-      accountHolder: string;
-      accountNumber: string;
-      cci: string;
+      note: string[];
+      accounts: Array<{
+        bank: string;
+        accountNumber: string;
+        cci: string;
+      }>;
     };
     legalLinks: Array<{ label: string; href: string }>;
   };
   rsvp: {
     heading: string;
+    subtitle: string;
     deadline: string;
     namePlaceholder: string;
     emailPlaceholder: string;

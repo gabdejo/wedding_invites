@@ -22,7 +22,7 @@ export default function MusicPlayer() {
 
   return (
     <>
-      <audio ref={audioRef} src="/audio/soledad_el_mar.mp3" loop preload="none" />
+      <audio ref={audioRef} src="/audio/soledad_el_mar_full.mp3" loop preload="none" />
       <button
         type="button"
         onClick={toggle}
