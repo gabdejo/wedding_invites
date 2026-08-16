@@ -120,10 +120,13 @@ export default function RsvpSection({ content }: Props) {
                     <button
                       type="button"
                       onMouseDown={() => selectGuest(guest)}
-                      className="w-full px-3 py-2 text-left text-sm text-[#2c2c2c] hover:bg-[#e8eff7]"
+                      className="flex w-full items-center justify-between px-3 py-2 text-left text-sm text-[#2c2c2c] hover:bg-[#e8eff7]"
                       style={{ fontFamily: "var(--font-body)" }}
                     >
-                      {guest.full_name}
+                      <span>{guest.full_name}</span>
+                      <span className="text-xs text-[#7A96B0]">
+                        {guest.max_guests} {guest.max_guests === 1 ? "pase" : "pases"}
+                      </span>
                     </button>
                   </li>
                 ))}

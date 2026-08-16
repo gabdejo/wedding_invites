@@ -80,12 +80,28 @@ function StoryPhoto({
   );
 }
 
+const EYEBROW_STAGGER_MS = 150;
+const EYEBROW_DURATION_MS = 1500;
+const HEADING_DURATION_MS = 700;
+const LINE_DURATION_MS = 500;
+
 export default function OurStorySection({ content }: Props) {
   const [openPhoto, setOpenPhoto] = useState<Photo | null>(null);
+  const [introDone, setIntroDone] = useState(false);
+
+  // Heading should only appear once the eyebrow's word-by-word read-in has finished.
+  const eyebrowWordCount = content.eyebrow.trim().split(/\s+/).length;
+  const headingDelayMs = (eyebrowWordCount - 1) * EYEBROW_STAGGER_MS + EYEBROW_DURATION_MS;
+  // Gold line appears once the heading has finished; milestones stay gated until the line finishes too.
+  const lineDelayMs = headingDelayMs + HEADING_DURATION_MS;
+  const introTotalMs = lineDelayMs + LINE_DURATION_MS;
 
   return (
     <section className="overflow-x-clip bg-[#faf8f4] px-6 pt-20 pb-24" id="our-story">
-      <Reveal className="mx-auto mb-20 max-w-xl text-center sm:mb-28">
+      <Reveal
+        className="mx-auto mb-20 max-w-xl text-center sm:mb-28"
+        onIntersect={() => setTimeout(() => setIntroDone(true), introTotalMs)}
+      >
         <p
           className="mb-3 text-sm font-medium tracking-widest sm:text-base"
           style={{ fontFamily: "var(--font-body-new)" }}
@@ -94,17 +110,28 @@ export default function OurStorySection({ content }: Props) {
             text={content.eyebrow}
             color="#9a8066"
             lightColor="#e3d9c8"
-            staggerMs={150}
-            durationMs={1500}
+            staggerMs={EYEBROW_STAGGER_MS}
+            durationMs={EYEBROW_DURATION_MS}
           />
         </p>
         <h2
-          className="text-4xl font-medium italic text-[#2c2c2c] sm:text-5xl"
+          className="text-4xl font-medium italic sm:text-5xl"
           style={{ fontFamily: "var(--font-heading-new)" }}
         >
-          {content.heading}
+          <ReadInText
+            text={content.heading}
+            color="#2c2c2c"
+            lightColor="#ece6da"
+            staggerMs={0}
+            durationMs={HEADING_DURATION_MS}
+            delayMs={headingDelayMs}
+          />
         </h2>
-        <div className="mx-auto mt-6 h-px w-12 bg-[#c9a96e]" />
+        <Reveal
+          delayMs={lineDelayMs}
+          durationMs={LINE_DURATION_MS}
+          className="mx-auto mt-6 h-px w-12 bg-[#c9a96e]"
+        />
       </Reveal>
 
       <div className="mx-auto flex max-w-5xl flex-col gap-24 sm:gap-32">
@@ -122,6 +149,7 @@ export default function OurStorySection({ content }: Props) {
             >
               <Reveal
                 durationMs={2500}
+                gate={introDone}
                 className={`mx-auto max-w-sm text-center md:max-w-none ${
                   !hasPhotos
                     ? "md:mx-auto md:text-center"
@@ -153,6 +181,7 @@ export default function OurStorySection({ content }: Props) {
               {hasPhotos && (
                 <Reveal
                   durationMs={2500}
+                  gate={introDone}
                   className={`relative mx-auto mt-10 w-full max-w-sm md:mx-0 md:mt-0 md:max-w-none ${
                     CLUSTER_HEIGHTS[milestone.photos.length] ?? CLUSTER_HEIGHTS[3]
                   } ${textOnRight ? "md:order-1" : "md:order-2"}`}

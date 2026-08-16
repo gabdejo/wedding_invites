@@ -18,7 +18,9 @@
 
 A premium, mobile-first digital wedding invitation — not a web app. Most guests arrive from WhatsApp on a phone and spend under a minute. Optimize for: open → understand everything immediately.
 
-Avoid: heavy animations, autoplay, complex auth, overengineering, slow assets.
+Avoid: heavy animations, complex auth, overengineering, slow assets.
+
+Exception: background music (`MusicPlayer.tsx`) autoplays on load, falling back silently to its "off" state if the browser blocks unmuted autoplay.
 
 ## File structure
 

@@ -1,10 +1,31 @@
 "use client";
 
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 export default function MusicPlayer() {
   const audioRef = useRef<HTMLAudioElement>(null);
   const [playing, setPlaying] = useState(false);
+
+  useEffect(() => {
+    audioRef.current?.play().then(
+      () => setPlaying(true),
+      () => setPlaying(false)
+    );
+  }, []);
+
+  // Autoplay is blocked until the browser sees user interaction — catch the
+  // first tap/scroll/keypress anywhere on the page and retry once. Only
+  // fires once ever, so a later manual pause (via the button) isn't undone
+  // by the guest's next scroll.
+  useEffect(() => {
+    const events = ["pointerdown", "keydown", "touchstart", "scroll"] as const;
+    function tryPlay() {
+      audioRef.current?.play().then(() => setPlaying(true), () => {});
+      events.forEach((e) => window.removeEventListener(e, tryPlay));
+    }
+    events.forEach((e) => window.addEventListener(e, tryPlay, { once: true, passive: true }));
+    return () => events.forEach((e) => window.removeEventListener(e, tryPlay));
+  }, []);
 
   function toggle() {
     const audio = audioRef.current;

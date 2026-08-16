@@ -9,6 +9,7 @@ type Props = {
   lightColor: string;
   staggerMs?: number;
   durationMs?: number;
+  delayMs?: number;
 };
 
 // Fades words in left-to-right (reading order), lightColor -> color.
@@ -19,6 +20,7 @@ export default function ReadInText({
   lightColor,
   staggerMs = 45,
   durationMs = 500,
+  delayMs = 0,
 }: Props) {
   const ref = useRef<HTMLSpanElement>(null);
   const [visible, setVisible] = useState(false);
@@ -51,7 +53,7 @@ export default function ReadInText({
             opacity: visible ? 1 : 0,
             color: visible ? color : lightColor,
             transition: `opacity ${durationMs}ms ease-out, color ${durationMs}ms ease-out`,
-            transitionDelay: `${i * staggerMs}ms`,
+            transitionDelay: `${delayMs + i * staggerMs}ms`,
           }}
         >
           {word}
