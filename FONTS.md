@@ -19,6 +19,20 @@ Every component references `var(--font-heading)` / `var(--font-body)` — never 
 
 **One exception:** `OurStorySection.tsx` is hardcoded to `var(--font-heading-new)` / `var(--font-body-new)` (Libre Bodoni/Manrope) regardless of the `PREVIEW_NEW_FONTS` flag — it's permanently pinned there as the font trial. Flip `PREVIEW_NEW_FONTS = true` in `layout.tsx` to preview that pairing on the rest of the site too.
 
+**Per-section font groups:** some sections get their own dedicated variable pair instead of following `--font-heading`/`--font-body`, so their typeface can be swapped independently without touching the rest of the site. Each one is declared in `layout.tsx` and currently aliases the site defaults until a distinct face is chosen for it.
+
+| Group | Variables | Scope |
+|---|---|---|
+| Our Story (pinned trial) | `--font-heading-new` / `--font-body-new` | Whole section — eyebrow, milestones (not the "Nuestra historia de Amor" heading, see below) |
+| Itinerary events | `--font-heading-itinerary` / `--font-body-itinerary` | Event time + name only — the "Itinerario" title still uses `--font-heading` |
+
+**Permanently pinned single texts:** two texts are deliberately kept on a fixed typeface, independent of everything above — they won't move even if `PREVIEW_NEW_FONTS` is flipped.
+
+| Text | Variable | Typeface |
+|---|---|---|
+| "Sol & Gabriel" (HeroSection) | `--font-hero` | Cormorant Garamond |
+| "Nuestra historia de Amor" (OurStorySection heading) | `--font-heading-story` | Libre Bodoni |
+
 ## 2. The content hierarchy (which role uses which variable)
 
 | Role | Example | Variable | Typical size |

@@ -47,8 +47,8 @@ export default function CountdownSection({ content }: Props) {
   return (
     <section className="bg-[#5D7B9F] px-6 py-20 text-center" id="countdown">
       <p
-        className="mb-10 text-2xl uppercase tracking-[0.1em] text-[#c9a96e] sm:text-3xl"
-        style={{ fontFamily: "var(--font-heading)" }}
+        className="mb-10 text-2xl uppercase tracking-[0.05em] text-[#ffffff] sm:text-3xl"
+        style={{ fontFamily: "var(--font-heading-cormorant)" }}
       >
         {content.heading}
       </p>
@@ -61,15 +61,15 @@ export default function CountdownSection({ content }: Props) {
           { label: content.labels.minutes, value: t.minutes },
           { label: content.labels.seconds, value: t.seconds },
         ].map(({ label, value }) => (
-          <div key={label} className="flex flex-col items-center gap-2">
+          <div key={label} className="flex w-14 flex-col items-center gap-2 sm:w-24">
             <span
-              className="text-5xl font-light tabular-nums text-white sm:text-6xl"
+              className="text-4xl font-light tabular-nums text-white sm:text-6xl"
               style={{ fontFamily: "var(--font-heading)" }}
             >
               {pad(value)}
             </span>
             <span
-              className="text-[10px] uppercase tracking-wide text-[#AEBDCF] sm:text-xs sm:tracking-widest"
+              className="whitespace-nowrap text-[10px] uppercase tracking-wide text-[#AEBDCF] sm:text-xs sm:tracking-widest"
               style={{ fontFamily: "var(--font-body)" }}
             >
               {label}

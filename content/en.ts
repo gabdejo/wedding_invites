@@ -182,6 +182,7 @@ const en: SiteContent = {
     buyerPhonePlaceholder: "Phone",
     dedicationPlaceholder: "Message (optional)",
     goToPayLabel: "Go to payment",
+    processingLabel: "Processing payment...",
     removeLabel: "Remove",
     products: [
       {

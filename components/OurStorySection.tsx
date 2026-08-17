@@ -37,11 +37,24 @@ const CLUSTER_LAYOUTS: Record<number, SpotLayout[]> = {
   ],
 };
 
+// Photos are absolutely positioned, so this height is the ONLY thing reserving
+// space for them — it doesn't grow to fit their real (rotated, portrait-heavy)
+// extent. Values below are calibrated against the actual rendered photos so the
+// cluster stops either crowding the next title or leaving dead space before it.
+// Fallback, keyed by photo count — used for counts with no per-milestone override below.
 const CLUSTER_HEIGHTS: Record<number, string> = {
-  2: "h-[240px] sm:h-[300px]",
-  3: "h-[300px] sm:h-[380px]",
-  4: "h-[340px] sm:h-[420px]",
-  5: "h-[360px] sm:h-[440px]",
+  2: "h-[365px] sm:h-[415px]", // worst case: two portrait photos (Universidad)
+  3: "h-[360px] sm:h-[420px]",
+  4: "h-[400px] sm:h-[460px]", // no milestone uses this yet; generous default
+  5: "h-[300px] sm:h-[350px]",
+};
+
+// Same photo count can still need a different height depending on the actual
+// orientation mix (a landscape photo sits much shorter than a portrait one),
+// so the two-portrait worst case above over-reserves for milestones with a
+// shorter mix — override per milestone index where that happens.
+const MILESTONE_CLUSTER_HEIGHT_OVERRIDES: Record<number, string> = {
+  2: "h-[290px] sm:h-[320px]", // "Enamorados" — one portrait + one landscape photo
 };
 
 function StoryPhoto({
@@ -103,7 +116,7 @@ export default function OurStorySection({ content }: Props) {
         onIntersect={() => setTimeout(() => setIntroDone(true), introTotalMs)}
       >
         <p
-          className="mb-3 text-sm font-medium tracking-widest sm:text-base"
+          className="mb-3 text-base font-medium tracking-widest sm:text-lg"
           style={{ fontFamily: "var(--font-body-new)" }}
         >
           <ReadInText
@@ -116,7 +129,7 @@ export default function OurStorySection({ content }: Props) {
         </p>
         <h2
           className="text-4xl font-medium italic sm:text-5xl"
-          style={{ fontFamily: "var(--font-heading-new)" }}
+          style={{ fontFamily: "var(--font-heading-story)" }}
         >
           <ReadInText
             text={content.heading}
@@ -183,7 +196,9 @@ export default function OurStorySection({ content }: Props) {
                   durationMs={2500}
                   gate={introDone}
                   className={`relative mx-auto mt-10 w-full max-w-sm md:mx-0 md:mt-0 md:max-w-none ${
-                    CLUSTER_HEIGHTS[milestone.photos.length] ?? CLUSTER_HEIGHTS[3]
+                    MILESTONE_CLUSTER_HEIGHT_OVERRIDES[mIndex] ??
+                    CLUSTER_HEIGHTS[milestone.photos.length] ??
+                    CLUSTER_HEIGHTS[3]
                   } ${textOnRight ? "md:order-1" : "md:order-2"}`}
                 >
                   {milestone.photos.map((photo, pIndex) => {

@@ -12,7 +12,7 @@ export default function EventInfoSection({ content }: Props) {
     <section className="bg-[#f0f4f9] px-6 py-24" id="info">
       <div className="mx-auto max-w-3xl text-center">
         <h2
-          className="mb-4 text-4xl font-light text-[#2c2c2c]"
+          className="mb-4 text-3xl font-light text-[#2c2c2c] sm:text-4xl"
           style={{ fontFamily: "var(--font-heading)" }}
         >
           {content.heading}
@@ -100,7 +100,7 @@ function FlipCard({
           }}
         >
           <p
-            className="text-4xl font-light text-[#2c2c2c]"
+            className="text-3xl font-light text-[#2c2c2c] sm:text-4xl"
             style={{ fontFamily: "var(--font-heading)" }}
           >
             {event.name}

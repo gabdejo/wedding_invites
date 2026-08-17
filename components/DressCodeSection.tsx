@@ -9,7 +9,7 @@ export default function DressCodeSection({ content }: Props) {
       <div className="px-6 pt-24 text-center">
         <div className="mx-auto max-w-xl">
           <h2
-            className="mb-4 text-4xl font-light text-[#2c2c2c]"
+            className="mb-4 text-3xl font-light text-[#2c2c2c] sm:text-4xl"
             style={{ fontFamily: "var(--font-heading)" }}
           >
             {content.heading}

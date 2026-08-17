@@ -7,12 +7,14 @@ import type { SiteContent } from "@/content/types";
 
 type Props = { content: SiteContent["registry"] };
 
+// text-base (16px) on mobile prevents iOS Safari's auto-zoom-on-focus; text-sm from sm: up.
 const inputClass =
-  "w-full border-b border-[#AEBDCF] bg-transparent py-3 text-sm text-[#2c2c2c] placeholder-[#9BAED4] outline-none transition-colors focus:border-[#5D7B9F]";
+  "w-full border-b border-[#AEBDCF] bg-transparent py-3 text-base text-[#2c2c2c] placeholder-[#9BAED4] outline-none transition-colors focus:border-[#5D7B9F] sm:text-sm";
 
 export default function RegistrySection({ content }: Props) {
   const [expanded, setExpanded] = useState(false);
   const [purchaseState, setPurchaseState] = useState<"idle" | "success" | "error">("idle");
+  const [isProcessing, setIsProcessing] = useState(false);
   const [showToast, setShowToast] = useState(false);
   const [cart, setCart] = useState<Map<string, number>>(new Map());
   const [amountEditing, setAmountEditing] = useState<string | null>(null);
@@ -55,7 +57,8 @@ export default function RegistrySection({ content }: Props) {
   }
 
   function checkoutCart() {
-    if (cartItems.length === 0 || !buyerName.trim() || !buyerEmail.trim()) return;
+    if (cartItems.length === 0 || !buyerName.trim() || !buyerEmail.trim() || isProcessing) return;
+    setPurchaseState("idle");
 
     const description = [
       cartItems.map((p) => p.name).join(", "),
@@ -77,6 +80,7 @@ export default function RegistrySection({ content }: Props) {
     window.culqi = async () => {
       window.Culqi.close();
       if (window.Culqi.token) {
+        setIsProcessing(true);
         try {
           const res = await fetch("/api/charge", {
             method: "POST",
@@ -103,7 +107,14 @@ export default function RegistrySection({ content }: Props) {
             setCart(new Map());
             setCartOpen(false);
             setExpanded(false);
-            document.getElementById("registry")?.scrollIntoView({ block: "start" });
+            // Wait for the collapsed product grid to actually repaint before scrolling —
+            // otherwise this measures the still-expanded (taller) layout and the page
+            // ends up scrolled past "registry" once React removes that height.
+            requestAnimationFrame(() => {
+              requestAnimationFrame(() => {
+                document.getElementById("registry")?.scrollIntoView({ block: "start" });
+              });
+            });
             setBuyerName("");
             setBuyerEmail("");
             setBuyerPhone("");
@@ -113,6 +124,8 @@ export default function RegistrySection({ content }: Props) {
           }
         } catch {
           setPurchaseState("error");
+        } finally {
+          setIsProcessing(false);
         }
       } else if (window.Culqi.error) {
         setPurchaseState("error");
@@ -146,7 +159,7 @@ export default function RegistrySection({ content }: Props) {
 
       <div className="mx-auto max-w-5xl text-center">
         <h2
-          className="mb-4 text-4xl font-light text-[#2c2c2c]"
+          className="mb-4 text-3xl font-light text-[#2c2c2c] sm:text-4xl"
           style={{ fontFamily: "var(--font-heading)" }}
         >
           {content.heading}
@@ -260,7 +273,7 @@ export default function RegistrySection({ content }: Props) {
                         placeholder={content.customAmountPrompt}
                         value={amountDraft}
                         onChange={(e) => setAmountDraft(e.target.value)}
-                        className="w-0 min-w-0 flex-1 border border-[#5D7B9F] px-2 py-1.5 text-xs text-[#2c2c2c] outline-none"
+                        className="w-0 min-w-0 flex-1 border border-[#5D7B9F] px-2 py-1.5 text-base text-[#2c2c2c] outline-none sm:text-xs"
                         style={{ fontFamily: "var(--font-body)" }}
                       />
                       <button
@@ -358,6 +371,7 @@ export default function RegistrySection({ content }: Props) {
                 value={buyerName}
                 onChange={(e) => setBuyerName(e.target.value)}
                 required
+                disabled={isProcessing}
                 style={{ fontFamily: "var(--font-body)" }}
               />
               <input
@@ -367,6 +381,7 @@ export default function RegistrySection({ content }: Props) {
                 value={buyerEmail}
                 onChange={(e) => setBuyerEmail(e.target.value)}
                 required
+                disabled={isProcessing}
                 style={{ fontFamily: "var(--font-body)" }}
               />
               <input
@@ -375,6 +390,7 @@ export default function RegistrySection({ content }: Props) {
                 placeholder={content.buyerPhonePlaceholder}
                 value={buyerPhone}
                 onChange={(e) => setBuyerPhone(e.target.value)}
+                disabled={isProcessing}
                 style={{ fontFamily: "var(--font-body)" }}
               />
               <textarea
@@ -383,15 +399,28 @@ export default function RegistrySection({ content }: Props) {
                 placeholder={content.dedicationPlaceholder}
                 value={dedication}
                 onChange={(e) => setDedication(e.target.value)}
+                disabled={isProcessing}
                 style={{ fontFamily: "var(--font-body)" }}
               />
+              {purchaseState === "error" && !isProcessing && (
+                <p className="text-center text-sm text-red-600" style={{ fontFamily: "var(--font-body)" }}>
+                  {content.purchaseError}
+                </p>
+              )}
+
               <button
                 type="submit"
-                disabled={!buyerName.trim() || !buyerEmail.trim()}
-                className="mt-2 bg-[#5D7B9F] py-4 text-sm uppercase tracking-[0.3em] text-white transition-colors hover:bg-[#9BAED4] disabled:cursor-not-allowed disabled:opacity-40"
+                disabled={!buyerName.trim() || !buyerEmail.trim() || isProcessing}
+                className="mt-2 flex items-center justify-center gap-3 bg-[#5D7B9F] py-4 text-sm uppercase tracking-[0.3em] text-white transition-colors hover:bg-[#9BAED4] disabled:cursor-not-allowed disabled:opacity-70"
                 style={{ fontFamily: "var(--font-body)" }}
               >
-                {content.goToPayLabel}
+                {isProcessing && (
+                  <span
+                    aria-hidden="true"
+                    className="h-4 w-4 animate-spin rounded-full border-2 border-white/40 border-t-white"
+                  />
+                )}
+                {isProcessing ? content.processingLabel : content.goToPayLabel}
               </button>
             </form>
 

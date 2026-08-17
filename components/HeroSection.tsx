@@ -25,7 +25,7 @@ export default function HeroSection({ content }: Props) {
       <div className="absolute inset-0 bg-black/40" />
 
       <div className="relative z-10 flex flex-col items-center gap-4">
-        <div className="flex flex-col items-center gap-1" style={{ fontFamily: "var(--font-heading)" }}>
+        <div className="flex flex-col items-center gap-1" style={{ fontFamily: "var(--font-hero)" }}>
           <h1 className="text-7xl font-light leading-none tracking-wide text-white sm:text-8xl md:text-9xl">
             Sol
           </h1>

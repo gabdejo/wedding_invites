@@ -16,8 +16,12 @@ export default function MerchantInfoCard({ merchant }: Props) {
     <dl className="grid grid-cols-1 gap-x-6 gap-y-3 rounded-sm bg-white p-6 shadow-md ring-1 ring-black/5 sm:grid-cols-2">
       {rows.map(([label, value]) => (
         <div key={label}>
-          <dt className="text-xs uppercase tracking-widest text-[#9BAED4]">{label}</dt>
-          <dd className="text-sm text-[#2c2c2c]">{value}</dd>
+          <dt className="text-xs uppercase tracking-widest text-[#9BAED4]" style={{ fontFamily: "var(--font-body)" }}>
+            {label}
+          </dt>
+          <dd className="text-sm text-[#2c2c2c]" style={{ fontFamily: "var(--font-body)" }}>
+            {value}
+          </dd>
         </div>
       ))}
     </dl>

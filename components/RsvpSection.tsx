@@ -3,8 +3,9 @@
 import { useState } from "react";
 import { supabase } from "@/lib/supabase";
 
+// text-base (16px) on mobile prevents iOS Safari's auto-zoom-on-focus; text-sm from sm: up.
 const inputClass =
-  "w-full border-b border-[#AEBDCF] bg-transparent py-3 text-sm text-[#2c2c2c] placeholder-[#9BAED4] outline-none transition-colors focus:border-[#5D7B9F]";
+  "w-full border-b border-[#AEBDCF] bg-transparent py-3 text-base text-[#2c2c2c] placeholder-[#9BAED4] outline-none transition-colors focus:border-[#5D7B9F] sm:text-sm";
 
 import type { SiteContent } from "@/content/types";
 
@@ -66,7 +67,7 @@ export default function RsvpSection({ content }: Props) {
       <section className="bg-[#e8eff7] px-6 py-24 text-center" id="rsvp">
         <div className="mx-auto max-w-md">
           <h2
-            className="mb-4 text-4xl font-light text-[#2c2c2c]"
+            className="mb-4 text-3xl font-light text-[#2c2c2c] sm:text-4xl"
             style={{ fontFamily: "var(--font-heading)" }}
           >
             {content.thankYou}
@@ -90,7 +91,7 @@ export default function RsvpSection({ content }: Props) {
           {content.subtitle}
         </p>
         <h2
-          className="mb-4 text-4xl font-light text-[#2c2c2c]"
+          className="mb-4 text-3xl font-light text-[#2c2c2c] sm:text-4xl"
           style={{ fontFamily: "var(--font-heading)" }}
         >
           {content.heading}

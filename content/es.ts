@@ -183,6 +183,7 @@ const es: SiteContent = {
     buyerPhonePlaceholder: "Teléfono",
     dedicationPlaceholder: "Dedicatoria (opcional)",
     goToPayLabel: "Ir a pagar",
+    processingLabel: "Procesando pago...",
     removeLabel: "Quitar",
     products: [
       {
@@ -392,7 +393,7 @@ const es: SiteContent = {
       //},
       {
         question: "¿Habrá estacionamiento?",
-        answer: "Sí, ambas locaciones cuentan con estacionamiento disponible para los invitados. En el caso de la iglesia, hay una playa de Apparka en la misma cuadra en la siguiente esquina.",
+        answer: "Sí, ambas locaciones cuentan con estacionamiento disponible para los invitados. En el caso de la iglesia, hay una playa Apparka en la misma cuadra, en la Av Armendáriz 350.",
       },
       {
         question: "¿Cómo funciona la mesa de regalos?",

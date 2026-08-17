@@ -120,6 +120,7 @@ export interface SiteContent {
     buyerPhonePlaceholder: string;
     dedicationPlaceholder: string;
     goToPayLabel: string;
+    processingLabel: string;
     removeLabel: string;
     products: Array<{
       imagePath: string;
