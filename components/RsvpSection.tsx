@@ -97,7 +97,7 @@ export default function RsvpSection({ content }: Props) {
           {content.heading}
         </h2>
         <div className="mx-auto mb-4 h-px w-12 bg-[#c9a96e]" />
-        <p className="mb-10 text-sm text-[#666666]" style={{ fontFamily: "var(--font-body)" }}>
+        <p className="mb-10 text-base text-[#666666]" style={{ fontFamily: "var(--font-body)" }}>
           {content.deadline}
         </p>
 

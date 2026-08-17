@@ -23,7 +23,9 @@ const inter = Inter({
 const libreBodoni = Libre_Bodoni({
   variable: "--font-heading-libre-bodoni",
   subsets: ["latin"],
-  weight: ["400", "500", "600"],
+  // "variable" (one file, full weight range) instead of discrete weights — Google's CDN
+  // was 404ing on the specific static-weight file hashes Next's font manifest requested.
+  weight: "variable",
   style: ["normal", "italic"],
 });
 
