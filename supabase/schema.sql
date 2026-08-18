@@ -52,6 +52,9 @@ create table guests (
 -- returns at most 5 matches instead of exposing the full guest list.
 alter table guests enable row level security;
 
+-- Accent-insensitive matching ("Nuñez" ~ "Nunez")
+create extension if not exists unaccent;
+
 create or replace function search_guests(search_query text)
 returns table(id uuid, full_name text, max_guests int)
 language sql
@@ -60,7 +63,7 @@ set search_path = public
 as $$
   select id, full_name, max_guests
   from guests
-  where full_name ilike '%' || search_query || '%'
+  where unaccent(full_name) ilike '%' || unaccent(search_query) || '%'
   order by full_name
   limit 5;
 $$;
