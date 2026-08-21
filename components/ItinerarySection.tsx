@@ -31,7 +31,7 @@ export default function ItinerarySection({ content }: Props) {
               <div key={item.name} className="absolute inset-x-0" style={{ top: `${top}%` }}>
                 <div
                   className={`absolute h-[clamp(56px,19vw,72px)] w-[clamp(56px,19vw,72px)] -translate-y-1/2 shrink-0 overflow-hidden rounded-full bg-white shadow-sm ${
-                    flip ? "left-[70%] ml-2" : "right-[70%] mr-2"
+                    flip ? "left-[70%] ml-4" : "right-[70%] mr-4"
                   }`}
                 >
                   {item.imagePath ? (
@@ -42,9 +42,14 @@ export default function ItinerarySection({ content }: Props) {
                 </div>
 
                 <div
-                  className={`absolute w-[clamp(96px,29vw,160px)] -translate-y-1/2 ${
-                    flip ? "right-[70%] mr-3 text-right" : "left-[70%] ml-3 text-left"
-                  }`}
+                  className="absolute w-[clamp(96px,29vw,160px)] text-center"
+                  style={{
+                    // centers this box on the exact same point the mirrored photo circle
+                    // is centered on (its anchor + margin + half its own width), so text
+                    // and photos share the same two vertical lines across every row.
+                    [flip ? "right" : "left"]: "calc(70% + 16px + clamp(56px,19vw,72px)/2)",
+                    transform: flip ? "translate(50%, -50%)" : "translate(-50%, -50%)",
+                  }}
                 >
                   <p
                     className="text-[clamp(13px,3.2vw,15px)] uppercase tracking-widest text-[#5D7B9F]"

@@ -33,7 +33,7 @@ const es: SiteContent = {
     photos: [
       { imagePath: "/images/carru1.jpg", alt: "Foto de Sol y Gabriel 1", orientation: "landscape" },
       { imagePath: "/images/carru2.jpg", alt: "Foto de Sol y Gabriel 2", orientation: "landscape" },
-      { imagePath: "/images/carru3.jpg", alt: "Foto de Sol y Gabriel 3", orientation: "landscape" },
+      { imagePath: "/images/carru3b.jpg", alt: "Foto de Sol y Gabriel 3", orientation: "landscape" },
       { imagePath: "/images/carru4.jpg", alt: "Foto de Sol y Gabriel 4", orientation: "landscape" },
       { imagePath: "/images/carru5b.jpg", alt: "Foto de Sol y Gabriel 5", orientation: "landscape" },
       { imagePath: "/images/carru6b.jpg", alt: "Foto de Sol y Gabriel 6", orientation: "landscape" },
@@ -47,14 +47,14 @@ const es: SiteContent = {
       {
         name: "Iglesia",
         imagePath: "/images/fatima_fondo.png",
-        time: "12:00 M",
+        time: "11:45 AM",
         address: "Parroquia Nuestra Señora de Fátima · Av. Armendariz 350, Miraflores",
         mapsUrl: "https://maps.app.goo.gl/UqyHfwYS5m7971fz5",
       },
       {
         name: "Hacienda",
         imagePath: "/images/lilas_medio_rosado.png",
-        time: "3:30 PM",
+        time: "3:00 PM",
         address: "Hacienda Las Lilas · Pachacamac",
         mapsUrl: "https://maps.app.goo.gl/HqxFEcde4zyGsXae6"
       },
@@ -75,7 +75,7 @@ const es: SiteContent = {
       },
       {
         title: "Año Nuevo 2020",
-        text: " Después de vernos más seguido otra vez por los Makis, lo invité a pasar Año Nuevo en la playa junto con otros amigos de la chamba. Todos podían ver la buena química que teníamos, menos nosotros, pero sus palabras nos dejaron esa idea de que podríamos ser buena pareja.",
+        text: "S: Después de vernos más seguido otra vez por los Makis, lo invité a pasar Año Nuevo en la playa junto con otros amigos de la chamba. Todos podían ver la buena química que teníamos, menos nosotros, pero sus palabras nos dejaron esa idea de que podríamos ser buena pareja.",
         photos: [
           { imagePath: "/images/IMG_8479.jpg", alt: "Gabriel, Sol y el sol", orientation: "landscape" },
           { imagePath: "/images/IMG_8384.jpg", alt: "Una pose saltando, de dos amigos", orientation: "portrait" },
@@ -84,7 +84,7 @@ const es: SiteContent = {
       },
       {
         title: "Enamorados",
-        text: "Después de un verano con más salidas y maratones de películas, Gabriel decidió pedirme ser su enamorada, agarrando la guitarra de mi papá, y cantándome una canción de Cultura Profética: Me faltabas tú",
+        text: "S: Después de un verano con más salidas y maratones de películas, Gabriel decidió pedirme ser su enamorada, agarrando la guitarra de mi papá, y cantándome una canción de Cultura Profética: Me faltabas tú",
         photos: [
           { imagePath: "/images/IMG_0104.jpg", alt: "San Bartolo", orientation: "portrait" },
           { imagePath: "/images/IMG_0950.jpg", alt: "Cerca a nuestro primer aniversario", orientation: "landscape" },
@@ -92,7 +92,7 @@ const es: SiteContent = {
       },
       {
         title: "Promesa",
-        text: "A lo largo de los años crecimos, nos graduamos, viajamos, empezamos a trabajar y nos unimos más. Al cumplir nuestro aniversario #3, le regalé a Sol un anillo con la promesa de que en algunos años lo cambiaría por uno de compromiso.",
+        text: "G: A lo largo de los años crecimos, nos graduamos, viajamos, empezamos a trabajar y nos unimos más. Al cumplir nuestro aniversario #3, le regalé a Sol un anillo con la promesa de que en algunos años lo cambiaría por uno de compromiso.",
         photos: [
           { imagePath: "/images/IMG_6012.jpg", alt: "Ella y sus girasoles", orientation: "portrait" },
           { imagePath: "/images/IMG_8283.jpg", alt: "El anillo de promesa", orientation: "landscape" },
@@ -103,7 +103,7 @@ const es: SiteContent = {
       },
       {
         title: "Comprometidos",
-        text: "En un viaje de desconexión a Cartagena, en el archipiélago de las islas del Rosario, le preparé a Sol una pedida íntima. Así, después de años y años de súplicas...",
+        text: "G: En un viaje de desconexión a Cartagena, en el archipiélago de las islas del Rosario, le preparé a Sol una pedida íntima. Así, después de años y años de súplicas...",
         highlight: "¡Me dijo que sí!",
         photos: [],
       },
@@ -126,7 +126,7 @@ const es: SiteContent = {
   itinerary: {
     heading: "Itinerario",
     items: [
-      { time: "12:00 M", name: "Misa", imagePath: "/images/dib_misa.png" },
+      { time: "11:45 AM", name: "Misa", imagePath: "/images/dib_misa.png" },
       { time: "3:00 PM", name: "Recepción", imagePath: "/images/dib_recepcion.png" },
       { time: "5:30 PM", name: "Cena", imagePath: "/images/dib_cena.png" },
       { time: "6:30 PM", name: "Fiesta", imagePath: "/images/dib_fiesta.png" },
@@ -324,7 +324,7 @@ const es: SiteContent = {
       heading: "¿Prefieres hacerlo por transferencia?",
       note: [
         "Si prefieren hacerlo mediante transferencia, pueden realizarlo a las siguientes cuentas a nombre de Gabriel Dejo.",
-        "Les agradeceremos puedan colocar su nombre en el concepto para poder agradecerles por su detalle."
+        "Les pedimos puedan colocar su nombre en el concepto para poder agradecerles por su detalle."
       ],
       accounts: [
         {
@@ -334,12 +334,12 @@ const es: SiteContent = {
         },
         {
           bank: "Scotiabank",
-          accountNumber: "833-0064602",
+          accountNumber: "8330064602",
           cci: "00972420833006460267",
         },
         {
           bank: "Interbank",
-          accountNumber: "100-3276288960",
+          accountNumber: "1003276288960",
           cci: "00310001327628896059",
         },
       ],
@@ -355,11 +355,11 @@ const es: SiteContent = {
     heading: "Confirmar Asistencia",
     subtitle: "RSVP",
     deadline: "Por favor confirmar antes del 8 de octubre",
-    namePlaceholder: "Nombre y apellido",
+    namePlaceholder: "Nombre y primer apellido",
     emailPlaceholder: "Correo electrónico",
     willYouAttend: "¿Asistirás?",
-    accepts: "Con gusto asistirá",
-    declines: "Con pena no podrá",
+    accepts: "Con gusto asistiré",
+    declines: "Con pena no podré",
     numberOfGuests: "Número de acompañantes",
     notesPlaceholder: "Mensaje para los novios (opcional)",
     submit: "Confirmar asistencia",
@@ -397,7 +397,7 @@ const es: SiteContent = {
       },
       {
         question: "¿Cómo funciona la mesa de regalos?",
-        answer: "Pueden elegir alguno de los regalos que hemos seleccionado o, si lo prefieren, realizar un aporte libre que destinaremos con mucho cariño a nuestra luna de miel. Una vez elegido el regalo, la web los dirigirá a una plataforma segura, donde podrán completar el proceso con tarjeta de crédito, tarjeta de débito, Yape o Plin.\n\nSi prefieren hacerlo mediante transferencia, pueden realizarlo a las siguientes cuentas a nombre de Gabriel Dejo.\n BCP\n19170142836048\nCCI 00219117014283604853\n\nScotiabank\n833-0064602\nCCI 00972420833006460267\n\nInterbank\n100-3276288960\nCCI 00310001327628896059\n\nLes agradeceremos colocar su nombre en el concepto para poder agradecerles por su detalle.",
+        answer: "Pueden elegir alguno de los regalos que hemos seleccionado o, si lo prefieren, realizar un aporte libre que destinaremos con mucho cariño a nuestra luna de miel. Una vez elegido el regalo, la web los dirigirá a una plataforma segura, donde podrán completar el proceso con tarjeta de crédito, tarjeta de débito, Yape o Plin.\n\nSi prefieren hacerlo mediante transferencia, pueden realizarlo a las siguientes cuentas a nombre de Gabriel Dejo.\n BCP\n19170142836048\nCCI 00219117014283604853\n\nScotiabank\n8330064602\nCCI 00972420833006460267\n\nInterbank\n1003276288960\nCCI 00310001327628896059\n\nLes pedimos colocar su nombre en el concepto para poder agradecerles por su detalle.",
       },
     ],
   },

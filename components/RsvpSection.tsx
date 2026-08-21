@@ -171,7 +171,7 @@ export default function RsvpSection({ content }: Props) {
                       key={label}
                       type="button"
                       onClick={() => setAttending(value)}
-                      className={`flex-1 border py-3 text-xs uppercase tracking-[0.15em] transition-colors ${
+                      className={`flex-1 border px-2 py-3 text-center text-xs uppercase leading-snug tracking-[0.15em] transition-colors ${
                         attending === value
                           ? "border-[#9BAED4] bg-[#9BAED4] text-white"
                           : "border-[#AEBDCF] text-[#666666] hover:border-[#9BAED4] hover:text-[#9BAED4]"

@@ -56,7 +56,7 @@ const PREVIEW_NEW_FONTS = true;
 
 export const metadata: Metadata = {
   title: "Sol & Gabriel — Nov 14, 2026",
-  description: "We're getting married and want you to celebrate with us.",
+  description: "¡Nos casamos! Ven y celebra con nosotros.",
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
