@@ -229,6 +229,13 @@ const es: SiteContent = {
         price: 210,
       },
       {
+        imagePath: "/images/joycon.jpg",
+        category: "hogar",
+        name: "Mandos Joy-Con",
+        description: "Para nuestras noches de juegos en pareja o con amigos que nos visiten.",
+        price: 390,
+      },
+      {
         imagePath: "/images/hielera.jpg",
         category: "cocina",
         name: "Hielera de acero inoxidable",

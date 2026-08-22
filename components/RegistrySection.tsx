@@ -174,12 +174,12 @@ export default function RegistrySection({ content }: Props) {
         </p>
 
         <div id="registry-bank-transfer" className="mx-auto mb-12 max-w-md text-left">
-          <p className="mb-6 text-sm leading-7 text-[#666666]" style={{ fontFamily: "var(--font-body)" }}>
+          <p className="mb-6 text-justify text-sm leading-7 text-[#666666]" style={{ fontFamily: "var(--font-body)" }}>
             {content.lines[0]}
             <br />
             {content.lines[1]}
           </p>
-          <p className="mb-4 text-sm leading-7 text-[#666666]" style={{ fontFamily: "var(--font-body)" }}>
+          <p className="mb-4 text-justify text-sm leading-7 text-[#666666]" style={{ fontFamily: "var(--font-body)" }}>
             {content.bankTransfer.note.map((line, i) => (
               <span key={i}>
                 {line}
@@ -189,7 +189,7 @@ export default function RegistrySection({ content }: Props) {
           </p>
           <div className="space-y-4">
             {content.bankTransfer.accounts.map((account, i) => (
-              <p key={i} className="text-sm leading-7 text-[#666666]" style={{ fontFamily: "var(--font-body)" }}>
+              <p key={i} className="text-justify text-sm leading-7 text-[#666666]" style={{ fontFamily: "var(--font-body)" }}>
                 <span className="font-medium uppercase tracking-wide text-[#9a8066]">{account.bank}</span>
                 <br />
                 Cuenta: {account.accountNumber}

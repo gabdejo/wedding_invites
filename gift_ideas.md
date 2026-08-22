@@ -12,3 +12,4 @@
 - [x] https://www.falabella.com.pe/falabella-pe/product/883661717/difusor-aromatico-ceramica-17x10cm/883661717
 - [x] https://record.com.pe/products/olla-gourmet-rojo-aluminio-fundido-ceramico-n24
 - [x] https://www.kitchenaid.pe/batidora-artisan-plus-4-7-l-sun-dried-tomato/p
+- [x] https://www.falabella.com.pe/falabella-pe/product/80029597/acc-switch-joy-con-red-blue/80029597
