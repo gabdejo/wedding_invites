@@ -60,10 +60,12 @@ export default function RegistrySection({ content }: Props) {
     if (cartItems.length === 0 || !buyerName.trim() || !buyerEmail.trim() || isProcessing) return;
     setPurchaseState("idle");
 
+    // Buyer identity goes first so it survives the 80-char clamp in /api/charge —
+    // that's what lets a failed charge in the Culqi Panel log be traced back to a guest.
     const description = [
-      cartItems.map((p) => p.name).join(", "),
       `De: ${buyerName}`,
       buyerPhone && `Tel: ${buyerPhone}`,
+      cartItems.map((p) => p.name).join(", "),
       dedication && `Dedicatoria: ${dedication}`,
     ]
       .filter(Boolean)
