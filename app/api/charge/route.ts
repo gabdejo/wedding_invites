@@ -23,9 +23,16 @@ export async function POST(req: NextRequest) {
 
   const data = await culqiRes.json();
 
-  if (!culqiRes.ok) {
+  // Culqi can return HTTP 201 even when the issuing bank declined the charge —
+  // the real result is in outcome.type, not the HTTP status.
+  const declined = !culqiRes.ok || data.outcome?.type !== "venta_exitosa";
+
+  if (declined) {
     console.error("Culqi charge failed", { email, description: safeDescription, culqiError: data });
-    return NextResponse.json({ ok: false, error: data.user_message ?? "Charge failed" }, { status: 400 });
+    return NextResponse.json(
+      { ok: false, error: data.outcome?.user_message ?? data.user_message ?? "Charge failed" },
+      { status: 400 }
+    );
   }
 
   return NextResponse.json({ ok: true });
