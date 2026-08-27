@@ -178,6 +178,7 @@ const es: SiteContent = {
     cartDrawerHeading: "Carrito",
     securePaymentHeading: "Pago seguro con Culqi",
     securePaymentNote: "Al continuar, se habilitará una ventana segura de Culqi para completar el pago. Los datos de tu tarjeta están protegidos y no pasan por esta web.",
+    bankRejectionNotice: "Un pequeño aviso: BBVA y Scotiabank a veces bloquean este pago por tratarse de un comercio nuevo para ellos. Si esto te pasa, no es nada de tu lado — prueba con otra tarjeta o banco, o usa la transferencia bancaria. ¡Gracias por tu paciencia y por acompañarnos!",
     buyerNamePlaceholder: "Nombre del comprador",
     buyerEmailPlaceholder: "Correo",
     buyerPhonePlaceholder: "Teléfono",
@@ -326,6 +327,20 @@ const es: SiteContent = {
         description: "Una batidora para animarnos a hornear juntos y compartir postres caseros con quienes queremos.",
         price: 1450,
       },
+      {
+        imagePath: "/images/lavadora_samsung.webp",
+        category: "hogar",
+        name: "Lavadora",
+        description: "Para hacer más liviano el día a día en nuestro nuevo hogar.",
+        price: 1800,
+      },
+      {
+        imagePath: "/images/refrigeradora_lg.webp",
+        category: "hogar",
+        name: "Refrigeradora",
+        description: "El corazón de nuestra cocina, lista para guardar todo lo que cocinemos y compartamos juntos.",
+        price: 2900,
+      },
     ],
     bankTransfer: {
       heading: "¿Prefieres hacerlo por transferencia?",
@@ -380,7 +395,7 @@ const es: SiteContent = {
     items: [
       {
         question: "¿A qué hora debería llegar para la misa y recepción?",
-        answer: "Para la misa, por favor llegar entre 11:40 y 11:50 a.m. para que tengas tiempo suficiente de tomar asiento antes que empieze la ceremonia puntualmente a las 12:00 p.m.\nPara la recepción, llegar por favor entre 3:00 y 3:15 p.m. para acomodarse para la boda civil y los votos que empezarán a las 3:30 p.m.",
+        answer: "Para la misa, por favor llegar entre 11:40 y 11:50 a.m. para que tengas tiempo suficiente de tomar asiento antes que empiece la ceremonia puntualmente a las 12:00 p.m.\nPara la recepción, llegar por favor entre 3:00 y 3:15 p.m. para acomodarse para la boda civil y los votos que empezarán a las 3:30 p.m.",
       },
       {
         question: "¿Cómo confirmo mi asistencia?",

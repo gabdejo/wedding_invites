@@ -13,3 +13,5 @@
 - [x] https://record.com.pe/products/olla-gourmet-rojo-aluminio-fundido-ceramico-n24
 - [x] https://www.kitchenaid.pe/batidora-artisan-plus-4-7-l-sun-dried-tomato/p
 - [x] https://www.falabella.com.pe/falabella-pe/product/80029597/acc-switch-joy-con-red-blue/80029597
+- [x] https://www.sodimac.com.pe/sodimac-pe/articulo/142215438/lavadora-samsung-21-kg-negro-carga-superior-wa80f21b9bpe/142215439
+- [x] https://simple.ripley.com.pe/refrigeradora-lg-658l-gs66bpm-side-by-side-total-no-frost-negro-mate-2003350719941p?color_80=Negro+Mate

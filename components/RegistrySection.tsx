@@ -404,6 +404,10 @@ export default function RegistrySection({ content }: Props) {
                 disabled={isProcessing}
                 style={{ fontFamily: "var(--font-body)" }}
               />
+              <div className="rounded-sm border border-[#e6d5b8] bg-[#fdf6ea] p-4 text-xs leading-5 text-[#6b5744]" style={{ fontFamily: "var(--font-body)" }}>
+                💛 {content.bankRejectionNotice}
+              </div>
+
               {purchaseState === "error" && !isProcessing && (
                 <p className="text-center text-sm text-red-600" style={{ fontFamily: "var(--font-body)" }}>
                   {content.purchaseError}

@@ -176,6 +176,7 @@ const en: SiteContent = {
     cartDrawerHeading: "Cart",
     securePaymentHeading: "Secure payment with Culqi",
     securePaymentNote: "By continuing, a secure Culqi window will open to complete your payment. Your card details are protected and never pass through this website.",
+    bankRejectionNotice: "A little heads-up: BBVA and Scotiabank's own security systems sometimes block this payment since we're a merchant new to them. If that happens, it's not on your end — try a different card or bank, or use the bank transfer option above. Thank you for your patience and for celebrating with us!",
     buyerNamePlaceholder: "Buyer's name",
     buyerEmailPlaceholder: "Email",
     buyerPhonePlaceholder: "Phone",
@@ -323,6 +324,20 @@ const en: SiteContent = {
         name: "Stand mixer",
         description: "A stand mixer to encourage us to bake together and share homemade desserts with the people we love.",
         price: 1450,
+      },
+      {
+        imagePath: "/images/lavadora_samsung.webp",
+        category: "home",
+        name: "Washing machine",
+        description: "To make everyday life a little lighter in our new home.",
+        price: 1800,
+      },
+      {
+        imagePath: "/images/refrigeradora_lg.webp",
+        category: "home",
+        name: "Refrigerator",
+        description: "The heart of our kitchen, ready to hold everything we cook and share together.",
+        price: 2900,
       },
     ],
     bankTransfer: {

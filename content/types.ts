@@ -115,6 +115,7 @@ export interface SiteContent {
     cartDrawerHeading: string;
     securePaymentHeading: string;
     securePaymentNote: string;
+    bankRejectionNotice: string;
     buyerNamePlaceholder: string;
     buyerEmailPlaceholder: string;
     buyerPhonePlaceholder: string;
