@@ -382,7 +382,7 @@ const es: SiteContent = {
     willYouAttend: "¿Asistirás?",
     accepts: "Con gusto asistiré",
     declines: "Con pena no podré",
-    numberOfGuests: "Número de acompañantes",
+    numberOfGuests: "Cantidad de asistentes",
     notesPlaceholder: "Mensaje para los novios (opcional)",
     submit: "Confirmar asistencia",
     thankYou: "¡Gracias!",
