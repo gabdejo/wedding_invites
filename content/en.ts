@@ -21,7 +21,6 @@ const en: SiteContent = {
   countdown: {
     heading: "Countdown",
     labels: {
-      months: "Months",
       days: "Days",
       hours: "Hours",
       minutes: "Minutes",
@@ -374,7 +373,6 @@ const en: SiteContent = {
   rsvp: {
     heading: "Confirm Attendance",
     subtitle: "RSVP",
-    deadline: "Please confirm by October 8",
     namePlaceholder: "First and last name",
     emailPlaceholder: "Email address",
     willYouAttend: "Will you attend?",

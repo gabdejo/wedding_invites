@@ -96,10 +96,7 @@ export default function RsvpSection({ content }: Props) {
         >
           {content.heading}
         </h2>
-        <div className="mx-auto mb-4 h-px w-12 bg-[#c9a96e]" />
-        <p className="mb-10 text-base text-[#666666]" style={{ fontFamily: "var(--font-body)" }}>
-          {content.deadline}
-        </p>
+        <div className="mx-auto mb-10 h-px w-12 bg-[#c9a96e]" />
 
         <form onSubmit={handleSubmit} className="flex flex-col gap-6 text-left">
           <div className="relative">

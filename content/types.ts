@@ -9,7 +9,6 @@ export interface SiteContent {
   countdown: {
     heading: string;
     labels: {
-      months: string;
       days: string;
       hours: string;
       minutes: string;
@@ -144,7 +143,6 @@ export interface SiteContent {
   rsvp: {
     heading: string;
     subtitle: string;
-    deadline: string;
     namePlaceholder: string;
     emailPlaceholder: string;
     willYouAttend: string;
