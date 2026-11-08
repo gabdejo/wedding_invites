@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { findGuest, tableGuests } from "./actions";
+import { supabase } from "@/lib/supabase";
 import { Backdrop, TABLES, TableDetail, GUEST_VIEWBOX } from "../mesas/venue";
 
 type Match = { id: string; name: string; table_no: number | null };
@@ -18,19 +18,19 @@ export default function FindTable() {
     if (picked) return;
     if (q.trim().length < 3) return;
     let stale = false;
-    const t = setTimeout(async () => {
-      const r = await findGuest(q);
-      if (!stale) setMatches(r);
-    }, 250);
+    supabase.rpc("find_seat", { q }).then(({ data }) => {
+      if (!stale) setMatches(data ?? []);
+    });
     return () => {
       stale = true;
-      clearTimeout(t);
     };
   }, [q, picked]);
 
   async function pick(m: Match) {
     setPicked(m);
-    setMates(m.table_no ? await tableGuests(m.table_no) : []);
+    if (!m.table_no) return setMates([]);
+    const { data } = await supabase.rpc("table_guests", { n: m.table_no });
+    setMates(data ?? []);
   }
 
   const n = picked?.table_no ?? null;
