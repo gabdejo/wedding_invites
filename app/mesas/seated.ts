@@ -6,6 +6,7 @@ export type Seated = {
   side: string | null;
   cat: string | null;
   name: string;
+  unnamed: boolean; // plus-one whose name is not known yet
   table_no: number | null;
 };
 
@@ -38,7 +39,7 @@ export async function loadSeated(): Promise<{ data: Seated[]; error: { message: 
     seen.set(p.guest_id, n);
     if (!r?.attending || n > r.guests) return [];
     const inv = Array.isArray(p.guests) ? p.guests[0] : p.guests;
-    return [{ id: p.id, group: inv?.full_name ?? "", side: (inv?.guest_side as string | null) ?? null, cat: (inv?.guest_group as string | null) ?? null, name: p.full_name ?? `Acompañante ${p.person_number}`, table_no: p.table_no as number | null }];
+    return [{ id: p.id, group: inv?.full_name ?? "", side: (inv?.guest_side as string | null) ?? null, cat: (inv?.guest_group as string | null) ?? null, name: p.full_name ?? `Acompañante ${p.person_number}`, unnamed: !p.full_name, table_no: p.table_no as number | null }];
   });
   return { data, error };
 }

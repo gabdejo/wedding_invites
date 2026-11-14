@@ -108,6 +108,13 @@ export default function Seating({ secret, initial }: { secret: string; initial: 
       </div>
 
       <aside className="lg:sticky lg:top-4 lg:self-start">
+        <div className="mb-3 flex gap-2 text-xs" style={font}>
+          {([["mesas", "Excel de mesas"], ["lista", "Excel lista"]] as const).map(([type, label]) => (
+            <a key={type} href={`/mesas/export?key=${encodeURIComponent(secret)}&type=${type}`} className="flex-1 rounded-sm border border-[#5D7B9F] py-1.5 text-center text-[#5D7B9F]">
+              ↓ {label}
+            </a>
+          ))}
+        </div>
         <div className="mb-4 flex border-b border-[#e5dfd3]" style={font}>
           {([["free", `Sin mesa · ${unassigned.length}`], ["tables", "Mesas"]] as const).map(([k, label]) => (
             <button
