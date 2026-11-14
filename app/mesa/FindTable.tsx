@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { supabase } from "@/lib/supabase";
-import { Backdrop, TABLES, TableDetail, GUEST_VIEWBOX } from "../mesas/venue";
+import { Backdrop, TABLES, GUEST_VIEWBOX } from "../mesas/venue";
 
 type Match = { id: string; name: string; table_no: number | null };
 
@@ -84,10 +84,20 @@ export default function FindTable() {
                   );
                 })}
               </svg>
-              <div className="mt-4">
-                <TableDetail table={TABLES[n - 1]} seated={mates} highlight={picked.id} />
-              </div>
-              <p className="mt-2 text-center text-sm text-[#7a7a7a]">{mates.map((p) => p.name).join(" · ")}</p>
+              <div className="mx-auto mt-8 h-px w-16 bg-[#c9a96e]" />
+              <p className="mt-6 text-center text-xs uppercase tracking-[0.3em] text-[#9a8066]">Te acompañan</p>
+              <ul className="mt-4 space-y-2 text-center">
+                {mates.map((p) => (
+                  <li
+                    key={p.id}
+                    className={p.id === picked.id ? "text-lg text-[#5D7B9F]" : "text-lg text-[#2c2c2c]"}
+                    style={{ fontFamily: "var(--font-heading)" }}
+                  >
+                    {p.name}
+                    {p.id === picked.id && <span className="ml-2 text-xs uppercase tracking-wider text-[#9a8066]" style={font}>tú</span>}
+                  </li>
+                ))}
+              </ul>
             </>
           ) : (
             <p className="text-center text-[#2c2c2c]">
